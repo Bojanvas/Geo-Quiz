@@ -1361,7 +1361,7 @@ const questions = [{
     },
     {
         question: 'What is the Capital of USA?',
-        img: require('../img/flag4.png'),
+        img: require('../img/flag4.jpg'),
         corectAn: 'Washington',
         ans: ['New York', 'Miami', 'Washington', "Los Angeles"],
         dificult: ['1'],
@@ -1559,9 +1559,106 @@ const questions = [{
         dificult: ['3'],
         type: 'capital',
     },
-
-
-
+    //Mount
+    {
+        question: 'Highest Mountain Peaks in the World?',
+        img: require('../img/mount.jpg'),
+        corectAn: 'Mount Everest',
+        ans: ['Lhotse', 'Mount Everest', 'K2', "Kanchenjunga"],
+        dificult: ['1', '2'],
+        type: 'mountain',
+    },
+    {
+        question: 'Highest Mountain Peaks in the Europe?',
+        img: require('../img/mount.jpg'),
+        corectAn: 'Mount Elbrus',
+        ans: ['Mount Elbrus', 'Mount Everest', 'K2', "Mont Blanc"],
+        dificult: ['1', '2', '3'],
+        type: 'mountain',
+    },
+    {
+        question: 'Highest Mountain Peaks in the Africa?',
+        img: require('../img/mount.jpg'),
+        corectAn: 'Kilimanjaro',
+        ans: ['Mount Meru', 'Mount Everest', 'Mount Kenya', "Kilimanjaro"],
+        dificult: ['1', '2', '3'],
+        type: 'mountain',
+    },
+    {
+        question: 'Highest Mountain Peaks in the South America?',
+        img: require('../img/mount2.jpg'),
+        corectAn: 'Aconcagua',
+        ans: ['Aconcagua', 'Mount Everest', 'Mount McKinley', "Tajumulco"],
+        dificult: ['2', '3'],
+        type: 'mountain',
+    },
+    {
+        question: 'Highest Mountain Peaks in the North America?',
+        img: require('../img/mount2.jpg'),
+        corectAn: 'Mount McKinley',
+        ans: ['Aconcagua', 'Mount Everest', 'Mount McKinley', "Tajumulco"],
+        dificult: ['2', '3'],
+        type: 'mountain',
+    },
+    //LAKE
+    {
+        question: 'Deepest lake in the world?',
+        img: require('../img/lake.jpg'),
+        corectAn: 'Lake Baikal',
+        ans: ['Tanganyika', 'Lake Baikal', 'Lake Vostok', "Lake Malawi"],
+        dificult: ['1', '2', '3'],
+        type: 'lake',
+    },
+    // Deserts
+    {
+        question: 'Largest desert in the world?',
+        img: require('../img/desert.jpg'),
+        corectAn: 'Sahara',
+        ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
+        dificult: ['1'],
+        type: 'desert',
+    },
+    {
+        question: 'Largest desert in the Asia?',
+        img: require('../img/desert.jpg'),
+        corectAn: 'Gobi Desert',
+        ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
+        dificult: ['2', '3'],
+        type: 'desert',
+    },
+    {
+        question: 'Second largest desert in the Africa?',
+        img: require('../img/desert.jpg'),
+        corectAn: 'Kalahari Desert',
+        ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
+        dificult: ['2', '3'],
+        type: 'desert',
+    },
+    {
+        question: 'Largest desert in the South America?',
+        img: require('../img/desert.jpg'),
+        corectAn: 'Atacama Desert',
+        ans: ['Kalahari Desert', 'Atacama Desert', 'Gobi Desert', "Sahara"],
+        dificult: ['2', '3'],
+        type: 'desert',
+    },
+    //Oceans
+    {
+        question: 'Deepest ocean in the world?',
+        img: require('../img/ocean.jpg'),
+        corectAn: 'Pacific Ocean',
+        ans: ['Atlantic Ocean', 'Indian Ocean', 'Southern Ocean', "Pacific Ocean"],
+        dificult: ['1', '2', '3'],
+        type: 'ocean',
+    },
+    {
+        question: 'Deepest place in the world?',
+        img: require('../img/ocean.jpg'),
+        corectAn: 'Mariana Trench',
+        ans: ['Mariana Trench', 'Milwaukee Deep', 'Java Trench', "Puerto Rico Trench"],
+        dificult: ['2', '3'],
+        type: 'ocean',
+    },
     // RIVERS
     {
         question: 'What is the longest river in the world?',
@@ -1576,6 +1673,22 @@ const questions = [{
         img: require('../img/rive.jpg'),
         corectAn: 'Volga',
         ans: ['Volga', 'Danube', 'Ural River', "Dnieper"],
+        dificult: ['2', '3'],
+        type: 'river',
+    },
+    {
+        question: 'What is the longest river in the Australia?',
+        img: require('../img/rive.jpg'),
+        corectAn: 'Murray',
+        ans: ['Volga', 'Darling', 'Murrumbidgee', "Murray"],
+        dificult: ['2', '3'],
+        type: 'river',
+    },
+    {
+        question: 'What is the longest river in the Asia?',
+        img: require('../img/riverj.jpg'),
+        corectAn: 'Yangtze',
+        ans: ['Yellow River', 'Yangtze', 'Murrumbidgee', "Irtysh"],
         dificult: ['2', '3'],
         type: 'river',
     },
@@ -1630,29 +1743,31 @@ function difarr() {
         }
 
     }
-    random();
+    // random();
+    return easyQuest, normalQuest, hardQuest;
 }
 
-function random() {
-    for (let i = 0; i < 5; i++) {
-        let num = Math.floor(Math.random() * easyQuest.length);
-        difQuest_1.push(easyQuest[num]);
-        easyQuest.splice(num, 1);
-    }
-    for (let i = 0; i < 5; i++) {
-        let num = Math.floor(Math.random() * normalQuest.length);
-        difQuest_2.push(normalQuest[num]);
-        normalQuest.splice(num, 1);
-    }
-    for (let i = 0; i < 5; i++) {
-        let num = Math.floor(Math.random() * hardQuest.length);
-        difQuest_3.push(hardQuest[num]);
-        hardQuest.splice(num, 1);
-    }
-    return difQuest_1, difQuest_2, difQuest_3;
-}
+// function random() {
+//     for (let i = 0; i < 20; i++) {
+//         let num = Math.floor(Math.random() * easyQuest.length);
+//         difQuest_1.push(easyQuest[num]);
+//         easyQuest.splice(num, 1);
+//     }
+//     for (let i = 0; i < 20; i++) {
+//         let num = Math.floor(Math.random() * normalQuest.length);
+//         difQuest_2.push(normalQuest[num]);
+//         normalQuest.splice(num, 1);
+//     }
+//     for (let i = 0; i < 20; i++) {
+//         let num = Math.floor(Math.random() * hardQuest.length);
+//         difQuest_3.push(hardQuest[num]);
+//         hardQuest.splice(num, 1);
+//     }
+//     return difQuest_1, difQuest_2, difQuest_3;
+// }
 difarr();
 // random();
-var dificulties = [difQuest_1, difQuest_2, difQuest_3]
+// var dificulties = [difQuest_1, difQuest_2, difQuest_3];
+var dificulties = [easyQuest, normalQuest, hardQuest];
 console.log(dificulties);
 export { dificulties };

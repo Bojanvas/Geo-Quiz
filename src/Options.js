@@ -9,6 +9,12 @@ import {
     Dimensions,
     Picker,
 } from 'react-native';
+import { 
+  AdMobBanner, 
+  AdMobInterstitial, 
+  PublisherBanner,
+  AdMobRewarded
+} from 'react-native-admob';
 import {newQuest ,nQuest, hQuest} from './questions.js';
 export default class Option extends Component{
     constructor(props){
@@ -68,6 +74,10 @@ componentDidMount(){
         return(
             <View style={styles.option}>
                 <Text style={styles.opTitle}>Fun Quizzes</Text>
+                 <AdMobBanner
+                bannerSize="fullBanner"
+                adUnitID="ca-app-pub-7664756446244941/5385120799"
+                didFailToReceiveAdWithError={this.bannerError} />
             <View style={styles.opDiv}>
                 <Text style={styles.opButtons}>Last Score : {lastdb.score} </Text>
                 <Text style={styles.opButtonsText}>Dificult:{lastdb.dificult  } Date:{lastdb.date} </Text>

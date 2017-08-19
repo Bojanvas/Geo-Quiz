@@ -35,6 +35,7 @@ const Nav = StackNavigator({
     About: { screen: about },
     Results: {
         screen: results,
+        overrideBackPress: true,
     },
     Score: {
         screen: score,

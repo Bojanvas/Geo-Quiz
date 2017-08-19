@@ -8,9 +8,17 @@ import {
     Alert,
     TextInput,
     Modal,
+    Linking,
+    BackHandler,
     TouchableHighlight,
 } from 'react-native';
 import Realm from 'realm';
+import { 
+  AdMobBanner, 
+  AdMobInterstitial, 
+  PublisherBanner,
+  AdMobRewarded
+} from 'react-native-admob';
 
 
 
@@ -37,6 +45,18 @@ export default class Results extends Component{
   componentDidMount(){
      
   }
+  componentWillMount() {
+      console.log('this is true or false '+this.props.navigation.state.params.game);
+    // this.props.game(true);
+    BackHandler.addEventListener('hardwareBackPress', () => {
+        if (this.props.navigation.state.params.game) {
+            this.props.navigation.navigate('Home');
+            return true; // This will prevent the regular handling of the back button
+        }
+
+        return false;
+    });
+}
   addscore(){
               var difi =this.checkDif();
     var res = this.checkScore();
@@ -103,7 +123,8 @@ checkScore(){
     // calculate score
     let score = this.props.navigation.state.params.score;
     let time = this.props.navigation.state.params.time;
-    var res = score *100 / time;
+    var res = score *20000 / (time+100);
+    var res = Number(res.toFixed(2));
     return res;
 }
     render(){
@@ -134,10 +155,16 @@ checkScore(){
                         </View>
                     </View>
                 </Modal>
-                <Text style={styles.resTitle}> Congrats You have Finish the quizz your score is:</Text>
-                <Text style={styles.resNumber}>{this.props.navigation.state.params.score}</Text>
-                <Text style={styles.resNumber}>{this.props.navigation.state.params.time}</Text>
+                <Text style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
+                <Text style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
+                <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
                 <Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text>
+                <Text onPress={()=>{ this.props.navigation.navigate('results')}}>Check Score</Text>
+                 <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
+                    <AdMobBanner
+                bannerSize="fullBanner"
+                adUnitID="ca-app-pub-7664756446244941/5385120799"
+                didFailToReceiveAdWithError={this.bannerError} />
             </View>
         )
     }
@@ -156,7 +183,7 @@ const styles = StyleSheet.create({
         fontSize:30,
     },
     resNumber:{
-        fontSize:50,
+        fontSize:30,
         margin:20,
         color:'#34363a',
     },
@@ -179,5 +206,8 @@ const styles = StyleSheet.create({
         padding:10,
         width:80,
         margin:10,
+    },
+    abLink:{
+        fontSize:20,
     }
 })

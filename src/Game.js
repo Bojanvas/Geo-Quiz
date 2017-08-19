@@ -42,21 +42,46 @@ export default class Home extends Component {
             dif:'',
             questions : this.quest,
             opacity:0,
+            mesColor:'#8c1c41',
+            message:'',
         }
     }
 
 
  componentDidMount() {
+     var difQuest_1 = [];
+    var difQuest_2 = [];
+    var difQuest_3 = [];
+    var newdificulties = [];
+     function random() {
+    for (let i = 0; i < 20; i++) {
+        let num = Math.floor(Math.random() * dificulties[0].length);
+        difQuest_1.push(dificulties[0][num]);
+        dificulties[0].splice(num, 1);
+    }
+    for (let i = 0; i < 20; i++) {
+        let num = Math.floor(Math.random() * dificulties[1].length);
+        difQuest_2.push(dificulties[1][num]);
+        dificulties[1].splice(num, 1);
+    }
+    for (let i = 0; i < 20; i++) {
+        let num = Math.floor(Math.random() * dificulties[2].length);
+        difQuest_3.push(dificulties[2][num]);
+        dificulties[2].splice(num, 1);
+    }
+    return newdificulties = [difQuest_1, difQuest_2, difQuest_3];
+}
+random()
       AsyncStorage.getItem('dificult').then((data)=>{
           // here iam chaning difficuly fonr games
-        this.quest = dificulties[data];
+        this.quest = newdificulties[data];
           this.setState({
             questions:this.quest,
             dif:data,
     })
    }) 
 
-    setInterval(
+   this.interval = setInterval(
         // time is thicking 1s
       () => {   this.setState({
           time: this.state.time +1,
@@ -83,36 +108,52 @@ export default class Home extends Component {
           // right one
           score++;
           this.setState({
-              i: i+1,
               score: score,
+              mesColor:'#3bf955',
+              message:'Correct answer',
           })
-             this.checkGame();
+          if(i<19){
+           this.nextquest();
+          }else{
+              this.gameover();
+          }
+
       }else{
+          
           //wrong one
            this.setState({
-              i: i+1,
               score: score,
+              mesColor:'#8c1c41',
+              message:'Wrong answer',
           })
-                this.checkGame();
+        if(i<19){
+              this.nextquest();
+          }else{
+              this.gameover();
+          }
       }
 
   }
-  checkGame(){
-      // check the game is it finished
-      if(this.state.i<3){
-      }else{
-          this.setState({
-              game:false,
+  nextquest(){
+            var i = this.state.i;
+       this.setState({
+              i: i+1,
           })
-        //   alert('game has ended' + this.state.score)
-        this.props.navigation.navigate('Results',{ score:this.state.score,time:this.state.time,dificult:this.state.dif});
+  }
+  gameover(){
+         clearInterval(this.interval);
+        this.props.navigation.navigate('Results',{ score:this.state.score,time:this.state.time,dificult:this.state.dif,game:this.state.game});
 
       }
-  }
+
+componentWillUnmount(){
+    clearInterval(this.interval);
+}
   render() {
 
       var i = this.state.i;
       var questions = this.state.questions;
+   
     return (
       <View  style={styles.container}>
         <View style={styles.first}>
@@ -129,14 +170,15 @@ export default class Home extends Component {
             </View>
         </View>
          <View style={styles.second}>
-         <View style={styles.questions}><Text style={styles.qu}>{this.state.questions[i].question}</Text></View>
+         <Text style={{color:this.state.mesColor}}>{this.state.message}</Text>
+         <View style={styles.questions}><Text style={styles.qu}>{this.state.questions[i].question  || 'No Question'}</Text></View>
          <View style={styles.answers}>
-              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[0])}} style={styles.an}>{this.state.questions[i].ans[0]}</Text></TouchableOpacity>
-              <TouchableOpacity><Text onPress={(event)=>{this.checkAn(this.state.questions[i].ans[1])}} style={styles.an}>{this.state.questions[i].ans[1]}</Text></TouchableOpacity>
+              <TouchableOpacity><Text onPress={(event)=>{  this.checkAn(this.state.questions[i].ans[0])}} style={styles.an}>{this.state.questions[i].ans[0] || 'No Question'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[1])}} style={styles.an}>{this.state.questions[i].ans[1] || 'No Question'}</Text></TouchableOpacity>
          </View>
           <View style={styles.answers}>
-              <TouchableOpacity><Text onPress={(event)=>{this.checkAn(this.state.questions[i].ans[2])}} style={styles.an}>{this.state.questions[i].ans[2]}</Text></TouchableOpacity>
-              <TouchableOpacity><Text onPress={(event)=>{this.checkAn(this.state.questions[i].ans[3])}} style={styles.an}>{this.state.questions[i].ans[3]}</Text></TouchableOpacity>
+              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[2])}} style={styles.an}>{this.state.questions[i].ans[2] || 'No Question'}</Text></TouchableOpacity>
+              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[3])}} style={styles.an}>{this.state.questions[i].ans[3] || 'No Question'}</Text></TouchableOpacity>
            </View>
         </View>
       </View>

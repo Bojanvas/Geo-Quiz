@@ -14,12 +14,19 @@ import {
   View,
   AsyncStorage,
 } from 'react-native';
+import { 
+  AdMobBanner, 
+  AdMobInterstitial, 
+  PublisherBanner,
+  AdMobRewarded
+} from 'react-native-admob';
 
 export default class Home extends Component {
        constructor(props){
          super(props);
          this.state ={
-           dificult:1
+           dificult:1,
+           game:false,
          }
        }
       
@@ -46,6 +53,10 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+         <AdMobBanner
+                bannerSize="fullBanner"
+                adUnitID="ca-app-pub-7664756446244941/5385120799"
+                didFailToReceiveAdWithError={this.bannerError} />
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}>
           <TouchableOpacity>
             <Text onPress = {()=>{
