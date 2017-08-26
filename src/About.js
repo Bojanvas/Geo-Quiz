@@ -25,10 +25,10 @@ import {
               <Text style={styles.abTitle}>About this great Quizz</Text>
              <Image source={require('../img/earth3.png')} style={styles.backgroundImage}>   
                 <View style={styles.abBox}>
-                        <Text style={styles.abText}>This is Fun geo quzies for killing times i hope your enyoed </Text>
-                        <Text  style={styles.abLink} onPress={()=>Linking.openURL("https://play.google.com/store/apps/details?id=com.bojanvasilevski.calculator")}>Rate It!!</Text>
+                        <Text style={styles.abText}>Thanks for downlaoding my app, this app is for testing your Geographic knowledge it is great for killing time i hope you will enjoyed </Text>
+                        <Text  style={styles.abLink} onPress={()=>Linking.openURL("https://play.google.com/store/apps/details?id=com.bojanvasilevski.geo&hl=en")}>Rate It!!</Text>
                         <Text  style={styles.abText}>I am Bojan Vasilevski, Web Developer/Mobile Developer this is my </Text>
-                         <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanvasilevski.com")}> Website!!</Text>
+                         <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com")}> Website!!</Text>
                          </View>
              </Image>
             </View>
@@ -49,6 +49,8 @@ const styles = StyleSheet.create({
             color:'white',
             alignItems:'center',
             fontSize:16,
+            textAlign:'center',
+            fontFamily: 'Slabo',
         },
          abLink:{
             justifyContent:'center',

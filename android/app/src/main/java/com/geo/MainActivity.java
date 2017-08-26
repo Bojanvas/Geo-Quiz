@@ -1,4 +1,4 @@
-package com.geo;
+package com.bojanvasilevski.geo;
 
 import com.facebook.react.ReactActivity;
 

@@ -243,8 +243,10 @@ const styles = StyleSheet.create({
       backgroundColor:'white',
       color:'#33afd4',
       padding:10,
+      elevation:9,
       fontWeight:'200',
-            fontFamily: 'Slabo',
+        fontFamily: 'Slabo',
+
 
   },
 });

@@ -63,6 +63,7 @@ export default class Score extends Component{
                 }}]
         });
           let dbscore = realm.objects('Score');
+          dbscore = dbscore.sorted('score', {ascending: false});
         //   var data = this.state.data;
         // var nwdata = Array.from(data);
         // nwdata.push(dbscore);

@@ -10,6 +10,7 @@ import {
     Modal,
     Linking,
     BackHandler,
+    TouchableOpacity,
     TouchableHighlight,
 } from 'react-native';
 import Realm from 'realm';
@@ -26,7 +27,7 @@ export default class Results extends Component{
     constructor(props){
         super(props);
         this.state={
-            name:'no Name',
+            name:'No Name',
             modalVisible : true,
         }
        
@@ -158,9 +159,9 @@ checkScore(){
                 <Text style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
                 <Text style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
                 <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
-                <Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text>
-                <Text onPress={()=>{ this.props.navigation.navigate('results')}}>Check Score</Text>
-                 <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
+                 <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
+                <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
+                 <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
                     <AdMobBanner
                 bannerSize="fullBanner"
                 adUnitID="ca-app-pub-7664756446244941/5385120799"
@@ -209,5 +210,6 @@ const styles = StyleSheet.create({
     },
     abLink:{
         fontSize:20,
+         margin:10,
     }
 })

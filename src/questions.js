@@ -1330,7 +1330,7 @@ const questions = [{
     {
         question: 'What is the Capital of Tunisia?',
         img: require('../img/tunis.png'),
-        corectAn: 'Rabat',
+        corectAn: 'Tunis',
         ans: ['Cairo', 'Rabat', 'Algiers', "Tunis"],
         dificult: ['1', '2'],
         type: 'capital',

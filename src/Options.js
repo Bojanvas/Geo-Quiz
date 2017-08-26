@@ -7,7 +7,7 @@ import {
     StyleSheet,
     AsyncStorage,
     Dimensions,
-    Picker,
+    Picker,Linking,
 } from 'react-native';
 import { 
   AdMobBanner, 
@@ -59,6 +59,13 @@ componentDidMount(){
    })
    
 }
+checkdb(lastdb){
+    // console.log('this is '+typeof(lastdb));
+    if(typeof(lastdb) =='object'){
+       
+              return  <Text style={styles.opButtons}>Last Score : {lastdb.score}  Date:{lastdb.date.slice(3,11)} </Text>
+    }else{ return <Text style={styles.opButtons}>Last Score : 0 </Text> }
+}
     render(){
          let realm = new Realm({
             schema: [{name: 'Score',
@@ -70,7 +77,8 @@ componentDidMount(){
                 }}]
         });
          let dbscore = realm.objects('Score');
-         let lastdb = dbscore[0];
+         let num = dbscore.length;
+         var lastdb = dbscore[num-1];
         return(
             <View style={styles.option}>
                 <Text style={styles.opTitle}>Fun Quizzes</Text>
@@ -79,8 +87,7 @@ componentDidMount(){
                 adUnitID="ca-app-pub-7664756446244941/5385120799"
                 didFailToReceiveAdWithError={this.bannerError} />
             <View style={styles.opDiv}>
-                <Text style={styles.opButtons}>Last Score : {lastdb.score} </Text>
-                <Text style={styles.opButtonsText}>Dificult:{lastdb.dificult  } Date:{lastdb.date} </Text>
+               {this.checkdb(lastdb)}
             </View>    
             <View style={styles.opDiv}>
                  <View style={{flex:5}}>
@@ -104,7 +111,7 @@ componentDidMount(){
               </View>  
                <View style={styles.opDiv}>
                  <TouchableOpacity>
-                    <Text onPress={()=>{this.props.navigation.navigate('Score')}} style={styles.opButtons}>Check all Scores</Text>
+                    <Text onPress={()=>{this.props.navigation.navigate('Score')}} style={styles.opButtons}>My Scores</Text>
                 </TouchableOpacity>
                 </View>
                 <View style={styles.opDiv}>
@@ -112,6 +119,7 @@ componentDidMount(){
                     <Text onPress={()=>{alert('Coming Soon...')}} style={styles.opButtons}>Languages</Text>
                 </TouchableOpacity>
                 </View>
+                <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
             </View>
         )
     }
@@ -155,5 +163,10 @@ const styles = StyleSheet.create({
       borderWidth:0.8,
         borderColor:'#33afd4',
                 alignItems:'center',
+    },
+      abLink:{
+          marginTop:10,
+          color:'white',
+        fontSize:20,
     }
 });

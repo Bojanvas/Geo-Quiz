@@ -13,6 +13,7 @@ import {
   Image,
   View,
   AsyncStorage,
+  Dimensions
 } from 'react-native';
 import { 
   AdMobBanner, 
@@ -53,10 +54,6 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-         <AdMobBanner
-                bannerSize="fullBanner"
-                adUnitID="ca-app-pub-7664756446244941/5385120799"
-                didFailToReceiveAdWithError={this.bannerError} />
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}>
           <TouchableOpacity>
             <Text onPress = {()=>{
@@ -74,11 +71,16 @@ export default class Home extends Component {
           }} style={styles.buttons}>About</Text>
           </TouchableOpacity>
         </Image>
+          <AdMobBanner
+                bannerSize="fullBanner"
+                adUnitID="ca-app-pub-7664756446244941/5385120799"
+                didFailToReceiveAdWithError={this.bannerError} />
       </View>
     );
   }
 }
-
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
   backgroundImage:{
     flex:1,
     height: null,
-    width:700,
+    width:width*1.9,
      alignItems:'center',
      justifyContent:"center",
      resizeMode:'stretch',
