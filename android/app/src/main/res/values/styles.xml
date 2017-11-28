@@ -3,6 +3,19 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
+    </style>
+    <style name="SpinnerItem">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">18dp</item>
     </style>
 
+    <style name="SpinnerDropDownItem">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/mydivider</item>
+    </style>
 </resources>

@@ -20,6 +20,7 @@ import options from './src/Options.js';
 import about from './src/About.js';
 import results from './src/results.js';
 import score from './src/score.js';
+import res from './src/res.js';
 
 export default class Geo extends Component {
     render() {
@@ -33,6 +34,9 @@ const Nav = StackNavigator({
     Game: { screen: gameApp },
     Option: { screen: options },
     About: { screen: about },
+    Res:{
+        screen: res
+    },
     Results: {
         screen: results,
         overrideBackPress: true,

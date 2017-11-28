@@ -40,6 +40,7 @@ export default class Home extends Component {
             game:true,
             time:0,
             dif:'',
+            location:'None',
             questions : this.quest,
             opacity:0,
             mesColor:'#8c1c41',
@@ -49,25 +50,29 @@ export default class Home extends Component {
 
 
  componentDidMount() {
-     var difQuest_1 = [];
+    var difQuest_1 = [];
     var difQuest_2 = [];
     var difQuest_3 = [];
     var newdificulties = [];
+    var newQuestion = [];
+    for(let i=0;i<dificulties.length;i++){
+        newQuestion[i] = dificulties[i].slice();
+    }
      function random() {
     for (let i = 0; i < 20; i++) {
-        let num = Math.floor(Math.random() * dificulties[0].length);
-        difQuest_1.push(dificulties[0][num]);
-        dificulties[0].splice(num, 1);
+        let num = Math.floor(Math.random() * newQuestion[0].length);
+        difQuest_1.push(newQuestion[0][num]);
+        newQuestion[0].splice(num, 1);
     }
     for (let i = 0; i < 20; i++) {
-        let num = Math.floor(Math.random() * dificulties[1].length);
-        difQuest_2.push(dificulties[1][num]);
-        dificulties[1].splice(num, 1);
+        let num = Math.floor(Math.random() * newQuestion[1].length);
+        difQuest_2.push(newQuestion[1][num]);
+        newQuestion[1].splice(num, 1);
     }
     for (let i = 0; i < 20; i++) {
-        let num = Math.floor(Math.random() * dificulties[2].length);
-        difQuest_3.push(dificulties[2][num]);
-        dificulties[2].splice(num, 1);
+        let num = Math.floor(Math.random() * newQuestion[2].length);
+        difQuest_3.push(newQuestion[2][num]);
+        newQuestion[2].splice(num, 1);
     }
     return newdificulties = [difQuest_1, difQuest_2, difQuest_3];
 }
@@ -205,7 +210,7 @@ const styles = StyleSheet.create({
   img:{
       flex:2,
       width:310,
-        resizeMode:'contain',      
+      resizeMode:'contain',      
   },
   time:{
       margin:5,
@@ -245,7 +250,7 @@ const styles = StyleSheet.create({
       padding:10,
       elevation:9,
       fontWeight:'200',
-        fontFamily: 'Slabo',
+      fontFamily: 'Slabo',
 
 
   },

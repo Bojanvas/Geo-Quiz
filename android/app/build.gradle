@@ -96,9 +96,10 @@ android {
     defaultConfig {
         applicationId "com.bojanvasilevski.geo"
         minSdkVersion 16
+        multiDexEnabled true
         targetSdkVersion 22
-        versionCode 5
-        versionName "1.0.4"
+        versionCode 12
+        versionName "1.1.1"
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }

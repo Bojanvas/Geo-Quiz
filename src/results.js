@@ -29,6 +29,8 @@ export default class Results extends Component{
         this.state={
             name:'No Name',
             modalVisible : true,
+            poition:0,
+            location:'none',
         }
        
     }
@@ -44,7 +46,11 @@ export default class Results extends Component{
          headerLeft: null,
   };
   componentDidMount(){
-     
+    AsyncStorage.getItem("location").then(data => {
+        this.setState({
+        location: data
+        });
+    });
   }
   componentWillMount() {
       console.log('this is true or false '+this.props.navigation.state.params.game);
@@ -80,6 +86,7 @@ export default class Results extends Component{
             score: res,
             date:td,
             dificult:difi,
+            location:this.state.location,
         })
     });
     var person ={};
@@ -87,6 +94,7 @@ export default class Results extends Component{
     person.score = res;
     person.date = td,
     person.dificult=difi;
+    person.location =this.state.location;
     
     fetch('http://www.bojanvasilevski.com/results',{
         method:'POST',
@@ -96,9 +104,10 @@ export default class Results extends Component{
         },
         body:JSON.stringify({
             name:this.state.name,
-             score: res,
+            score: res,
             date:td,
-            dificult:difi
+            dificult:difi,
+            location:this.state.location
         })
     }).then(function(response) {
         console.log(response)
@@ -108,7 +117,6 @@ export default class Results extends Component{
   }
   checkDif(){
       let dif = this.props.navigation.state.params.dificult;
-      console.log(dif);
       if(dif==0){
           difi ="Easy";
           return difi;
@@ -120,13 +128,40 @@ export default class Results extends Component{
           return difi;
       }
   }
+
 checkScore(){
     // calculate score
     let score = this.props.navigation.state.params.score;
     let time = this.props.navigation.state.params.time;
     var res = score *20000 / (time+100);
     var res = Number(res.toFixed(2));
+    this.checkrank(res);
     return res;
+}
+calc(json,result){
+    var pos=1;
+    for(var i=0;i<json.length;i++){
+        if(result<json[i].score){
+            pos++;
+        }
+    }
+    return pos;
+}
+checkrank(result){
+    var self = this;
+    var difi =this.checkDif();
+    var resul = result;
+ fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+        return response.json();
+    }).then(function(json){
+        var pos= self.calc(json,resul);
+        self.setState({
+            position:pos,
+        })
+    }).catch((e)=>{
+        console.log(e);
+        return e;
+    });
 }
     render(){
 
@@ -152,12 +187,13 @@ checkScore(){
                             }}>
                             <Text style ={{color:'white',textAlign:'center'}}>OK</Text>
                             </TouchableHighlight>
-
                         </View>
                     </View>
                 </Modal>
                 <Text style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
                 <Text style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
+                <Text style={styles.resNumber}>Online Rank:{this.state.position}</Text>
+                <Text style={styles.foosnote}>*Online ranking available only if you have internet access</Text>
                 <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
                  <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
                 <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
@@ -185,7 +221,7 @@ const styles = StyleSheet.create({
     },
     resNumber:{
         fontSize:30,
-        margin:20,
+        margin:10,
         color:'#34363a',
     },
     back:{
@@ -204,12 +240,23 @@ const styles = StyleSheet.create({
     },
     butt:{
         backgroundColor:'#33afd4',
-        padding:10,
-        width:80,
-        margin:10,
+        paddingTop:10,
+        paddingBottom:10,
+        paddingLeft:30,
+        paddingRight:30,
+        borderRadius:4,
+        width:140,
+        shadowOffset:{width: 22, height:22},
+        shadowColor:'#f6f6f6',
+        marginTop:50,
+        marginLeft:20,
     },
     abLink:{
         fontSize:20,
          margin:10,
+    },
+    foosnote:{
+        fontSize:12,
+        color:'#ad0834',
     }
 })

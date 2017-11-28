@@ -11,7 +11,10 @@ import {
   Text,
   TouchableOpacity,
   Image,
+  Modal,
   View,
+  Picker,
+  TouchableHighlight,
   AsyncStorage,
   Dimensions
 } from 'react-native';
@@ -21,6 +24,7 @@ import {
   PublisherBanner,
   AdMobRewarded
 } from 'react-native-admob';
+import {countries} from './country.js';
 
 export default class Home extends Component {
        constructor(props){
@@ -28,8 +32,20 @@ export default class Home extends Component {
          this.state ={
            dificult:1,
            game:false,
+           count:countries,
+           location:'none',
+           modalVisible : false,
          }
        }
+
+
+      setModalVisible(visible) {
+        if(this.state.location == 'none'){
+          this.setState({modalVisible: true});
+        }else{
+          this.setState({modalVisible: false});
+        }
+      }
       
     static navigationOptions = {
     title: ' Geography Quiz || Test your knowledge',
@@ -40,6 +56,7 @@ export default class Home extends Component {
 
       
   };
+
   componentDidMount(){
    AsyncStorage.getItem('dificult').then((data)=>{
      if(data != null){
@@ -50,10 +67,55 @@ export default class Home extends Component {
       AsyncStorage.setItem('dificult','1');
    }
    })
+   AsyncStorage.getItem('location').then((data)=>{
+    if(data != null){
+    this.setState({
+      location:data
+    })
+  }else{
+     AsyncStorage.setItem('location','none');
   }
-  render() {
+  this.setModalVisible(false);
+  })
+
+
+  }
+  render(){
+    var country = this.state.count;
     return (
       <View style={styles.container}>
+        <Modal
+                animationType={"slide"}
+                transparent={false}
+                visible={this.state.modalVisible}
+                onRequestClose={() => {alert("Modal has been closed.")}}
+                >
+                <View style={{marginTop: 22,borderColor:'#000036',borderWidth:0.5,}}>
+                    <View>
+                      <Text style={styles.modal}>Choose your location:</Text>     
+                    </View>
+                </View>
+                <View style={{flex:5,alignItems:'center',margin:50, }}>
+                  <View style={{borderTopWidth:0.5,borderTopColor:'#33afd4',borderBottomWidth:0.5,borderBottomColor:'#33afd4',justifyContent: 'center'}}>
+                  <Picker
+                    style={{color:'#33afd4',width:200,marginTop:5,marginBottom:5,}}
+                    selectedValue={this.state.location}
+                    
+                     onValueChange={(itemValue, itemIndex) =>{ console.log(itemValue), this.setState({location:itemValue}) }}>
+                    {country.map(function(n,i){
+                      return <Picker.Item  key={i} label={n.name} value={n.name} />
+                    })}
+                  </Picker>
+                  </View>
+                  <TouchableHighlight style={styles.butt} onPress={() => {
+                    {/* this.addlocation(); */}
+                    AsyncStorage.setItem('location',this.state.location)
+                    this.setModalVisible(false)
+                    }}>
+                    <Text style ={{color:'white',textAlign:'center',fontSize:20}}>Save</Text>
+                  </TouchableHighlight>
+                </View>  
+        </Modal>
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}>
           <TouchableOpacity>
             <Text onPress = {()=>{
@@ -62,13 +124,18 @@ export default class Home extends Component {
           </TouchableOpacity>
           <TouchableOpacity>
             <Text onPress = {()=>{
-          this.props.navigation.navigate('Option');
+          this.props.navigation.navigate('Option',{location:this.state.location});
           }} style={styles.buttons}>Options</Text>
           </TouchableOpacity>
           <TouchableOpacity>
             <Text onPress = {()=>{
           this.props.navigation.navigate('About');
           }} style={styles.buttons}>About</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text onPress = {()=>{
+          this.props.navigation.navigate('Res');
+          }} style={styles.buttons}>Results</Text>
           </TouchableOpacity>
         </Image>
           <AdMobBanner
@@ -98,9 +165,14 @@ const styles = StyleSheet.create({
     flex:1,
     height: null,
     width:width*1.9,
-     alignItems:'center',
-     justifyContent:"center",
-     resizeMode:'stretch',
+    alignItems:'center',
+    justifyContent:"center",
+    resizeMode:'stretch',
+  },
+  modal:{
+    fontSize:24,
+    textAlign: 'center',
+    margin: 20,
   },
   buttons:{
     margin:10,
@@ -113,5 +185,17 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     borderColor: 'white',
     fontFamily: 'Slabo',
+  },
+  butt:{
+    backgroundColor:'#33afd4',
+    paddingTop:10,
+    paddingBottom:10,
+    paddingLeft:30,
+    paddingRight:30,
+    borderRadius:4,
+    width:140,
+    shadowOffset:{width: 22, height:22},
+    shadowColor:'#f6f6f6',
+    marginTop:80,
   },
 });
