@@ -34,6 +34,7 @@ export default class Home extends Component {
            game:false,
            count:countries,
            location:'none',
+           //id:null,
            modalVisible : false,
          }
        }
@@ -58,6 +59,17 @@ export default class Home extends Component {
   };
 
   componentDidMount(){
+    // AsyncStorage.getItem('id').then((data)=>{
+    //   if(data != null){
+    //     this.setState({
+    //       id:data
+    //     })
+    //   } else {
+    //     id = this.generateId();
+    //     console.log(id);
+    //     AsyncStorage.setItem('id',id);
+    //  }
+    // })
    AsyncStorage.getItem('dificult').then((data)=>{
      if(data != null){
      this.setState({
@@ -77,9 +89,12 @@ export default class Home extends Component {
   }
   this.setModalVisible(false);
   })
-
-
   }
+  // generateId(){
+  //   return Math.floor((Math.random() * 10) * 0x10000000)
+  //   .toString(16)
+  //   .substring(1);
+  // }
   render(){
     var country = this.state.count;
     return (
@@ -116,7 +131,8 @@ export default class Home extends Component {
                   </TouchableHighlight>
                 </View>  
         </Modal>
-        <Image source={require('../img/geo.png')} style={styles.backgroundImage}>
+        <Image source={require('../img/geo.png')} style={styles.backgroundImage}></Image>
+        <View style={styles.image}>
           <TouchableOpacity>
             <Text onPress = {()=>{
           this.props.navigation.navigate('Game',{dificult:this.state.dificult});
@@ -137,9 +153,9 @@ export default class Home extends Component {
           this.props.navigation.navigate('Res');
           }} style={styles.buttons}>Results</Text>
           </TouchableOpacity>
-        </Image>
+          </View>
           <AdMobBanner
-                bannerSize="fullBanner"
+                adSize="fullBanner"
                 adUnitID="ca-app-pub-7664756446244941/5385120799"
                 didFailToReceiveAdWithError={this.bannerError} />
       </View>
@@ -180,10 +196,9 @@ const styles = StyleSheet.create({
     fontSize:24,
     textAlign:'center',
     color:'white',
+    elevation:9,
     width:200,
     backgroundColor:'#33afd4',
-    borderWidth: 0.5,
-    borderColor: 'white',
     fontFamily: 'Slabo',
   },
   butt:{
@@ -198,4 +213,7 @@ const styles = StyleSheet.create({
     shadowColor:'#f6f6f6',
     marginTop:80,
   },
+  image:{
+    position:'absolute'
+  }
 });

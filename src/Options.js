@@ -8,7 +8,8 @@ import {
   AsyncStorage,
   Dimensions,
   Picker,
-  Linking
+  Linking,
+  Switch,
 } from "react-native";
 import {
   AdMobBanner,
@@ -18,6 +19,8 @@ import {
 } from "react-native-admob";
 import { newQuest, nQuest, hQuest } from "./questions.js";
 import {countries} from './country.js';
+import PushNotification from 'react-native-push-notification';
+
 export default class Option extends Component {
   constructor(props) {
     super(props);
@@ -25,6 +28,7 @@ export default class Option extends Component {
       optionSelected: ["easy", "normal", "hard"],
       count:countries,
       location:this.props.navigation.state.params.location,
+      notif:true,
     };
   }
 
@@ -102,7 +106,7 @@ export default class Option extends Component {
       <View style={styles.option}>
         <Text style={styles.opTitle}>Fun Quizzes</Text>
         <AdMobBanner
-          bannerSize="fullBanner"
+          adSize="fullBanner"
           adUnitID="ca-app-pub-7664756446244941/5385120799"
           didFailToReceiveAdWithError={this.bannerError}
         />
@@ -150,18 +154,21 @@ export default class Option extends Component {
             </Text>
           </TouchableOpacity>
         </View>
-        {/* <View style={styles.opDiv}>
-          <TouchableOpacity>
+        <View style={styles.opDiv}>
             <Text
               onPress={() => {
                 alert("Coming Soon...");
               }}
               style={styles.opButtons}
             >
-              Languages
+              Notifications:
             </Text>
-          </TouchableOpacity>
-        </View> */}
+            <Switch 
+              style={styles.switch}
+              onValueChange={ (value) => this.setState({ notif: value })} 
+              value={ this.state.notif } 
+            /> 
+        </View>
         <View style={styles.opDiv}>
           <View style={{ flex: 5 }}>
             <Text style={styles.opButtons}>Location </Text>
@@ -237,5 +244,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: "white",
     fontSize: 20
+  },
+  switch:{
+    flex:1,
+    justifyContent: 'flex-end',
+    marginRight:10
   }
 });

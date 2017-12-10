@@ -14,6 +14,12 @@ import {
     AsyncStorage,
     Dimensions
   } from 'react-native';
+  import { 
+    AdMobBanner, 
+    AdMobInterstitial, 
+    PublisherBanner,
+    AdMobRewarded
+  } from 'react-native-admob';
 
   export default class Res extends Component{
     constructor(props){
@@ -114,7 +120,12 @@ import {
                 data={this.state.results}
                 renderItem={this.list}
                 />
-            </View>    
+            </View>
+            <AdMobBanner
+                    adSize="fullBanner"
+                    adUnitID="ca-app-pub-7664756446244941/5385120799"
+                    didFailToReceiveAdWithError={this.bannerError}
+                />     
             </View>    
         )
     }            
