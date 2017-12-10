@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "793754954154",
+    "firebase_url": "https://world-geography-43cc4.firebaseio.com",
+    "project_id": "world-geography-43cc4",
+    "storage_bucket": "world-geography-43cc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793754954154:android:3ee51f1cca5bba00",
+        "android_client_info": {
+          "package_name": "com.bojanvasilevski.geo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793754954154-itjdedsmkvinlsko04obfc6ia3nis8u6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bojanvasilevski.geo",
+            "certificate_hash": "45c67048b13130dc4db21f5f046a26f4f5806159"
+          }
+        },
+        {
+          "client_id": "793754954154-ecffr46l1mheuoeunq6orphshriq30e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMOZ0DPlE_goom55w5a7q3QgsF3W0eLOA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793754954154-ecffr46l1mheuoeunq6orphshriq30e2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
