@@ -26,6 +26,9 @@ import {
 } from 'react-native-admob';
 import {countries} from './country.js';
 
+import PushNotification from 'react-native-push-notification';
+import Notification from './notification.js';
+
 export default class Home extends Component {
        constructor(props){
          super(props);
@@ -36,6 +39,7 @@ export default class Home extends Component {
            location:'none',
            //id:null,
            modalVisible : false,
+           notif:'true',
          }
        }
 
@@ -57,8 +61,20 @@ export default class Home extends Component {
 
       
   };
-
+  
   componentDidMount(){
+    // NOtifications
+    AsyncStorage.getItem('notif').then((data)=>{
+      if(data != null){
+      this.setState({
+        notif:data
+      })
+    }else{
+       AsyncStorage.setItem('notif',"true");
+    }
+      this.checkNotif();
+    })
+    // ID
     // AsyncStorage.getItem('id').then((data)=>{
     //   if(data != null){
     //     this.setState({
@@ -89,6 +105,19 @@ export default class Home extends Component {
   }
   this.setModalVisible(false);
   })
+  }
+  checkNotif(){
+    console.log(this.state.notif);
+    if(this.state.notif == 'true'){
+      PushNotification.localNotificationSchedule({
+        title:"World geography",
+        message: "How about one game? Test your knowledge", // (required)
+        date: new Date(Date.now() + (72 * 60 * 60 * 1000)), // in 60 secs
+        repeatType: 'week',
+    });
+    } else {
+      PushNotification.cancelAllLocalNotifications();
+    }
   }
   // generateId(){
   //   return Math.floor((Math.random() * 10) * 0x10000000)
@@ -140,7 +169,7 @@ export default class Home extends Component {
           </TouchableOpacity>
           <TouchableOpacity>
             <Text onPress = {()=>{
-          this.props.navigation.navigate('Option',{location:this.state.location});
+          this.props.navigation.navigate('Option',{location:this.state.location, notif:this.state.notif});
           }} style={styles.buttons}>Options</Text>
           </TouchableOpacity>
           <TouchableOpacity>

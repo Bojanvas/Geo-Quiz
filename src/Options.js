@@ -19,7 +19,6 @@ import {
 } from "react-native-admob";
 import { newQuest, nQuest, hQuest } from "./questions.js";
 import {countries} from './country.js';
-import PushNotification from 'react-native-push-notification';
 
 export default class Option extends Component {
   constructor(props) {
@@ -28,7 +27,7 @@ export default class Option extends Component {
       optionSelected: ["easy", "normal", "hard"],
       count:countries,
       location:this.props.navigation.state.params.location,
-      notif:true,
+      notif:this.props.navigation.state.params.notif,
     };
   }
 
@@ -71,6 +70,12 @@ export default class Option extends Component {
         location: data
         });
     });
+    AsyncStorage.getItem("notif").then(data => {
+      console.log('data si' + data)
+      this.setState({
+      notif: data
+      });
+  });
   }
   checkdb(lastdb) {
     // console.log('this is '+typeof(lastdb));
@@ -165,8 +170,11 @@ export default class Option extends Component {
             </Text>
             <Switch 
               style={styles.switch}
-              onValueChange={ (value) => this.setState({ notif: value })} 
-              value={ this.state.notif } 
+              onValueChange={ (value) => {
+                AsyncStorage.setItem("notif", value.toString()),
+                this.setState({ notif: value.toString() });
+            }} 
+              value={ this.state.notif === "true" } 
             /> 
         </View>
         <View style={styles.opDiv}>
