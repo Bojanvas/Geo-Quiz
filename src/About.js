@@ -23,15 +23,16 @@ import {
         return(
             <View style={styles.about}>
               <Text style={styles.abTitle}>About this great Quizz</Text>
-             <Image source={require('../img/earth3.png')} style={styles.backgroundImage}>   
+             <Image source={require('../img/earth3.png')} style={styles.backgroundImage}></Image>
+             <View style={styles.about}>   
                 <View style={styles.abBox}>
                         <Text style={styles.abText}>Thanks for downlaoding my app, this app is for testing your Geographic knowledge it is great for killing time i hope you will enjoyed </Text>
                         <Text  style={styles.abLink} onPress={()=>Linking.openURL("https://play.google.com/store/apps/details?id=com.bojanvasilevski.geo&hl=en")}>Rate It!!</Text>
                         <Text  style={styles.abText}>I am Bojan Vasilevski, Web Developer/Mobile Developer this is my </Text>
                         <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com")}> Website!!</Text>
-                        <Text  style={styles.abText}>Version 1.0.8</Text>
+                        <Text  style={styles.abText}>Version 1.1.5</Text>
                 </View>
-             </Image>
+             </View>
             </View>
         )
     }
@@ -44,6 +45,9 @@ const styles = StyleSheet.create({
             backgroundColor:'#33afd4',
             justifyContent:'center',
             alignItems:'center',
+        },
+        about:{
+            position:'absolute',
         },
          abText:{
             justifyContent:'center',
@@ -71,14 +75,16 @@ const styles = StyleSheet.create({
              borderWidth:0.8,
              justifyContent:'center',
              alignItems:'center',
-             padding:10,
+             padding:20,
              width: width / 1.3,
              marginTop:height / 5,
+             marginLeft:40,
         },
-         backgroundImage:{
-    flex:1,
-    width: width,
-     alignItems:'center',
-     resizeMode:'contain',
+        backgroundImage:{
+            flex:1,
+            height:height/1.5,
+            width: width,
+            alignItems:'center',
+            resizeMode:'stretch',
   },
 });

@@ -13,11 +13,14 @@ import {
   TouchableOpacity,
   Image,
   Animated,
+  Dimensions,
   LayoutAnimation,
   View,
   Platform,
   UIManager
 } from 'react-native';
+
+
 import {dificulties} from './questions.js';
 import TimerMixin from 'react-timer-mixin';
 import Resul from './results.js';
@@ -162,7 +165,7 @@ componentWillUnmount(){
     return (
       <View  style={styles.container}>
         <View style={styles.first}>
-            <Image   style={styles.img} source={this.state.questions[i].img}></Image>
+            <Image  style={styles.img} source={this.state.questions[i].img}></Image>
             <View style={styles.time}>
             <Text style={styles.quest}>time:
                 {"\n"}
@@ -191,8 +194,11 @@ componentWillUnmount(){
   }
 }
 
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
 const styles = StyleSheet.create({
   container: {
+    height:height,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -200,17 +206,18 @@ const styles = StyleSheet.create({
 
   },
   first:{
-      flex:5,
+      flex:6,
   },
   second:{
-      flex:5,
+      flex:4,
       alignItems:'center',
       justifyContent:'center',
   },
   img:{
       flex:2,
-      width:310,
+      width:width/1.1,
       resizeMode:'contain',      
+      backgroundColor:'#33afd4',
   },
   time:{
       margin:5,
@@ -220,12 +227,12 @@ const styles = StyleSheet.create({
   },
   quest:{
       backgroundColor:'white',
-      padding:10,
+      padding:3,
       margin:4,
-      height:60,
+      height:height/11,
       width:120,
       textAlign:'center',
-      fontSize:18,
+      fontSize:20,
       fontFamily: 'Slabo',
   },
   qu:{
@@ -237,18 +244,19 @@ const styles = StyleSheet.create({
   answers:{
         flexDirection:'row',
         flex:0,
+        marginBottom:10,
         alignItems:'center',
         justifyContent: 'space-around',
   },
   an:{
-      width:120,
-      margin:15,
+      width:width/2.5,
+      margin:10,
       textAlign:'center',
-      fontSize:20,
+      fontSize:22,
       backgroundColor:'white',
       color:'#33afd4',
-      padding:10,
-      elevation:9,
+      padding:5,
+      elevation:6,
       fontWeight:'200',
       fontFamily: 'Slabo',
 

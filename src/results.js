@@ -9,6 +9,7 @@ import {
     TextInput,
     Modal,
     Linking,
+    Dimensions,
     BackHandler,
     TouchableOpacity,
     TouchableHighlight,
@@ -21,8 +22,6 @@ import {
   AdMobRewarded
 } from 'react-native-admob';
 
-
-
 export default class Results extends Component{
     constructor(props){
         super(props);
@@ -34,9 +33,10 @@ export default class Results extends Component{
         }
        
     }
-     setModalVisible(visible) {
+ setModalVisible(visible) {
              this.setState({modalVisible: visible});
-             }
+ }
+
  static navigationOptions = {
     title: ' Results',
     headerTintColor: 'white',
@@ -45,7 +45,8 @@ export default class Results extends Component{
        elevation: null},
          headerLeft: null,
   };
-  componentDidMount(){
+
+ componentDidMount(){
     AsyncStorage.getItem("location").then(data => {
         this.setState({
         location: data
@@ -174,10 +175,10 @@ checkrank(result){
                 onRequestClose={() => {alert("Modal has been closed.")}}
                 >
                     <View style={{marginTop: 22}}>
-                        <View>
+                        <View style={{marginBottom: 100}}>
                             <Text style={styles.modal}>Enter Your Name</Text>
                             <TextInput
-                                style={{height: 60, fontSize:30,borderColor: '#33afd4',color:'#33afd4', borderWidth: 1}}
+                                style={{height: 60,elevation:4, fontSize:30,borderColor: '#33afd4',color:'#33afd4', borderWidth: 1}}
                                 onChangeText={(name) => this.setState({name})}
                                 value={this.state.name}
                             />
@@ -185,9 +186,14 @@ checkrank(result){
                                 this.addscore();
                             this.setModalVisible(false)
                             }}>
-                            <Text style ={{color:'white',textAlign:'center'}}>OK</Text>
+                            <Text style ={{color:'white',textAlign:'center',}}>OK</Text>
                             </TouchableHighlight>
                         </View>
+                        <AdMobBanner
+                            adSize="fullBanner"
+                            adUnitID="ca-app-pub-7664756446244941/5385120799"
+                            didFailToReceiveAdWithError={this.bannerError}
+                        />
                     </View>
                 </Modal>
                 <Text style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
@@ -195,24 +201,30 @@ checkrank(result){
                 <Text style={styles.resNumber}>Online Rank:{this.state.position}</Text>
                 <Text style={styles.foosnote}>*Online ranking available only if you have internet access</Text>
                 <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
-                 <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
+                <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
                 <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
-                 <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
-                    <AdMobBanner
-                bannerSize="fullBanner"
-                adUnitID="ca-app-pub-7664756446244941/5385120799"
-                didFailToReceiveAdWithError={this.bannerError} />
+                <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
+                <AdMobBanner
+                    adSize="fullBanner"
+                    adUnitID="ca-app-pub-7664756446244941/5385120799"
+                    didFailToReceiveAdWithError={this.bannerError}
+                    />
             </View>
         )
     }
 
 }
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
+
 const styles = StyleSheet.create({
     res:{
         backgroundColor:'#33afd4',
         flex:1,
         justifyContent:'center',
         alignItems:'center',
+        height:height,
+        width:width,
     },
     resTitle:{
         color:'white',
@@ -250,6 +262,7 @@ const styles = StyleSheet.create({
         shadowColor:'#f6f6f6',
         marginTop:50,
         marginLeft:20,
+        elevation:9,
     },
     abLink:{
         fontSize:20,

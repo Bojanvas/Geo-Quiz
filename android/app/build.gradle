@@ -147,6 +147,10 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-push-notification')
+    compile ('com.google.android.gms:play-services-gcm:+') {
+        force = true;
+    }
     // compile project(':react-native-admob')
     compile project(':RNAdMob')
     compile project(':realm')
