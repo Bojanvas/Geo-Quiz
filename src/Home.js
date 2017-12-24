@@ -25,10 +25,10 @@ import {
   AdMobRewarded
 } from 'react-native-admob';
 import {countries} from './country.js';
-
+import Levels from './Level.js';
 import PushNotification from 'react-native-push-notification';
 import Notification from './notification.js';
-
+import User from "./user.js";
 export default class Home extends Component {
        constructor(props){
          super(props);
@@ -37,9 +37,11 @@ export default class Home extends Component {
            game:false,
            count:countries,
            location:'none',
-           //id:null,
+           user_id:null,
            modalVisible : false,
            notif:'true',
+           level:0,
+           exp:0,
          }
        }
 
@@ -63,6 +65,8 @@ export default class Home extends Component {
   };
   
   componentDidMount(){
+    //getlvl from db
+
     // NOtifications
     AsyncStorage.getItem('notif').then((data)=>{
       if(data != null){
@@ -75,17 +79,20 @@ export default class Home extends Component {
       this.checkNotif();
     })
     // ID
-    // AsyncStorage.getItem('id').then((data)=>{
-    //   if(data != null){
-    //     this.setState({
-    //       id:data
-    //     })
-    //   } else {
-    //     id = this.generateId();
-    //     console.log(id);
-    //     AsyncStorage.setItem('id',id);
-    //  }
-    // })
+    AsyncStorage.getItem('user_id').then((data)=>{
+      if(data != null){
+        this.setState({
+          user_id:data
+        })
+      } else {
+        id = this.generateId();
+        AsyncStorage.setItem('user_id',id);
+        user.id = id;
+        user.level = 0;
+        user.exp = 0;
+        User.newUser(user);
+     }
+    })
    AsyncStorage.getItem('dificult').then((data)=>{
      if(data != null){
      this.setState({
@@ -119,11 +126,12 @@ export default class Home extends Component {
     });
     }
   }
-  // generateId(){
-  //   return Math.floor((Math.random() * 10) * 0x10000000)
-  //   .toString(16)
-  //   .substring(1);
-  // }
+  generateId(){
+    //generate random ID for the user
+    return Math.floor((Math.random() * 10) * 0x10000000)
+    .toString(16)
+    .substring(1);
+  }
   render(){
     var country = this.state.count;
     return (
@@ -161,7 +169,8 @@ export default class Home extends Component {
                 </View>  
         </Modal>
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}></Image>
-        <View style={styles.image}>
+        <Levels level= {this.state.level} />
+        <View style={styles.image}>      
           <TouchableOpacity>
             <Text onPress = {()=>{
           this.props.navigation.navigate('Game',{dificult:this.state.dificult});
