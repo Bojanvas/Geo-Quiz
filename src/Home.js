@@ -106,17 +106,17 @@ export default class Home extends Component {
   this.setModalVisible(false);
   })
   }
-  checkNotif(){
-    console.log(this.state.notif);
+  checkNotif() {
+    //clear notfications first
+    PushNotification.cancelAllLocalNotifications();
     if(this.state.notif == 'true'){
+      //if notif is on show notification after one week
       PushNotification.localNotificationSchedule({
         title:"World geography",
-        message: "How about one game? Test your knowledge", // (required)
-        date: new Date(Date.now() + (72 * 60 * 60 * 1000)), // in 60 secs
+        message: "How about one game? Test your knowledge", 
+        date: new Date(Date.now() + (72 * 60 * 60 * 1000)), // in 3 days
         repeatType: 'week',
     });
-    } else {
-      PushNotification.cancelAllLocalNotifications();
     }
   }
   // generateId(){

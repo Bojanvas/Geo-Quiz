@@ -2545,7 +2545,7 @@ const questions = [{
     {
         question: 'Guess the country from its outline?',
         img: require('../img/geoCou.png'),
-        corectAn: 'Armenia',
+        corectAn: 'Georgia',
         ans: ['Georgia', 'Azerbaijan', 'Syria', "Armenia"],
         dificult: ['2','3'],
         type: 'country',     
