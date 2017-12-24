@@ -28,6 +28,7 @@ import {countries} from './country.js';
 import Levels from './Level.js';
 import PushNotification from 'react-native-push-notification';
 import Notification from './notification.js';
+import realm from './realm';
 import User from "./user.js";
 export default class Home extends Component {
        constructor(props){
@@ -65,8 +66,6 @@ export default class Home extends Component {
   };
   
   componentDidMount(){
-    //getlvl from db
-
     // NOtifications
     AsyncStorage.getItem('notif').then((data)=>{
       if(data != null){
@@ -84,13 +83,16 @@ export default class Home extends Component {
         this.setState({
           user_id:data
         })
+        this.setUser();
       } else {
         id = this.generateId();
         AsyncStorage.setItem('user_id',id);
+        var user = User.getUser();
         user.id = id;
-        user.level = 0;
+        user.level = 1;
         user.exp = 0;
         User.newUser(user);
+        this.setUser();
      }
     })
    AsyncStorage.getItem('dificult').then((data)=>{
@@ -126,6 +128,19 @@ export default class Home extends Component {
     });
     }
   }
+
+  setUser(){
+    //getlvl from db
+    var user = User.getUser();
+    if(user != "undefined"){
+      console.log(user[0].level);
+      this.setState({
+        level : user[0].level,
+        exp : user[0].exp,
+      })
+    }
+  }
+
   generateId(){
     //generate random ID for the user
     return Math.floor((Math.random() * 10) * 0x10000000)

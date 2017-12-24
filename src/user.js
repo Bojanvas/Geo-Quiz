@@ -1,3 +1,4 @@
+import Realm from 'realm';
 import realm from './realm.js';
 
 export default class UserRealm {

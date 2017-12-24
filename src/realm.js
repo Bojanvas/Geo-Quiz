@@ -1,6 +1,6 @@
-import Realm from 'realm';
 import User from "./user.js";
-console.log("this is value of this "+User);
+import Realm from 'realm';
+
 const realm = new Realm({
   schema: [
     User
