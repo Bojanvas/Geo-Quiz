@@ -21,6 +21,9 @@ import {
   PublisherBanner,
   AdMobRewarded
 } from 'react-native-admob';
+import realm from './realm';
+import User from "./user.js";
+import Score from "./score_realm.js";
 
 export default class Results extends Component{
     constructor(props){
@@ -66,30 +69,30 @@ export default class Results extends Component{
     });
 }
   addscore(){
-              var difi =this.checkDif();
+    var difi =this.checkDif();
     var res = this.checkScore();
-        let realm = new Realm({
-            // schema for db
-            schema: [{name: 'Score',
-            properties: {
-                name:'string',
-                score: 'int',
-                date:'string',
-                dificult:'string',
-                }}]
-        });
-        var today = new Date(); // current date
-        var td = today.toDateString(); // format date
-           realm.write( ()=>{
-               // write to db res
-        let myRes = realm.create('Score',{
-            name:this.state.name,
-            score: res,
-            date:td,
-            dificult:difi,
-            location:this.state.location,
-        })
-    });
+    var exp = this.calculateExp(res,this.props.navigation.state.params.dificult);
+    var result = {};
+    result.name = this.state.name;
+    result.location = this.state.location;
+    result.difi = difi;
+    result.res = res;
+    // add resulsts to score tableDB
+    Score.addResults(result);
+
+    //add to user table
+    db_user = User.getUser();
+    lvl = db_user[0].level;
+    oldExp = db_user[0].exp;
+    users = {};
+    users.id = db_user[0].id;
+    users_info = this.caclLevel(exp, lvl , oldExp);
+    users.level = users_info[0];
+    users.exp = users_info[1];
+    User.updatedUser(users);
+
+    var today = new Date(); // current date
+    var td = today.toDateString(); // format date
     var person ={};
     person.name =this.state.name;
     person.score = res;
@@ -97,37 +100,52 @@ export default class Results extends Component{
     person.dificult=difi;
     person.location =this.state.location;
     
-    fetch('http://www.bojanvasilevski.com/results',{
-        method:'POST',
-        headers:{
-            'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        },
-        body:JSON.stringify({
-            name:this.state.name,
-            score: res,
-            date:td,
-            dificult:difi,
-            location:this.state.location
-        })
-    }).then(function(response) {
-        console.log(response)
-        }).catch(function(err) {
-            console.log(err)
-        })
+    // fetch('http://www.bojanvasilevski.com/results',{
+    //     method:'POST',
+    //     headers:{
+    //         'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //     },
+    //     body:JSON.stringify({
+    //         name:this.state.name,
+    //         score: res,
+    //         date:td,
+    //         dificult:difi,
+    //         location:this.state.location
+    //     })
+    // }).then(function(response) {
+    //     console.log(response)
+    //     }).catch(function(err) {
+    //         console.log(err)
+    //     })
+  }
+  caclLevel(exp,lvl,old){
+      //calculate the level
+      let checkExp = true;
+      exp = exp + old;
+        while(checkExp) {
+            var borderLvL = 10000 * lvl;
+            if(exp > borderLvL){
+                exp = exp - borderLvL;
+                lvl++;
+            } else {
+                checkExp = false;
+            }
+        }
+        return info =[lvl,exp];
+
   }
   checkDif(){
+      //Check dificulty of the game so can calucalte results 
       let dif = this.props.navigation.state.params.dificult;
-      if(dif==0){
-          difi ="Easy";
-          return difi;
-      }else if(dif==1){
-            difi ="Normal";
-          return difi;
-      }else if(dif==2){
+      if (dif == 0) {
+          difi = "Easy";
+      } else if ( dif == 1) {
+            difi = "Normal";
+      } else if ( dif == 2 ) {
             difi ="Hard";
-          return difi;
       }
+      return difi;
   }
 
 checkScore(){
@@ -147,6 +165,12 @@ calc(json,result){
         }
     }
     return pos;
+}
+calculateExp(r,d){
+    //calucalte how much experinece user get
+    let dif = d+1;
+    return r * d;
+
 }
 checkrank(result){
     var self = this;

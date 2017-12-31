@@ -66,6 +66,8 @@ export default class Home extends Component {
   };
   
   componentDidMount(){
+    var users = User.getUser();
+    console.log(users[0]);
     // NOtifications
     AsyncStorage.getItem('notif').then((data)=>{
       if(data != null){
@@ -130,10 +132,11 @@ export default class Home extends Component {
   }
 
   setUser(){
+    // set the user when start the appliaction
     //getlvl from db
+
     var user = User.getUser();
     if(user != "undefined"){
-      console.log(user[0].level);
       this.setState({
         level : user[0].level,
         exp : user[0].exp,

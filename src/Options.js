@@ -20,6 +20,9 @@ import {
 import { newQuest, nQuest, hQuest } from "./questions.js";
 import {countries} from './country.js';
 
+import realm from './realm';
+import Score from "./score_realm.js";
+
 export default class Option extends Component {
   constructor(props) {
     super(props);
@@ -90,20 +93,7 @@ export default class Option extends Component {
     }
   }
   render() {
-    let realm = new Realm({
-      schema: [
-        {
-          name: "Score",
-          properties: {
-            name: "string",
-            score: "int",
-            date: "string",
-            dificult: "string",
-          }
-        }
-      ]
-    });
-    let dbscore = realm.objects("Score");
+    let dbscore = Score.getScore();
     let num = dbscore.length;
     var lastdb = dbscore[num - 1];
     var country = this.state.count;

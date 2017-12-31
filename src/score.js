@@ -9,7 +9,9 @@ import {
     Dimensions,
     AsyncStorage,
 } from 'react-native';
-import Realm from 'realm'; 
+
+import realm from './realm';
+import Score_db from "./score_realm.js";
 
 export default class Score extends Component{
     constructor(props){
@@ -54,17 +56,9 @@ export default class Score extends Component{
          return <Text  style={styles.lines} ><Text style={styles.index}>{index+1}</Text> Name:{item.name}  Score:{item.score}  Date:{item.date} Dificult:{item.dificult}</Text>;
   }
     render(){
-           let realm = new Realm({
-            schema: [{name: 'Score',
-            properties: {
-                name:'string',
-                score: 'int',
-                date:'string',
-                dificult:'string',
-                }}]
-        });
-          let dbscore = realm.objects('Score');
-          dbscore = dbscore.sorted('score', {ascending: false});
+
+        let dbscore = Score_db.getScore();
+        dbscore = dbscore.sorted('score', {ascending: false});
         //   var data = this.state.data;
         // var nwdata = Array.from(data);
         // nwdata.push(dbscore);

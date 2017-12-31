@@ -29,5 +29,23 @@ export default class UserRealm {
              })
         )
     }
+
+    //method to updated user
+    static updatedUser (user) {
+        let result = realm.objects('User').filtered('id == $0', user.id);
+        let res = result[0];
+        console.log(res.id)
+        if (res) {
+            realm.write(() => {
+                res.level = user.level,
+                res.exp = user.exp
+            })
+            
+        } else {
+            msg = "Somthing wrong with Db try again";
+            return msg;
+        }
+        
+    }
        
 }
