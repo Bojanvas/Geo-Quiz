@@ -72,6 +72,23 @@ import {
             console.log('work')
         });
     }
+    level(){
+        var self = this;
+        var difi =this.state.dif;
+        fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+            return response.json();
+        }).then(function(json){
+            json.sort(function(a,b){
+                return b.score - a.score;
+            })
+            self.setState({
+                results:json,
+            })
+        }).then(function(){
+            console.log('work')
+        });
+
+    }
     checkrank(){
         var self = this;
         var difi =this.state.dif;
@@ -113,6 +130,12 @@ import {
                     this.hard();
                     }} style={styles.butto}>Hard</Text>
                 </TouchableOpacity>
+                <TouchableOpacity>
+                        <Text onPress = {()=>{
+                    this.state.dif = 'Levels';           
+                    this.level();
+                    }} style={styles.level}>Levels</Text>
+                </TouchableOpacity>
                 </View>
             <View style ={styles.content}>
                 <Text>Results for:  <Text style={styles.rows}>{this.state.dif}</Text></Text>     
@@ -150,7 +173,7 @@ import {
         flexDirection:"row",
     },
     butto:{
-        width:width/3,
+        width:width/4,
         fontSize:20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -159,6 +182,16 @@ import {
         color:"white",
         padding:10,
 
+    },
+    level:{
+        width:width/4,
+        fontSize:20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign:'center',
+        backgroundColor: '#32add2',
+        color:"gold",
+        padding:10,
     },
     row:{
         backgroundColor:'#f6f6f6f6',

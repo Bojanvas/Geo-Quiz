@@ -42,26 +42,7 @@ export default class Option extends Component {
       elevation: null
     }
   };
-  //   async getResults(){
-  //       try {
-  //         await AsyncStorage.multiGet(['score','date','dificult'],(error,results)=>{
-  //             results.map((result, i,res)=>{
-  //                 var score= res[0][1];
-  //                 var datedb= res[1][1];
-  //                 var difdb= res[2][1];
-  //                 // console.log('score is this'+score,datedb,difdb)
-  //                 this.setState({
-  //                     hScore:score,
-  //                     date:datedb,
-  //                     dif:difdb,
-  //                 })
-  //             });
-  //         });
-  //         } catch (error) {
-  //         // Error retrieving data
-  //         console.log(error);
-  //         }
-  //   }
+
   componentDidMount() {
     AsyncStorage.getItem("dificult").then(data => {
       this.setState({

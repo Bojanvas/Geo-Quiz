@@ -29,7 +29,7 @@ export default class Results extends Component{
     constructor(props){
         super(props);
         this.state={
-            name:'No Name',
+            name:this.props.navigation.state.params.name,
             modalVisible : true,
             poition:0,
             location:'none',
@@ -55,6 +55,11 @@ export default class Results extends Component{
         location: data
         });
     });
+    AsyncStorage.getItem("name").then(data => {
+        this.setState({
+        name: data
+        });
+    });
   }
   componentWillMount() {
       console.log('this is true or false '+this.props.navigation.state.params.game);
@@ -72,6 +77,7 @@ export default class Results extends Component{
     var difi =this.checkDif();
     var res = this.checkScore();
     var exp = this.calculateExp(res,this.props.navigation.state.params.dificult);
+    console.log(exp,res);
     var result = {};
     result.name = this.state.name;
     result.location = this.state.location;
@@ -168,8 +174,8 @@ calc(json,result){
 }
 calculateExp(r,d){
     //calucalte how much experinece user get
-    let dif = d+1;
-    return r * d;
+    let dif = Number(d)+1;
+    return r * dif;
 
 }
 checkrank(result){

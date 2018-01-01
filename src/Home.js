@@ -16,7 +16,8 @@ import {
   Picker,
   TouchableHighlight,
   AsyncStorage,
-  Dimensions
+  Dimensions,
+  TextInput
 } from 'react-native';
 import { 
   AdMobBanner, 
@@ -38,6 +39,7 @@ export default class Home extends Component {
            game:false,
            count:countries,
            location:'none',
+           name:"No Name",
            user_id:null,
            modalVisible : false,
            notif:'true',
@@ -67,6 +69,7 @@ export default class Home extends Component {
   
   componentDidMount(){
     var users = User.getUser();
+    this.setUser();
     console.log(users[0]);
     // NOtifications
     AsyncStorage.getItem('notif').then((data)=>{
@@ -85,7 +88,6 @@ export default class Home extends Component {
         this.setState({
           user_id:data
         })
-        this.setUser();
       } else {
         id = this.generateId();
         AsyncStorage.setItem('user_id',id);
@@ -136,7 +138,8 @@ export default class Home extends Component {
     //getlvl from db
 
     var user = User.getUser();
-    if(user != "undefined"){
+    console.log("User is tyope" + user[0]);
+    if(user[0] != undefined ){
       this.setState({
         level : user[0].level,
         exp : user[0].exp,
@@ -160,6 +163,14 @@ export default class Home extends Component {
                 visible={this.state.modalVisible}
                 onRequestClose={() => {alert("Modal has been closed.")}}
                 >
+                <View style={{marginBottom: 50}}>
+                      <Text style={styles.modal}>Enter Your Name</Text>
+                      <TextInput
+                        style={{height: 60,elevation:4, fontSize:30,borderColor: '#33afd4',color:'#33afd4', borderWidth: 1}}
+                        onChangeText={(name) => this.setState({name})}
+                        value={this.state.name}
+                      />
+                </View>
                 <View style={{marginTop: 22,borderColor:'#000036',borderWidth:0.5,}}>
                     <View>
                       <Text style={styles.modal}>Choose your location:</Text>     
@@ -179,6 +190,7 @@ export default class Home extends Component {
                   </View>
                   <TouchableHighlight style={styles.butt} onPress={() => {
                     {/* this.addlocation(); */}
+                    AsyncStorage.setItem('name',this.state.name)
                     AsyncStorage.setItem('location',this.state.location)
                     this.setModalVisible(false)
                     }}>
@@ -191,7 +203,7 @@ export default class Home extends Component {
         <View style={styles.image}>      
           <TouchableOpacity>
             <Text onPress = {()=>{
-          this.props.navigation.navigate('Game',{dificult:this.state.dificult});
+          this.props.navigation.navigate('Game',{dificult:this.state.dificult, name:this.state.name});
           }} style={styles.buttons}>New Game</Text>
           </TouchableOpacity>
           <TouchableOpacity>
