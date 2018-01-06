@@ -199,7 +199,7 @@ export default class Option extends Component {
         <Text
           style={styles.abLink}
           onPress={() =>
-            Linking.openURL("http://www.bojanvasilevski.com/results")}
+            Linking.openURL("https://bojanv4.herokuapp.com/results/")}
         >
           {" "}
           Check All-Time Results!!

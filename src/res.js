@@ -43,7 +43,7 @@ import {
     easy(){
         var self = this;
         var difi =this.state.dif;
-     fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+     fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
@@ -59,7 +59,7 @@ import {
     hard(){
         var self = this;
         var difi =this.state.dif;
-     fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+     fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
@@ -75,7 +75,7 @@ import {
     checkrank(){
         var self = this;
         var difi =this.state.dif;
-     fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+     fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){

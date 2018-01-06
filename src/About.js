@@ -29,7 +29,7 @@ import {
                         <Text style={styles.abText}>Thanks for downlaoding my app, this app is for testing your Geographic knowledge it is great for killing time i hope you will enjoyed </Text>
                         <Text  style={styles.abLink} onPress={()=>Linking.openURL("https://play.google.com/store/apps/details?id=com.bojanvasilevski.geo&hl=en")}>Rate It!!</Text>
                         <Text  style={styles.abText}>I am Bojan Vasilevski, Web Developer/Mobile Developer this is my </Text>
-                        <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com")}> Website!!</Text>
+                        <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results/")}> Website!!</Text>
                         <Text  style={styles.abText}>Version 1.1.8</Text>
                 </View>
              </View>

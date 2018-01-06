@@ -97,7 +97,7 @@ export default class Results extends Component{
     person.dificult=difi;
     person.location =this.state.location;
     
-    fetch('http://www.bojanvasilevski.com/results',{
+    fetch('https://bojanv4.herokuapp.com/results/',{
         method:'POST',
         headers:{
             'Accept': 'application/json',
@@ -152,7 +152,7 @@ checkrank(result){
     var self = this;
     var difi =this.checkDif();
     var resul = result;
- fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+ fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
         return response.json();
     }).then(function(json){
         var pos= self.calc(json,resul);
@@ -203,7 +203,7 @@ checkrank(result){
                 <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
                 <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
                 <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
-                <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
+                <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results/")}> Check All-Time Results!!</Text>
                 <AdMobBanner
                     adSize="fullBanner"
                     adUnitID="ca-app-pub-7664756446244941/5385120799"
