@@ -32,6 +32,7 @@ export default class Results extends Component{
             name:this.props.navigation.state.params.name,
             modalVisible : true,
             poition:0,
+            score:0,
             location:'none',
         }
        
@@ -76,6 +77,9 @@ export default class Results extends Component{
   addscore(){
     var difi =this.checkDif();
     var res = this.checkScore();
+    this.setState({
+        score : res,
+    })
     var exp = this.calculateExp(res,this.props.navigation.state.params.dificult);
     console.log(exp,res);
     var result = {};
@@ -106,7 +110,7 @@ export default class Results extends Component{
     person.dificult=difi;
     person.location =this.state.location;
     
-    // fetch('http://www.bojanvasilevski.com/results',{
+    // fetch('https://bojanv4.herokuapp.com/results',{
     //     method:'POST',
     //     headers:{
     //         'Accept': 'application/json',
@@ -124,6 +128,23 @@ export default class Results extends Component{
     //     }).catch(function(err) {
     //         console.log(err)
     //     })
+    fetch('https://bojanv4.herokuapp.com/levels',{
+        method:"POST",
+        headers:{
+            "Accept":"application/json",
+            "Content-Type":"application/json",
+        },
+        body: JSON.stringify({
+            id: users.id,
+            name: this.state.name,
+            location: this.state.location,
+            level: users.level,
+        })
+    }).then(function(response){
+        console.log("this is res"+response)
+    }).catch(function(err){
+        console.log(err)
+    })
   }
   caclLevel(exp,lvl,old){
       //calculate the level
@@ -182,10 +203,11 @@ checkrank(result){
     var self = this;
     var difi =this.checkDif();
     var resul = result;
- fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+ fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
         return response.json();
     }).then(function(json){
         var pos= self.calc(json,resul);
+        console.log(pos);
         self.setState({
             position:pos,
         })
@@ -214,7 +236,8 @@ checkrank(result){
                             />
                             <TouchableHighlight style={styles.butt} onPress={() => {
                                 this.addscore();
-                            this.setModalVisible(false)
+                                AsyncStorage.setItem('name',this.state.name)
+                                this.setModalVisible(false)
                             }}>
                             <Text style ={{color:'white',textAlign:'center',}}>OK</Text>
                             </TouchableHighlight>
@@ -230,10 +253,10 @@ checkrank(result){
                 <Text style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
                 <Text style={styles.resNumber}>Online Rank:{this.state.position}</Text>
                 <Text style={styles.foosnote}>*Online ranking available only if you have internet access</Text>
-                <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
+                <Text style={styles.resNumber}>Score:{this.state.score}</Text>
                 <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
                 <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
-                <Text style={styles.abLink}  onPress={()=>Linking.openURL("http://www.bojanvasilevski.com/results")}> Check All-Time Results!!</Text>
+                <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results")}> Check All-Time Results!!</Text>
                 <AdMobBanner
                     adSize="fullBanner"
                     adUnitID="ca-app-pub-7664756446244941/5385120799"

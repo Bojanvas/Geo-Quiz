@@ -43,7 +43,7 @@ import {
     easy(){
         var self = this;
         var difi =this.state.dif;
-     fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+     fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
@@ -59,7 +59,7 @@ import {
     hard(){
         var self = this;
         var difi =this.state.dif;
-     fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+     fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
@@ -74,8 +74,7 @@ import {
     }
     level(){
         var self = this;
-        var difi =this.state.dif;
-        fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+        fetch('https://bojanv4.herokuapp.com/results/Levels').then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
@@ -92,7 +91,7 @@ import {
     checkrank(){
         var self = this;
         var difi =this.state.dif;
-     fetch('http://www.bojanvasilevski.com/results/'+difi).then(function(response){
+     fetch('https://bojanv4.herokuapp.com/results/'+difi).then(function(response){
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
@@ -106,7 +105,11 @@ import {
         });
     }
     list({ item, index }){
+        if(item.level !== undefined ) {
+            return <View  style ={styles.row} key={index}><Text>  Pos:<Text style={styles.rows}>{index+1}</Text>   Name:<Text style={styles.rows}>{item.name}</Text>  Level:<Text style={styles.rows}>{item.level}</Text>  Location:<Text style={styles.rows}>{item.location}</Text></Text></View>
+        } else {
             return <View  style ={styles.row} key={index}><Text>  Pos:<Text style={styles.rows}>{index+1}</Text>   Name:<Text style={styles.rows}>{item.name}</Text>  Score:<Text style={styles.rows}>{item.score}</Text>  </Text><Text >  Location:<Text style={styles.rows}>{item.location}</Text></Text></View>
+        }       
     }
     render(){
         return(
@@ -138,7 +141,7 @@ import {
                 </TouchableOpacity>
                 </View>
             <View style ={styles.content}>
-                <Text>Results for:  <Text style={styles.rows}>{this.state.dif}</Text></Text>     
+                <Text>Results for:  <Text style={styles.rows}>{this.state.dif}</Text></Text> 
                 <FlatList 
                 data={this.state.results}
                 renderItem={this.list}
