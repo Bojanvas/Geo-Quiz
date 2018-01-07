@@ -29,7 +29,7 @@ export default class Results extends Component{
     constructor(props){
         super(props);
         this.state={
-            name:this.props.navigation.state.params.name,
+            name:this.props.navigation.state.params.name ? this.props.navigation.state.params.name : "No name",
             modalVisible : true,
             poition:0,
             score:0,
