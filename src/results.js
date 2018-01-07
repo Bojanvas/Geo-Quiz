@@ -117,24 +117,25 @@ export default class Results extends Component{
     person.dificult=difi;
     person.location =this.state.location;
     
-    // fetch('https://bojanv4.herokuapp.com/results',{
-    //     method:'POST',
-    //     headers:{
-    //         'Accept': 'application/json',
-    //     'Content-Type': 'application/json',
-    //     },
-    //     body:JSON.stringify({
-    //         name:this.state.name,
-    //         score: res,
-    //         date:td,
-    //         dificult:difi,
-    //         location:this.state.location
-    //     })
-    // }).then(function(response) {
-    //     console.log(response)
-    //     }).catch(function(err) {
-    //         console.log(err)
-    //     })
+
+    fetch('https://bojanv4.herokuapp.com/results',{
+        method:'POST',
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body:JSON.stringify({
+            name:this.state.name,
+            score: res,
+            date:td,
+            dificult:difi,
+            location:this.state.location
+        })
+    }).then(function(response) {
+        console.log(response)
+        }).catch(function(err) {
+            console.log(err)
+        })
     fetch('https://bojanv4.herokuapp.com/levels',{
         method:"POST",
         headers:{
