@@ -29,7 +29,7 @@ export default class Results extends Component{
     constructor(props){
         super(props);
         this.state={
-            name:this.props.navigation.state.params.name ? this.props.navigation.state.params.name : "No name",
+            name:this.props.navigation.state.params.name,
             modalVisible : true,
             poition:0,
             score:0,
@@ -57,9 +57,16 @@ export default class Results extends Component{
         });
     });
     AsyncStorage.getItem("name").then(data => {
-        this.setState({
-        name: data
-        });
+        console.log(data);
+        if(data != " "){
+            this.setState({
+                name: data
+            });
+        } else {
+            this.setState({
+                name: "No name"
+            });
+        }
     });
   }
   componentWillMount() {
