@@ -132,7 +132,7 @@ random()
            this.setState({
               score: score,
               mesColor:'#8c1c41',
-              message:'Wrong answer',
+              message:'Wrong answer, Correct answer was: '+corect,
           })
         if(i<19){
               this.nextquest();
@@ -150,7 +150,7 @@ random()
   }
   gameover(){
          clearInterval(this.interval);
-        this.props.navigation.navigate('Results',{ score:this.state.score,time:this.state.time,dificult:this.state.dif,game:this.state.game});
+        this.props.navigation.navigate('Results',{ score:this.state.score,time:this.state.time,dificult:this.state.dif,game:this.state.game,name:this.props.navigation.state.params.name});
 
       }
 

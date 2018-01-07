@@ -20,6 +20,9 @@ import {
 import { newQuest, nQuest, hQuest } from "./questions.js";
 import {countries} from './country.js';
 
+import realm from './realm';
+import Score from "./score_realm.js";
+
 export default class Option extends Component {
   constructor(props) {
     super(props);
@@ -39,26 +42,7 @@ export default class Option extends Component {
       elevation: null
     }
   };
-  //   async getResults(){
-  //       try {
-  //         await AsyncStorage.multiGet(['score','date','dificult'],(error,results)=>{
-  //             results.map((result, i,res)=>{
-  //                 var score= res[0][1];
-  //                 var datedb= res[1][1];
-  //                 var difdb= res[2][1];
-  //                 // console.log('score is this'+score,datedb,difdb)
-  //                 this.setState({
-  //                     hScore:score,
-  //                     date:datedb,
-  //                     dif:difdb,
-  //                 })
-  //             });
-  //         });
-  //         } catch (error) {
-  //         // Error retrieving data
-  //         console.log(error);
-  //         }
-  //   }
+
   componentDidMount() {
     AsyncStorage.getItem("dificult").then(data => {
       this.setState({
@@ -90,20 +74,7 @@ export default class Option extends Component {
     }
   }
   render() {
-    let realm = new Realm({
-      schema: [
-        {
-          name: "Score",
-          properties: {
-            name: "string",
-            score: "int",
-            date: "string",
-            dificult: "string",
-          }
-        }
-      ]
-    });
-    let dbscore = realm.objects("Score");
+    let dbscore = Score.getScore();
     let num = dbscore.length;
     var lastdb = dbscore[num - 1];
     var country = this.state.count;
@@ -199,7 +170,7 @@ export default class Option extends Component {
         <Text
           style={styles.abLink}
           onPress={() =>
-            Linking.openURL("https://bojanv4.herokuapp.com/results/")}
+            Linking.openURL("https://bojanv4.herokuapp.com/results")}
         >
           {" "}
           Check All-Time Results!!

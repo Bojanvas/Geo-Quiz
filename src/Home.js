@@ -16,7 +16,8 @@ import {
   Picker,
   TouchableHighlight,
   AsyncStorage,
-  Dimensions
+  Dimensions,
+  TextInput
 } from 'react-native';
 import { 
   AdMobBanner, 
@@ -25,10 +26,11 @@ import {
   AdMobRewarded
 } from 'react-native-admob';
 import {countries} from './country.js';
-
+import Levels from './Level.js';
 import PushNotification from 'react-native-push-notification';
 import Notification from './notification.js';
-
+import realm from './realm';
+import User from "./user.js";
 export default class Home extends Component {
        constructor(props){
          super(props);
@@ -37,9 +39,12 @@ export default class Home extends Component {
            game:false,
            count:countries,
            location:'none',
-           //id:null,
+           name:"No Name",
+           user_id:null,
            modalVisible : false,
            notif:'true',
+           level:0,
+           exp:0,
          }
        }
 
@@ -63,6 +68,9 @@ export default class Home extends Component {
   };
   
   componentDidMount(){
+    var users = User.getUser();
+    this.setUser();
+    console.log(users[0]);
     // NOtifications
     AsyncStorage.getItem('notif').then((data)=>{
       if(data != null){
@@ -75,17 +83,22 @@ export default class Home extends Component {
       this.checkNotif();
     })
     // ID
-    // AsyncStorage.getItem('id').then((data)=>{
-    //   if(data != null){
-    //     this.setState({
-    //       id:data
-    //     })
-    //   } else {
-    //     id = this.generateId();
-    //     console.log(id);
-    //     AsyncStorage.setItem('id',id);
-    //  }
-    // })
+    AsyncStorage.getItem('user_id').then((data)=>{
+      if(data != null){
+        this.setState({
+          user_id:data
+        })
+      } else {
+        id = this.generateId();
+        AsyncStorage.setItem('user_id',id);
+        var user = User.getUser();
+        user.id = id;
+        user.level = 1;
+        user.exp = 0;
+        User.newUser(user);
+        this.setUser();
+     }
+    })
    AsyncStorage.getItem('dificult').then((data)=>{
      if(data != null){
      this.setState({
@@ -119,11 +132,27 @@ export default class Home extends Component {
     });
     }
   }
-  // generateId(){
-  //   return Math.floor((Math.random() * 10) * 0x10000000)
-  //   .toString(16)
-  //   .substring(1);
-  // }
+
+  setUser(){
+    // set the user when start the appliaction
+    //getlvl from db
+
+    var user = User.getUser();
+    console.log("User is tyope" + user[0]);
+    if(user[0] != undefined ){
+      this.setState({
+        level : user[0].level,
+        exp : user[0].exp,
+      })
+    }
+  }
+
+  generateId(){
+    //generate random ID for the user
+    return Math.floor((Math.random() * 10) * 0x10000000)
+    .toString(16)
+    .substring(1);
+  }
   render(){
     var country = this.state.count;
     return (
@@ -134,6 +163,14 @@ export default class Home extends Component {
                 visible={this.state.modalVisible}
                 onRequestClose={() => {alert("Modal has been closed.")}}
                 >
+                <View style={{marginBottom: 50}}>
+                      <Text style={styles.modal}>Enter Your Name</Text>
+                      <TextInput
+                        style={{height: 60,elevation:4, fontSize:30,borderColor: '#33afd4',color:'#33afd4', borderWidth: 1}}
+                        onChangeText={(name) => this.setState({name})}
+                        value={this.state.name}
+                      />
+                </View>
                 <View style={{marginTop: 22,borderColor:'#000036',borderWidth:0.5,}}>
                     <View>
                       <Text style={styles.modal}>Choose your location:</Text>     
@@ -153,6 +190,7 @@ export default class Home extends Component {
                   </View>
                   <TouchableHighlight style={styles.butt} onPress={() => {
                     {/* this.addlocation(); */}
+                    AsyncStorage.setItem('name',this.state.name)
                     AsyncStorage.setItem('location',this.state.location)
                     this.setModalVisible(false)
                     }}>
@@ -161,10 +199,11 @@ export default class Home extends Component {
                 </View>  
         </Modal>
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}></Image>
-        <View style={styles.image}>
+        <Levels level= {this.state.level} />
+        <View style={styles.image}>      
           <TouchableOpacity>
             <Text onPress = {()=>{
-          this.props.navigation.navigate('Game',{dificult:this.state.dificult});
+          this.props.navigation.navigate('Game',{dificult:this.state.dificult, name:this.state.name});
           }} style={styles.buttons}>New Game</Text>
           </TouchableOpacity>
           <TouchableOpacity>

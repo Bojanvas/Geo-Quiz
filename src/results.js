@@ -21,14 +21,18 @@ import {
   PublisherBanner,
   AdMobRewarded
 } from 'react-native-admob';
+import realm from './realm';
+import User from "./user.js";
+import Score from "./score_realm.js";
 
 export default class Results extends Component{
     constructor(props){
         super(props);
         this.state={
-            name:'No Name',
+            name:this.props.navigation.state.params.name,
             modalVisible : true,
             poition:0,
+            score:0,
             location:'none',
         }
        
@@ -52,6 +56,18 @@ export default class Results extends Component{
         location: data
         });
     });
+    AsyncStorage.getItem("name").then(data => {
+        console.log(data);
+        if(data != " "){
+            this.setState({
+                name: data
+            });
+        } else {
+            this.setState({
+                name: "No name"
+            });
+        }
+    });
   }
   componentWillMount() {
       console.log('this is true or false '+this.props.navigation.state.params.game);
@@ -66,30 +82,34 @@ export default class Results extends Component{
     });
 }
   addscore(){
-              var difi =this.checkDif();
+    var difi =this.checkDif();
     var res = this.checkScore();
-        let realm = new Realm({
-            // schema for db
-            schema: [{name: 'Score',
-            properties: {
-                name:'string',
-                score: 'int',
-                date:'string',
-                dificult:'string',
-                }}]
-        });
-        var today = new Date(); // current date
-        var td = today.toDateString(); // format date
-           realm.write( ()=>{
-               // write to db res
-        let myRes = realm.create('Score',{
-            name:this.state.name,
-            score: res,
-            date:td,
-            dificult:difi,
-            location:this.state.location,
-        })
-    });
+    this.setState({
+        score : res,
+    })
+    var exp = this.calculateExp(res,this.props.navigation.state.params.dificult);
+    console.log(exp,res);
+    var result = {};
+    result.name = this.state.name;
+    result.location = this.state.location;
+    result.difi = difi;
+    result.res = res;
+    // add resulsts to score tableDB
+    Score.addResults(result);
+
+    //add to user table
+    db_user = User.getUser();
+    lvl = db_user[0].level;
+    oldExp = db_user[0].exp;
+    users = {};
+    users.id = db_user[0].id;
+    users_info = this.caclLevel(exp, lvl , oldExp);
+    users.level = users_info[0];
+    users.exp = users_info[1];
+    User.updatedUser(users);
+
+    var today = new Date(); // current date
+    var td = today.toDateString(); // format date
     var person ={};
     person.name =this.state.name;
     person.score = res;
@@ -97,11 +117,12 @@ export default class Results extends Component{
     person.dificult=difi;
     person.location =this.state.location;
     
-    fetch('https://bojanv4.herokuapp.com/results/',{
+
+    fetch('https://bojanv4.herokuapp.com/results',{
         method:'POST',
         headers:{
             'Accept': 'application/json',
-        'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
         },
         body:JSON.stringify({
             name:this.state.name,
@@ -115,19 +136,51 @@ export default class Results extends Component{
         }).catch(function(err) {
             console.log(err)
         })
+    fetch('https://bojanv4.herokuapp.com/levels',{
+        method:"POST",
+        headers:{
+            "Accept":"application/json",
+            "Content-Type":"application/json",
+        },
+        body: JSON.stringify({
+            id: users.id,
+            name: this.state.name,
+            location: this.state.location,
+            level: users.level,
+        })
+    }).then(function(response){
+        console.log("this is res"+response)
+    }).catch(function(err){
+        console.log(err)
+    })
+  }
+  caclLevel(exp,lvl,old){
+      //calculate the level
+      let checkExp = true;
+      exp = exp + old;
+        while(checkExp) {
+            var borderLvL = 10000 * lvl;
+            if(exp > borderLvL){
+                exp = exp - borderLvL;
+                lvl++;
+            } else {
+                checkExp = false;
+            }
+        }
+        return info =[lvl,exp];
+
   }
   checkDif(){
+      //Check dificulty of the game so can calucalte results 
       let dif = this.props.navigation.state.params.dificult;
-      if(dif==0){
-          difi ="Easy";
-          return difi;
-      }else if(dif==1){
-            difi ="Normal";
-          return difi;
-      }else if(dif==2){
+      if (dif == 0) {
+          difi = "Easy";
+      } else if ( dif == 1) {
+            difi = "Normal";
+      } else if ( dif == 2 ) {
             difi ="Hard";
-          return difi;
       }
+      return difi;
   }
 
 checkScore(){
@@ -148,6 +201,12 @@ calc(json,result){
     }
     return pos;
 }
+calculateExp(r,d){
+    //calucalte how much experinece user get
+    let dif = Number(d)+1;
+    return r * dif;
+
+}
 checkrank(result){
     var self = this;
     var difi =this.checkDif();
@@ -156,6 +215,7 @@ checkrank(result){
         return response.json();
     }).then(function(json){
         var pos= self.calc(json,resul);
+        console.log(pos);
         self.setState({
             position:pos,
         })
@@ -184,7 +244,8 @@ checkrank(result){
                             />
                             <TouchableHighlight style={styles.butt} onPress={() => {
                                 this.addscore();
-                            this.setModalVisible(false)
+                                AsyncStorage.setItem('name',this.state.name)
+                                this.setModalVisible(false)
                             }}>
                             <Text style ={{color:'white',textAlign:'center',}}>OK</Text>
                             </TouchableHighlight>
@@ -200,10 +261,10 @@ checkrank(result){
                 <Text style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
                 <Text style={styles.resNumber}>Online Rank:{this.state.position}</Text>
                 <Text style={styles.foosnote}>*Online ranking available only if you have internet access</Text>
-                <Text style={styles.resNumber}>Score:{this.checkScore()}</Text>
+                <Text style={styles.resNumber}>Score:{this.state.score}</Text>
                 <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
                 <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
-                <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results/")}> Check All-Time Results!!</Text>
+                <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results")}> Check All-Time Results!!</Text>
                 <AdMobBanner
                     adSize="fullBanner"
                     adUnitID="ca-app-pub-7664756446244941/5385120799"

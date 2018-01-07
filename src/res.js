@@ -72,6 +72,22 @@ import {
             console.log('work')
         });
     }
+    level(){
+        var self = this;
+        fetch('https://bojanv4.herokuapp.com/results/Levels').then(function(response){
+            return response.json();
+        }).then(function(json){
+            json.sort(function(a,b){
+                return b.score - a.score;
+            })
+            self.setState({
+                results:json,
+            })
+        }).then(function(){
+            console.log('work')
+        });
+
+    }
     checkrank(){
         var self = this;
         var difi =this.state.dif;
@@ -89,7 +105,11 @@ import {
         });
     }
     list({ item, index }){
+        if(item.level !== undefined ) {
+            return <View  style ={styles.row} key={index}><Text>  Pos:<Text style={styles.rows}>{index+1}</Text>   Name:<Text style={styles.rows}>{item.name}</Text>  Level:<Text style={styles.rows}>{item.level}</Text>  Location:<Text style={styles.rows}>{item.location}</Text></Text></View>
+        } else {
             return <View  style ={styles.row} key={index}><Text>  Pos:<Text style={styles.rows}>{index+1}</Text>   Name:<Text style={styles.rows}>{item.name}</Text>  Score:<Text style={styles.rows}>{item.score}</Text>  </Text><Text >  Location:<Text style={styles.rows}>{item.location}</Text></Text></View>
+        }       
     }
     render(){
         return(
@@ -113,9 +133,15 @@ import {
                     this.hard();
                     }} style={styles.butto}>Hard</Text>
                 </TouchableOpacity>
+                <TouchableOpacity>
+                        <Text onPress = {()=>{
+                    this.state.dif = 'Levels';           
+                    this.level();
+                    }} style={styles.level}>Levels</Text>
+                </TouchableOpacity>
                 </View>
             <View style ={styles.content}>
-                <Text>Results for:  <Text style={styles.rows}>{this.state.dif}</Text></Text>     
+                <Text>Results for:  <Text style={styles.rows}>{this.state.dif}</Text></Text> 
                 <FlatList 
                 data={this.state.results}
                 renderItem={this.list}
@@ -150,7 +176,7 @@ import {
         flexDirection:"row",
     },
     butto:{
-        width:width/3,
+        width:width/4,
         fontSize:20,
         justifyContent: 'center',
         alignItems: 'center',
@@ -159,6 +185,16 @@ import {
         color:"white",
         padding:10,
 
+    },
+    level:{
+        width:width/4,
+        fontSize:20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign:'center',
+        backgroundColor: '#32add2',
+        color:"gold",
+        padding:10,
     },
     row:{
         backgroundColor:'#f6f6f6f6',
