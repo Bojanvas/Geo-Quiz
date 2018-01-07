@@ -138,7 +138,6 @@ export default class Home extends Component {
     //getlvl from db
 
     var user = User.getUser();
-    console.log("User is tyope" + user[0]);
     if(user[0] != undefined ){
       this.setState({
         level : user[0].level,
@@ -199,7 +198,7 @@ export default class Home extends Component {
                 </View>  
         </Modal>
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}></Image>
-        <Levels level= {this.state.level} />
+        <Levels level= {this.state.level} exp = {this.state.exp} />
         <View style={styles.image}>      
           <TouchableOpacity>
             <Text onPress = {()=>{

@@ -5,24 +5,37 @@ import {
     StyleSheet,
     Dimensions
 } from 'react-native';
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
 
 export default class Levels extends Component{
     constructor(props){
         super(props);
     }
+
+    widthExp(){
+        let lvl = this.props.level;
+        let exp = this.props.exp;
+        let limit = lvl * 10000;
+        let parent = width/4;
+        let lastW = exp/limit * parent;
+        console.log(exp); 
+        return lastW;
+    }
     render(){
+        var newWidth = this.widthExp();
         return(
             <View style={styles.lvlCont}>
                 <View style={styles.lvlView}>
                     <Text style={styles.lvlText}>Level</Text>
-                    <Text style={styles.lvlNum}>{ this.props.level} </Text>
+                    <Text style={styles.lvlNum}>{ this.props.level}</Text>
+                    <View style={{height:10,position:"absolute",left:5,bottom:5,backgroundColor:"gold",width:newWidth}}></View>
                 </View>
             </View>        
         )
     }
 }
-var width = Dimensions.get('window').width; //full width
-var height = Dimensions.get('window').height; //full height
+
 const styles = StyleSheet.create({
     lvlCont:{
         height:height/6,
@@ -49,5 +62,5 @@ const styles = StyleSheet.create({
         fontFamily: 'Slabo',
         color:'#f4e542',
         textAlign:'center',
-    }
+    },
 })

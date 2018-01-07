@@ -2313,7 +2313,7 @@ const questions = [{
     {
         question: 'Guess the country from its outline?',
         img: require('../img/gyCou.png'),
-        corectAn: 'Columbia',
+        corectAn: 'French Guiana',
         ans: ['Ecuador', 'Mexico', 'Cuba', "French Guiana"],
         dificult: ['2','3'],
         type: 'country',     

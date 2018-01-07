@@ -78,7 +78,7 @@ import {
             return response.json();
         }).then(function(json){
             json.sort(function(a,b){
-                return b.score - a.score;
+                return b.level - a.level;
             })
             self.setState({
                 results:json,
