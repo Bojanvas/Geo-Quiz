@@ -57,8 +57,7 @@ export default class Results extends Component{
         });
     });
     AsyncStorage.getItem("name").then(data => {
-        console.log(data);
-        if(data != " "){
+        if(data){
             this.setState({
                 name: data
             });
