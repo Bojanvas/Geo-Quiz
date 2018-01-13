@@ -243,17 +243,16 @@ checkrank(result){
                             />
                             <TouchableHighlight style={styles.butt} onPress={() => {
                                 this.addscore();
-                                AsyncStorage.setItem('name',this.state.name)
-                                this.setModalVisible(false)
+                                AsyncStorage.setItem('name',this.state.name);
+                                this.setModalVisible(false);
+                                    // Display an interstitial
+                                    AdMobInterstitial.setAdUnitID('ca-app-pub-7664756446244941/2310636403');
+                                    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+                                    AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
                             }}>
                             <Text style ={{color:'white',textAlign:'center',}}>OK</Text>
                             </TouchableHighlight>
                         </View>
-                        <AdMobBanner
-                            adSize="fullBanner"
-                            adUnitID="ca-app-pub-7664756446244941/5385120799"
-                            didFailToReceiveAdWithError={this.bannerError}
-                        />
                     </View>
                 </Modal>
                 <Text style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
