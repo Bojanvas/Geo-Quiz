@@ -233,6 +233,7 @@ var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
 const styles = StyleSheet.create({
   container: {
+    width:width,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

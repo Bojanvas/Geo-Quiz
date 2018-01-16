@@ -246,9 +246,9 @@ checkrank(result){
                                 AsyncStorage.setItem('name',this.state.name);
                                 this.setModalVisible(false);
                                     // Display an interstitial
-                                    AdMobInterstitial.setAdUnitID('ca-app-pub-7664756446244941/2310636403');
-                                    AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
-                                    AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
+                                    // AdMobInterstitial.setAdUnitID('ca-app-pub-7664756446244941/2310636403');
+                                    // AdMobInterstitial.setTestDevices([AdMobInterstitial.simulatorId]);
+                                    // AdMobInterstitial.requestAd().then(() => AdMobInterstitial.showAd());
                             }}>
                             <Text style ={{color:'white',textAlign:'center',}}>OK</Text>
                             </TouchableHighlight>
