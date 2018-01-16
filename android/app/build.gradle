@@ -96,10 +96,9 @@ android {
     defaultConfig {
         applicationId "com.bojanvasilevski.geo"
         minSdkVersion 16
-        multiDexEnabled true
         targetSdkVersion 23
-        versionCode 23
-        versionName "1.2.2"
+        versionCode 24
+        versionName "1.2.3"
         multiDexEnabled true  
         ndk {
             abiFilters "armeabi-v7a", "x86"
@@ -148,15 +147,24 @@ android {
 
 dependencies {
     compile project(':react-native-push-notification')
-    compile ('com.google.android.gms:play-services-gcm:+') {
-        force = true;
+    // This should be here already
+    compile(project(':react-native-firebase')) {
+        transitive = false
     }
-    // compile project(':react-native-admob')
     compile project(':RNAdMob')
     compile project(':realm')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
+    compile ("com.google.firebase:firebase-core:+") {
+        force = true;
+    }
+    compile ('com.google.android.gms:play-services-gcm:+') {
+        force true;
+    }
+    compile ("com.google.android.gms:play-services-base:+"){
+        force = true;
+    }
 
 }
 
@@ -166,3 +174,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+

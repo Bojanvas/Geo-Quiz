@@ -20,6 +20,12 @@ import {
   UIManager
 } from 'react-native';
 
+import { 
+    AdMobBanner, 
+    AdMobInterstitial, 
+    PublisherBanner,
+    AdMobRewarded
+  } from 'react-native-admob';
 
 import {dificulties} from './questions.js';
 import TimerMixin from 'react-timer-mixin';
@@ -164,6 +170,13 @@ componentWillUnmount(){
    
     return (
       <View  style={styles.container}>
+        <View style={styles.ad}>
+            <AdMobBanner
+            adSize="fullBanner"
+            adUnitID="ca-app-pub-7664756446244941/5385120799"
+            didFailToReceiveAdWithError={this.bannerError}
+            />
+        </View>    
         <View style={styles.first}>
             <Image  style={styles.img} source={this.state.questions[i].img}></Image>
             <View style={styles.time}>
@@ -214,25 +227,26 @@ const styles = StyleSheet.create({
       justifyContent:'center',
   },
   img:{
-      flex:2,
+      marginTop:0,
+      flex:3,
       width:width/1.1,
       resizeMode:'contain',      
       backgroundColor:'#33afd4',
   },
   time:{
-      margin:5,
+      margin:2,
       flex:1,
       flexDirection:'row',
       justifyContent:'space-around',
   },
   quest:{
       backgroundColor:'white',
-      padding:3,
-      margin:4,
-      height:height/11,
+      padding:2,
+      margin:2,
+      height:height/13,
       width:120,
       textAlign:'center',
-      fontSize:20,
+      fontSize:19,
       fontFamily: 'Slabo',
   },
   qu:{
