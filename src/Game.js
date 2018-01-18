@@ -228,7 +228,7 @@ const styles = StyleSheet.create({
   },
   img:{
       marginTop:0,
-      flex:3,
+      flex:2,
       width:width/1.1,
       resizeMode:'contain',      
       backgroundColor:'#33afd4',

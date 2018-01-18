@@ -117,41 +117,41 @@ export default class Results extends Component{
     person.location =this.state.location;
     
 
-    fetch('https://bojanv4.herokuapp.com/results',{
-        method:'POST',
-        headers:{
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body:JSON.stringify({
-            name:this.state.name,
-            score: res,
-            date:td,
-            dificult:difi,
-            location:this.state.location
-        })
-    }).then(function(response) {
-        console.log(response)
-        }).catch(function(err) {
-            console.log(err)
-        })
-    fetch('https://bojanv4.herokuapp.com/levels',{
-        method:"POST",
-        headers:{
-            "Accept":"application/json",
-            "Content-Type":"application/json",
-        },
-        body: JSON.stringify({
-            id: users.id,
-            name: this.state.name,
-            location: this.state.location,
-            level: users.level,
-        })
-    }).then(function(response){
-        console.log("this is res"+response)
-    }).catch(function(err){
-        console.log(err)
-    })
+    // fetch('https://bojanv4.herokuapp.com/results',{
+    //     method:'POST',
+    //     headers:{
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body:JSON.stringify({
+    //         name:this.state.name,
+    //         score: res,
+    //         date:td,
+    //         dificult:difi,
+    //         location:this.state.location
+    //     })
+    // }).then(function(response) {
+    //     console.log(response)
+    //     }).catch(function(err) {
+    //         console.log(err)
+    //     })
+    // fetch('https://bojanv4.herokuapp.com/levels',{
+    //     method:"POST",
+    //     headers:{
+    //         "Accept":"application/json",
+    //         "Content-Type":"application/json",
+    //     },
+    //     body: JSON.stringify({
+    //         id: users.id,
+    //         name: this.state.name,
+    //         location: this.state.location,
+    //         level: users.level,
+    //     })
+    // }).then(function(response){
+    //     console.log("this is res"+response)
+    // }).catch(function(err){
+    //     console.log(err)
+    // })
   }
   caclLevel(exp,lvl,old){
       //calculate the level
