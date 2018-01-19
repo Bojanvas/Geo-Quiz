@@ -30,6 +30,7 @@ import {
 import {dificulties} from './questions.js';
 import TimerMixin from 'react-timer-mixin';
 import Resul from './results.js';
+import Hints from './hints.js';
 
 
 export default class Home extends Component {
@@ -184,6 +185,7 @@ componentWillUnmount(){
                 {"\n"}
                 {this.state.time}
             </Text>
+            <Hints />
             <Text  style={styles.quest}>Questions:
                 {"\n"}
                 {i+1}/{questions.length}
