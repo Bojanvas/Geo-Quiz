@@ -193,14 +193,16 @@ componentWillUnmount(){
          <View style={styles.second}>
          <Text style={{color:this.state.mesColor}}>{this.state.message}</Text>
          <View style={styles.questions}><Text style={styles.qu}>{this.state.questions[i].question  || 'No Question'}</Text></View>
-         <View style={styles.answers}>
-              <TouchableOpacity><Text onPress={(event)=>{  this.checkAn(this.state.questions[i].ans[0])}} style={styles.an}>{this.state.questions[i].ans[0] || 'No Question'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[1])}} style={styles.an}>{this.state.questions[i].ans[1] || 'No Question'}</Text></TouchableOpacity>
-         </View>
-          <View style={styles.answers}>
-              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[2])}} style={styles.an}>{this.state.questions[i].ans[2] || 'No Question'}</Text></TouchableOpacity>
-              <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[3])}} style={styles.an}>{this.state.questions[i].ans[3] || 'No Question'}</Text></TouchableOpacity>
-           </View>
+         <View style={styles.contAnswers}>
+            <View style={styles.answers}>
+                <TouchableOpacity><Text onPress={(event)=>{  this.checkAn(this.state.questions[i].ans[0])}} style={styles.an}>{this.state.questions[i].ans[0] || 'No Question'}</Text></TouchableOpacity>
+                <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[1])}} style={styles.an}>{this.state.questions[i].ans[1] || 'No Question'}</Text></TouchableOpacity>
+            </View>
+            <View style={styles.answers}>
+                <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[2])}} style={styles.an}>{this.state.questions[i].ans[2] || 'No Question'}</Text></TouchableOpacity>
+                <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[3])}} style={styles.an}>{this.state.questions[i].ans[3] || 'No Question'}</Text></TouchableOpacity>
+            </View>
+        </View>    
         </View>
       </View>
     );
@@ -222,13 +224,13 @@ const styles = StyleSheet.create({
       flex:6,
   },
   second:{
-      flex:4,
+      flex:5,
       alignItems:'center',
       justifyContent:'center',
   },
   img:{
       marginTop:0,
-      flex:2,
+      flex:3,
       width:width/1.1,
       resizeMode:'contain',      
       backgroundColor:'#33afd4',
@@ -241,7 +243,8 @@ const styles = StyleSheet.create({
   },
   quest:{
       backgroundColor:'white',
-      padding:2,
+      fontWeight:'bold',
+      padding:1,
       margin:2,
       height:height/13,
       width:120,
@@ -273,7 +276,8 @@ const styles = StyleSheet.create({
       elevation:6,
       fontWeight:'200',
       fontFamily: 'Slabo',
-
-
   },
+  contAnswers:{
+      flex:9,
+  }
 });
