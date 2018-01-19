@@ -22,6 +22,7 @@ import about from './src/About.js';
 import results from './src/results.js';
 import score from './src/score.js';
 import res from './src/res.js';
+import rewards from "./src/Rewards.js"
 
 export default class Geo extends Component {
     render() {
@@ -35,6 +36,7 @@ const Nav = StackNavigator({
     Game: { screen: gameApp },
     Option: { screen: options },
     About: { screen: about },
+    Rewards: { screen: rewards },
     Res:{
         screen: res
     },

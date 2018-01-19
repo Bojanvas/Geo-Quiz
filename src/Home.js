@@ -46,6 +46,7 @@ export default class Home extends Component {
            notif:'true',
            level:0,
            exp:0,
+           hints:0,
          }
        }
 
@@ -72,6 +73,16 @@ export default class Home extends Component {
     var users = User.getUser();
     this.setUser();
     console.log(users[0]);
+    // NOtifications
+    AsyncStorage.getItem('hint').then((data)=>{
+      if(data != null){
+      this.setState({
+        hints:data
+      })
+    }else{
+      AsyncStorage.setItem('hint','3');
+    }
+    })
     // NOtifications
     AsyncStorage.getItem('notif').then((data)=>{
       if(data != null){
@@ -220,6 +231,11 @@ export default class Home extends Component {
             <Text onPress = {()=>{
           this.props.navigation.navigate('Res');
           }} style={styles.buttons}>Results</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Text onPress = {()=>{
+          this.props.navigation.navigate('Rewards');
+          }} style={styles.buttons}>Rewards</Text>
           </TouchableOpacity>
           </View>
           <AdMobBanner
