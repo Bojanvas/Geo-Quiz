@@ -30,6 +30,7 @@ import {
 import {dificulties} from './questions.js';
 import TimerMixin from 'react-timer-mixin';
 import Resul from './results.js';
+import Hints from './Hints.js';
 
 
 export default class Home extends Component {
@@ -41,8 +42,8 @@ export default class Home extends Component {
         }
 
         this.dif = this.props.navigation.state.params.dificult; 
-         this.quest = dificulties[this.dif];
-          mixins: [TimerMixin],
+        this.quest = dificulties[this.dif];
+        mixins: [TimerMixin],
         this.state = {
             i:0,
             score:0,
@@ -51,6 +52,7 @@ export default class Home extends Component {
             dif:'',
             location:'None',
             questions : this.quest,
+            newArr : [],
             opacity:0,
             mesColor:'#8c1c41',
             message:'',
@@ -87,12 +89,13 @@ export default class Home extends Component {
 }
 random()
       AsyncStorage.getItem('dificult').then((data)=>{
-          // here iam chaning difficuly fonr games
+          // here iam chaning difficuly for games
         this.quest = newdificulties[data];
-          this.setState({
+        this.setState({
             questions:this.quest,
             dif:data,
-    })
+            newArr:Array.from(this.quest[this.state.i].ans)
+        })
    }) 
 
    this.interval = setInterval(
@@ -129,7 +132,7 @@ random()
           if(i<19){
            this.nextquest();
           }else{
-              this.gameover();
+            this.gameover();
           }
 
       }else{
@@ -148,16 +151,24 @@ random()
       }
 
   }
-  nextquest(){
-            var i = this.state.i;
-       this.setState({
-              i: i+1,
-          })
-  }
-  gameover(){
-         clearInterval(this.interval);
-        this.props.navigation.navigate('Results',{ score:this.state.score,time:this.state.time,dificult:this.state.dif,game:this.state.game,name:this.props.navigation.state.params.name});
 
+  onUpdate = (val) => {
+    this.setState({
+      message: val,
+    })
+  };
+
+  nextquest(){
+    var i = this.state.i;
+    this.setState({
+        i: i+1,
+        newArr:Array.from(this.state.questions[i+1].ans)
+    })
+  }
+
+  gameover(){
+        clearInterval(this.interval);
+        this.props.navigation.navigate('Results',{ score:this.state.score,time:this.state.time,dificult:this.state.dif,game:this.state.game,name:this.props.navigation.state.params.name});
       }
 
 componentWillUnmount(){
@@ -167,7 +178,8 @@ componentWillUnmount(){
 
       var i = this.state.i;
       var questions = this.state.questions;
-   
+      var questArr = this.state.newArr;
+      var msg = this.state.message;
     return (
       <View  style={styles.container}>
         <View style={styles.ad}>
@@ -178,12 +190,13 @@ componentWillUnmount(){
             />
         </View>    
         <View style={styles.first}>
-            <Image  style={styles.img} source={this.state.questions[i].img}></Image>
+            <Image style={styles.img} source={this.state.questions[i].img}></Image>
             <View style={styles.time}>
             <Text style={styles.quest}>time:
                 {"\n"}
                 {this.state.time}
             </Text>
+            <Hints questions={questArr} total={questArr.length} correct={this.state.questions[i].corectAn } message={msg} onUpdate={this.onUpdate} />
             <Text  style={styles.quest}>Questions:
                 {"\n"}
                 {i+1}/{questions.length}
@@ -191,16 +204,15 @@ componentWillUnmount(){
             </View>
         </View>
          <View style={styles.second}>
-         <Text style={{color:this.state.mesColor}}>{this.state.message}</Text>
+         <Text style={{color:this.state.mesColor}}>{msg}</Text>
          <View style={styles.questions}><Text style={styles.qu}>{this.state.questions[i].question  || 'No Question'}</Text></View>
          <View style={styles.contAnswers}>
             <View style={styles.answers}>
-                <TouchableOpacity><Text onPress={(event)=>{  this.checkAn(this.state.questions[i].ans[0])}} style={styles.an}>{this.state.questions[i].ans[0] || 'No Question'}</Text></TouchableOpacity>
-                <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[1])}} style={styles.an}>{this.state.questions[i].ans[1] || 'No Question'}</Text></TouchableOpacity>
-            </View>
-            <View style={styles.answers}>
-                <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[2])}} style={styles.an}>{this.state.questions[i].ans[2] || 'No Question'}</Text></TouchableOpacity>
-                <TouchableOpacity><Text onPress={(event)=>{ this.checkAn(this.state.questions[i].ans[3])}} style={styles.an}>{this.state.questions[i].ans[3] || 'No Question'}</Text></TouchableOpacity>
+            {
+             questArr.map((questions,i)=>{
+                return <TouchableOpacity key={i} ><Text onPress={(event)=>{ this.checkAn(questions) }} style={styles.an}>{questions || 'No Question'}</Text></TouchableOpacity>
+             })
+            }
             </View>
         </View>    
         </View>
@@ -222,6 +234,7 @@ const styles = StyleSheet.create({
   },
   first:{
       flex:6,
+      alignItems:'center',
   },
   second:{
       flex:5,
@@ -246,23 +259,23 @@ const styles = StyleSheet.create({
       fontWeight:'bold',
       padding:1,
       margin:2,
-      height:height/13,
+      height:height/13.5,
       width:120,
       textAlign:'center',
-      fontSize:19,
+      fontSize:17,
       fontFamily: 'Slabo',
   },
   qu:{
-      color:'white',
-      textAlign:'center',
-      fontSize:24,
+     color:'white',
+     textAlign:'center',
+     fontSize:24,
      fontFamily: 'Slabo',
   },
   answers:{
-        flexDirection:'row',
         flex:0,
         marginBottom:10,
-        alignItems:'center',
+        flexWrap:'wrap',
+        flexDirection:'row',
         justifyContent: 'space-around',
   },
   an:{
