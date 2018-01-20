@@ -37,7 +37,6 @@ export default class Home extends Component {
     
     constructor(props){
         super(props);
-        this.checkAn = this.checkAn.bind(this);
         if (Platform.OS === 'android') {
       UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
         }
@@ -90,14 +89,12 @@ export default class Home extends Component {
 }
 random()
       AsyncStorage.getItem('dificult').then((data)=>{
-          // here iam chaning difficuly fonr games
+          // here iam chaning difficuly for games
         this.quest = newdificulties[data];
         this.setState({
             questions:this.quest,
             dif:data,
-        })
-        this.setState({
-            newArr:Array.from(this.state.questions[this.state.i].ans)
+            newArr:Array.from(this.quest[this.state.i].ans)
         })
    }) 
 
@@ -237,6 +234,7 @@ const styles = StyleSheet.create({
   },
   first:{
       flex:6,
+      alignItems:'center',
   },
   second:{
       flex:5,
@@ -261,16 +259,16 @@ const styles = StyleSheet.create({
       fontWeight:'bold',
       padding:1,
       margin:2,
-      height:height/13,
+      height:height/13.5,
       width:120,
       textAlign:'center',
-      fontSize:19,
+      fontSize:17,
       fontFamily: 'Slabo',
   },
   qu:{
-      color:'white',
-      textAlign:'center',
-      fontSize:24,
+     color:'white',
+     textAlign:'center',
+     fontSize:24,
      fontFamily: 'Slabo',
   },
   answers:{

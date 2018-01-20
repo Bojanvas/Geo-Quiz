@@ -8,15 +8,15 @@ import {
     Linking,
     WebView,
     Dimensions,
-    } from 'react-native';
+} from 'react-native';
 
     export default class About extends Component{
-         static navigationOptions = {
+    static navigationOptions = {
     title: 'About',
     headerTintColor: 'white',
-     headerStyle: {
-       backgroundColor: '#33afd4', 
-       elevation: null},
+    headerStyle: {
+    backgroundColor: '#33afd4', 
+    elevation: null },
   }; 
 
     render(){
@@ -26,11 +26,11 @@ import {
              <Image source={require('../img/earth3.png')} style={styles.backgroundImage}></Image>
              <View style={styles.about}>   
                 <View style={styles.abBox}>
-                        <Text style={styles.abText}>Thanks for downlaoding my app, this app is for testing your Geographic knowledge it is great for killing time i hope you will enjoyed </Text>
-                        <Text  style={styles.abLink} onPress={()=>Linking.openURL("https://play.google.com/store/apps/details?id=com.bojanvasilevski.geo&hl=en")}>Rate It!!</Text>
-                        <Text  style={styles.abText}>I am Bojan Vasilevski, Web Developer/Mobile Developer this is my </Text>
-                        <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com")}> Website!!</Text>
-                        <Text  style={styles.abText}>Version 1.2.6</Text>
+                    <Text style={styles.abText}>Thanks for downlaoding my app, this app is for testing your Geographic knowledge it is great for killing time i hope you will enjoyed </Text>
+                    <Text  style={styles.abLink} onPress={()=>Linking.openURL("https://play.google.com/store/apps/details?id=com.bojanvasilevski.geo&hl=en")}>Rate It!!</Text>
+                    <Text  style={styles.abText}>I am Bojan Vasilevski, Web Developer/Mobile Developer this is my </Text>
+                    <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com")}> Website!!</Text>
+                    <Text  style={styles.abText}>Version 1.3.2</Text>
                 </View>
              </View>
             </View>

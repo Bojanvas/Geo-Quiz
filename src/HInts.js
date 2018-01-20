@@ -36,8 +36,8 @@ export default class Hints extends Component {
             let strHint = String(hints-1);
             AsyncStorage.setItem('hint',strHint);
         } else {
-            if(hints == 0){
-                 message ='You need to match videos in options for more hints';
+            if(hints == 0) {
+                 message ='You need to match video for more hints, go to the main screen';
                  this.props.onUpdate(message);
             } else {
                  message= 'You can use hint only once per-questions';
@@ -70,13 +70,12 @@ var width = Dimensions.get('window').width; //full width
 var height = Dimensions.get('window').height; //full height
 const styles = StyleSheet.create({
     containerHints:{
-
     },
     hintButt:{
         width:width/4,
         margin:10,
         textAlign:'center',
-        fontSize:22,
+        fontSize:20,
         backgroundColor:'#1dad35',
         color:'#ffffff',
         padding:5,

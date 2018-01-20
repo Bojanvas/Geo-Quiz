@@ -39,7 +39,7 @@ export default class Rewards extends Component {
                 hints: data,
             });
         });
-        AdMobRewarded.setAdUnitID('ca-app-pub-7664756446244941/3539652355');
+        AdMobRewarded.setAdUnitID("ca-app-pub-7664756446244941/3539652355");
         
         AdMobRewarded.setTestDevices([AdMobRewarded.simulatorId]);
 
@@ -85,7 +85,7 @@ export default class Rewards extends Component {
 
     adVideo() {
         // Display a rewarded ad
-        ad= "ca-app-pub-7664756446244941~9383897941";
+        ad='ca-app-pub-7664756446244941/3539652355';
         AdMobRewarded.showAd().catch(error => {
             console.warn(error);
             this.setState({
