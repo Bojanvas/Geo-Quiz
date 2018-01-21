@@ -255,14 +255,14 @@ checkrank(result){
                         </View>
                     </View>
                 </Modal>
-                <Text style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
-                <Text style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
-                <Text style={styles.resNumber}>Online Rank:{this.state.position}</Text>
-                <Text style={styles.foosnote}>*Online ranking available only if you have internet access</Text>
-                <Text style={styles.resNumber}>Score:{this.state.score}</Text>
-                <TouchableOpacity><Text style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
-                <TouchableOpacity><Text style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
-                <Text style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results")}> Check All-Time Results!!</Text>
+                <Text allowFontScaling={false} style={styles.resTitle}> Congrats You have Finish the quizz:</Text>
+                <Text allowFontScaling={false} style={styles.resNumber}>Corect Questions:{this.props.navigation.state.params.score}</Text>
+                <Text allowFontScaling={false} style={styles.resNumber}>Online Rank:{this.state.position}</Text>
+                <Text allowFontScaling={false} style={styles.foosnote}>*Online ranking available only if you have internet access</Text>
+                <Text allowFontScaling={false} style={styles.resNumber}>Score:{this.state.score}</Text>
+                <TouchableOpacity><Text allowFontScaling={false} style={styles.back} onPress = {()=>{this.props.navigation.navigate('Home')}}>Retrun back</Text></TouchableOpacity>
+                <TouchableOpacity><Text allowFontScaling={false} style={{fontSize:20}} onPress={()=>{ this.props.navigation.navigate('Score')}}>Check Score</Text></TouchableOpacity>
+                <Text allowFontScaling={false} style={styles.abLink}  onPress={()=>Linking.openURL("https://bojanv4.herokuapp.com/results")}> Check All-Time Results!!</Text>
                 <AdMobBanner
                     adSize="fullBanner"
                     adUnitID="ca-app-pub-7664756446244941/5385120799"

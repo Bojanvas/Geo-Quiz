@@ -30,7 +30,6 @@ export default class Rewards extends Component {
         headerStyle: {
         backgroundColor: '#33afd4', 
         elevation: null},
-        headerLeft: null,
     };
 
     componentDidMount(){
@@ -89,7 +88,7 @@ export default class Rewards extends Component {
         AdMobRewarded.showAd().catch(error => {
             console.warn(error);
             this.setState({
-                msg:String(error),
+                msg:String(error) + "Try again later",
             })
         });
     }
@@ -122,8 +121,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Slabo',
     },
     buttons:{
+        justifyContent : 'center',
         marginTop:50,
-        marginLeft:40,
         padding:10,
         fontSize:24,
         textAlign:'center',

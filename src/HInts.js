@@ -60,7 +60,7 @@ export default class Hints extends Component {
         var hint = this.state.hints;
         return(
             <View style={styles.containerHints}>
-                <TouchableOpacity><Text onPress={(event)=>{ this.hints(); }} style={styles.hintButt}>Hint  {hint}/3</Text></TouchableOpacity>
+                <TouchableOpacity><Text allowFontScaling={false} onPress={(event)=>{ this.hints(); }} style={styles.hintButt}>Hint  {hint}/3</Text></TouchableOpacity>
             </View>    
         )
     }
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
         width:width/4,
         margin:10,
         textAlign:'center',
-        fontSize:20,
+        fontSize:18,
         backgroundColor:'#1dad35',
         color:'#ffffff',
         padding:5,

@@ -89,7 +89,7 @@ export default class Option extends Component {
         <View style={styles.opDiv}>{this.checkdb(lastdb)}</View>
         <View style={styles.opDiv}>
           <View style={{ flex: 5 }}>
-            <Text style={styles.opButtons}>Difficulty </Text>
+            <Text allowFontScaling={false} style={styles.opButtons}>Difficulty </Text>
           </View>
           <View style={{ flex: 5 }}>
             <Picker
@@ -109,6 +109,7 @@ export default class Option extends Component {
         <View style={styles.opDiv}>
           <TouchableOpacity>
             <Text
+              allowFontScaling={false}
               onPress={() => {
                 alert("Coming Soon...");
               }}
@@ -121,6 +122,7 @@ export default class Option extends Component {
         <View style={styles.opDiv}>
           <TouchableOpacity>
             <Text
+              allowFontScaling={false}
               onPress={() => {
                 this.props.navigation.navigate("Score");
               }}
@@ -132,6 +134,7 @@ export default class Option extends Component {
         </View>
         <View style={styles.opDiv}>
             <Text
+              allowFontScaling={false}
               onPress={() => {
                 alert("Coming Soon...");
               }}
@@ -150,7 +153,7 @@ export default class Option extends Component {
         </View>
         <View style={styles.opDiv}>
           <View style={{ flex: 5 }}>
-            <Text style={styles.opButtons}>Location </Text>
+            <Text allowFontScaling={false} style={styles.opButtons}>Location </Text>
           </View>
           <View style={{ flex: 5 }}>
             <Picker
@@ -167,7 +170,8 @@ export default class Option extends Component {
             </Picker>
           </View>
         </View>
-        <Text
+        <Text 
+          allowFontScaling={false}
           style={styles.abLink}
           onPress={() =>
             Linking.openURL("https://bojanv4.herokuapp.com/results")}

@@ -192,12 +192,12 @@ componentWillUnmount(){
         <View style={styles.first}>
             <Image style={styles.img} source={this.state.questions[i].img}></Image>
             <View style={styles.time}>
-            <Text style={styles.quest}>time:
+            <Text allowFontScaling={false} style={styles.quest}>time:
                 {"\n"}
                 {this.state.time}
             </Text>
             <Hints questions={questArr} total={questArr.length} correct={this.state.questions[i].corectAn } message={msg} onUpdate={this.onUpdate} />
-            <Text  style={styles.quest}>Questions:
+            <Text allowFontScaling={false} style={styles.quest}>Questions:
                 {"\n"}
                 {i+1}/{questions.length}
             </Text>
@@ -210,7 +210,7 @@ componentWillUnmount(){
             <View style={styles.answers}>
             {
              questArr.map((questions,i)=>{
-                return <TouchableOpacity key={i} ><Text onPress={(event)=>{ this.checkAn(questions) }} style={styles.an}>{questions || 'No Question'}</Text></TouchableOpacity>
+                return <TouchableOpacity key={i} ><Text allowFontScaling={false} onPress={(event)=>{ this.checkAn(questions) }} style={styles.an}>{questions || 'No Question'}</Text></TouchableOpacity>
              })
             }
             </View>
@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
       padding:1,
       margin:2,
       height:height/13.5,
-      width:120,
+      width:90,
       textAlign:'center',
       fontSize:17,
       fontFamily: 'Slabo',
