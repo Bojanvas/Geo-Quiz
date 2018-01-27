@@ -30,7 +30,7 @@ import {
 import {dificulties} from './questions.js';
 import TimerMixin from 'react-timer-mixin';
 import Resul from './results.js';
-import Hints from './Hints.js';
+import Hints from './hints.js';
 
 
 export default class Home extends Component {
