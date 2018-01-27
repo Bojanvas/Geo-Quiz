@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   buttons:{
-    margin:10,
+    margin:8,
     padding:10,
     fontSize:24,
     textAlign:'center',

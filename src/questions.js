@@ -327,8 +327,8 @@ const questions = [{
     {
         question: 'Which country does this flag represent?',
         img: require('../img/congo.png'),
-        corectAn: 'Democratic Republic of the Congo',
-        ans: ['Democratic Republic of the Congo', 'Uganda', 'Cameroon', "Sudan"],
+        corectAn: 'DR Congo',
+        ans: ['DR Congo', 'Uganda', 'Cameroon', "Sudan"],
         dificult: ['2', '3'],
         type: 'flag',
     },
@@ -1601,7 +1601,7 @@ const questions = [{
     },
     //Mount
     {
-        question: 'Highest Mountain Peaks in the World?',
+        question: 'Highest Mountain Peak in the World?',
         img: require('../img/mount.jpg'),
         corectAn: 'Mount Everest',
         ans: ['Lhotse', 'Mount Everest', 'K2', "Kanchenjunga"],
@@ -1609,7 +1609,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the Balkans?',
+        question: 'Highest Mountain Peak in Balkans?',
         img: require('../img/mount4.jpg'),
         corectAn: 'Rila',
         ans: ['Rila', 'Korab', 'Olimp', "Baba"],
@@ -1617,7 +1617,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the Europe?',
+        question: 'Highest Mountain Peak in Europe?',
         img: require('../img/mount.jpg'),
         corectAn: 'Mount Elbrus',
         ans: ['Mount Elbrus', 'Mount Everest', 'K2', "Mont Blanc"],
@@ -1625,7 +1625,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the Africa?',
+        question: 'Highest Mountain Peak in Africa?',
         img: require('../img/mount.jpg'),
         corectAn: 'Kilimanjaro',
         ans: ['Mount Meru', 'Mount Everest', 'Mount Kenya', "Kilimanjaro"],
@@ -1633,7 +1633,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the South America?',
+        question: 'Highest Mountain Peak in South America?',
         img: require('../img/mount2.jpg'),
         corectAn: 'Aconcagua',
         ans: ['Aconcagua', 'Mount Everest', 'Mount McKinley', "Tajumulco"],
@@ -1641,7 +1641,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the China?',
+        question: 'Highest Mountain Peak in China?',
         img: require('../img/mount2.jpg'),
         corectAn: 'Mount Everest',
         ans: ['Lhotse', 'Mount Everest', 'Kanchenjunga', "Tajumulco"],
@@ -1649,7 +1649,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the India?',
+        question: 'Highest Mountain Peak in India?',
         img: require('../img/mount2.jpg'),
         corectAn: 'Kanchenjunga',
         ans: ['Lhotse', 'Mount Everest', 'Kanchenjunga', "Nanda Devi"],
@@ -1657,7 +1657,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the Spain?',
+        question: 'Highest Mountain Peak in Spain?',
         img: require('../img/moun_3.jpg'),
         corectAn: 'Mount Teide',
         ans: ['Lhotse', 'Mount Teide', 'Mulhacén', "Nanda Devi"],
@@ -1665,7 +1665,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the Iran?',
+        question: 'Highest Mountain Peak in Iran?',
         img: require('../img/moun_3.jpg'),
         corectAn: 'Damavand',
         ans: ['Damavand', 'Alam-Kuh', 'Mulhacén', "Nanda Devi"],
@@ -1673,7 +1673,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the North America?',
+        question: 'Highest Mountain Peak in North America?',
         img: require('../img/mount2.jpg'),
         corectAn: 'Mount McKinley',
         ans: ['Aconcagua', 'Mount Everest', 'Mount McKinley', "Tajumulco"],
@@ -1681,7 +1681,7 @@ const questions = [{
         type: 'mountain',
     },
     {
-        question: 'Highest Mountain Peaks in the Russia?',
+        question: 'Highest Mountain Peaks in Russia?',
         img: require('../img/mount2.jpg'),
         corectAn: 'Mount Elbrus',
         ans: ['Mount Ural', 'Mount Kazbek', 'Dykh-Tau', "Mount Elbrus"],
@@ -1701,28 +1701,28 @@ const questions = [{
         question: 'Largest lake in the world?',
         img: require('../img/lake.jpg'),
         corectAn: 'Caspian Sea',
-        ans: ['Lake Michigan–Huron', 'Lake Baikal', 'Lake Victoria', "Caspian Sea"],
+        ans: ['Lake Michigan', 'Lake Baikal', 'Lake Victoria', "Caspian Sea"],
         dificult: ['2', '3'],
         type: 'lake',
     },
     {
-        question: 'Largest lake in the Africa?',
+        question: 'Largest lake in Africa?',
         img: require('../img/lake.jpg'),
         corectAn: 'Lake Victoria',
-        ans: ['Lake Michigan–Huron', 'Lake Baikal', 'Lake Victoria', "Lake Tanganyika"],
+        ans: ['Lake Michigan', 'Lake Baikal', 'Lake Victoria', "Lake Tanganyika"],
         dificult: ['2', '3'],
         type: 'lake',
     },
     {
-        question: 'Largest lake in the North America?',
+        question: 'Largest lake in North America?',
         img: require('../img/lake2.jpg'),
         corectAn: 'Lake Michigan–Huron',
-        ans: ['Lake Michigan–Huron', 'Lake Superior', 'Lake Victoria', "Lake Huron"],
+        ans: ['Lake Michigan', 'Lake Superior', 'Lake Victoria', "Lake Huron"],
         dificult: ['2', '3'],
         type: 'lake',
     },
     {
-        question: 'Largest lake in the South America?',
+        question: 'Largest lake in South America?',
         img: require('../img/lake2.jpg'),
         corectAn: 'Lake Maracaibo',
         ans: ['Lake Titicaca', 'Lake Superior', 'Lake Maracaibo', "Lake Huron"],
@@ -1730,7 +1730,7 @@ const questions = [{
         type: 'lake',
     },
     {
-        question: 'Country with most Lake in the World?',
+        question: 'Country with most lakes in the World?',
         img: require('../img/lake2.jpg'),
         corectAn: 'Canada',
         ans: ['USA', 'Finland', 'Russia', "Canada"],
@@ -1739,7 +1739,7 @@ const questions = [{
     },
     // Deserts
     {
-        question: 'Largest desert in the world?',
+        question: 'Largest desert in world?',
         img: require('../img/desert.jpg'),
         corectAn: 'Sahara',
         ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
@@ -1747,7 +1747,7 @@ const questions = [{
         type: 'desert',
     },
     {
-        question: 'Largest desert in the Asia?',
+        question: 'Largest desert in Asia?',
         img: require('../img/desert.jpg'),
         corectAn: 'Gobi Desert',
         ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
@@ -1755,7 +1755,7 @@ const questions = [{
         type: 'desert',
     },
     {
-        question: 'Largest desert in the North America?',
+        question: 'Largest desert in North America?',
         img: require('../img/desert.jpg'),
         corectAn: 'Great Basin Desert',
         ans: ['Kalahari Desert', 'Great Basin Desert', 'Gobi Desert', "Chihuahuan Desert"],
@@ -1763,7 +1763,7 @@ const questions = [{
         type: 'desert',
     },
     {
-        question: 'Second largest desert in the Africa?',
+        question: 'Second largest desert in Africa?',
         img: require('../img/desert.jpg'),
         corectAn: 'Kalahari Desert',
         ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
@@ -1771,7 +1771,7 @@ const questions = [{
         type: 'desert',
     },
     {
-        question: 'Largest desert in the South America?',
+        question: 'Largest desert in South America?',
         img: require('../img/desert.jpg'),
         corectAn: 'Atacama Desert',
         ans: ['Kalahari Desert', 'Atacama Desert', 'Gobi Desert', "Sahara"],
@@ -1812,7 +1812,7 @@ const questions = [{
         type: 'ocean',
     },
     {
-        question: 'How many oceans border the United States?',
+        question: 'How many oceans does United States border?',
         img: require('../img/ocean.jpg'),
         corectAn: '3',
         ans: ['3', '2', '5', "4"],
@@ -1820,7 +1820,7 @@ const questions = [{
         type: 'ocean',
     },
     {
-        question: 'How many oceans border the Russia?',
+        question: 'How many oceans does Russia border?',
         img: require('../img/ocean.jpg'),
         corectAn: '2',
         ans: ['3', '2', '1', "4"],
@@ -1828,7 +1828,7 @@ const questions = [{
         type: 'ocean',
     },
     {
-        question: 'How many oceans border the South Africa?',
+        question: 'from how many oceans is surround South Africa?',
         img: require('../img/ocean.jpg'),
         corectAn: '2',
         ans: ['3', '2', '1', "4"],
@@ -1845,7 +1845,7 @@ const questions = [{
         type: 'sea',
     },
     {
-        question: 'Largest sea in the Europe?',
+        question: 'Largest sea in Europe?',
         img: require('../img/sea.jpg'),
         corectAn: 'Mediterranean',
         ans: ['Mediterranean', 'Caribbean Sea', 'Coral Sea', "South China Sea"],
@@ -1870,7 +1870,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Second largest country in the world?',
+        question: 'Second largest country in world?',
         img: require('../img/count.jpg'),
         corectAn: 'Canada',
         ans: ['Russia', 'US', 'Canada', "China"],
@@ -1878,7 +1878,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Second largest country in the North America?',
+        question: 'Second largest country in North America?',
         img: require('../img/count.jpg'),
         corectAn: 'US',
         ans: ['Russia', 'US', 'Canada', "China"],
@@ -1886,7 +1886,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Largest country in the Africa?',
+        question: 'Largest country in Africa?',
         img: require('../img/count.jpg'),
         corectAn: 'Algeria',
         ans: ['Libya', 'Congo', 'Sudan', "Algeria"],
@@ -1894,7 +1894,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Second largest country in the Africa?',
+        question: 'Second largest country in Africa?',
         img: require('../img/count.jpg'),
         corectAn: 'Congo',
         ans: ['Libya', 'Congo', 'Sudan', "Algeria"],
@@ -1902,7 +1902,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Second largest country in the South America?',
+        question: 'Second largest country in South America?',
         img: require('../img/count.jpg'),
         corectAn: 'Argentina',
         ans: ['Argentina', 'Brazil', 'Peru', "Columbia"],
@@ -1910,7 +1910,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Second largest country in the Europa?',
+        question: 'Second largest country in Europa?',
         img: require('../img/count.jpg'),
         corectAn: 'Ukraine',
         ans: ['Ukraine', 'Russia', 'France', "Sweden"],
@@ -1918,7 +1918,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Second largest country in the Asia?',
+        question: 'Second largest country in Asia?',
         img: require('../img/count.jpg'),
         corectAn: 'China',
         ans: ['India', 'Russia', 'Iran', "China"],
@@ -1926,7 +1926,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Largest country in the Middle East?',
+        question: 'Largest country in Middle East?',
         img: require('../img/count.jpg'),
         corectAn: 'Saudi Arabia',
         ans: ['India', 'Egypt', 'Iran', "Saudi Arabia"],
@@ -1934,7 +1934,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Smallest country in the South America?',
+        question: 'Smallest country in South America?',
         img: require('../img/small.jpg'),
         corectAn: 'Suriname',
         ans: ['Suriname', 'Ecuador', 'Peru', "Panama"],
@@ -1942,7 +1942,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Smallest country in the Europe?',
+        question: 'Smallest country in Europe?',
         img: require('../img/small.jpg'),
         corectAn: 'Vatican City',
         ans: ['Andora', 'Monaco', 'Vatican City', "San Marino"],
@@ -1950,7 +1950,7 @@ const questions = [{
         type: 'size',     
     },
     {
-        question: 'Smallest country in the Asia?',
+        question: 'Smallest country in Asia?',
         img: require('../img/small.jpg'),
         corectAn: 'Maldives',
         ans: ['Brunei', 'Bahrain', 'Singapore', "Maldives"],
@@ -2894,6 +2894,72 @@ const questions = [{
         dificult: ['1','2'],
         type: 'country',     
     },
+    //Island
+    {
+        question: 'Largest island in the world?',
+        img: require('../img/isla.jpg'),
+        corectAn: 'Greenland',
+        ans: ['UK', 'Greenland', 'New Guinea', "Borneo"],
+        dificult: ['1','2'],
+        type: 'island',     
+    },
+    {
+        question: 'Second largest island in the world?',
+        img: require('../img/isla.jpg'),
+        corectAn: 'New Guinea',
+        ans: ['UK', 'Greenland', 'New Guinea', "Borneo"],
+        dificult: ['1','2'],
+        type: 'island',     
+    },
+    {
+        question: 'Largest island in southeast Asia?',
+        img: require('../img/isla.jpg'),
+        corectAn: 'Borneo',
+        ans: ['Java', 'Sumatra', 'New Guinea', "Borneo"],
+        dificult: ['2','3'],
+        type: 'island',     
+    },
+    {
+        question: 'Largest island in Europe?',
+        img: require('../img/isla.jpg'),
+        corectAn: 'UK',
+        ans: ['Iceland', 'Ireland', 'Sicily', "UK"],
+        dificult: ['1','2'],
+        type: 'island',     
+    },
+    {
+        question: 'Largest island in Indain Ocean?',
+        img: require('../img/isla.jpg'),
+        corectAn: 'Madagascar',
+        ans: ['Madagascar', 'Réunion', 'Sicily', "Mauritius"],
+        dificult: ['2','3'],
+        type: 'island',     
+    },
+    {
+        question: 'Largest island in Mediterranean Sea?',
+        img: require('../img/isl.jpg'),
+        corectAn: 'Sicily',
+        ans: ['Sardinia', 'Ireland', 'Sicily', "UK"],
+        dificult: ['2','3'],
+        type: 'island',     
+    },
+    {
+        question: 'Largest island in Caribbean?',
+        img: require('../img/isla.jpg'),
+        corectAn: 'Cuba',
+        ans: ['Puerto Rico', 'Jamaica', 'Sicily', "Cuba"],
+        dificult: ['1','2'],
+        type: 'island',     
+    },
+    {
+        question: 'Largest island in Micronesia?',
+        img: require('../img/isl.jpg'),
+        corectAn: 'Pohnpei',
+        ans: ['Chuuk', 'Yap', 'Pohnpei', "Kosrae"],
+        dificult: ['3'],
+        type: 'island',     
+    },
+
     // RIVERS
     {
         question: 'What is the longest river in the world?',
@@ -2904,7 +2970,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'What is the longest river in the Europe?',
+        question: 'What is the longest river in Europe?',
         img: require('../img/rive.jpg'),
         corectAn: 'Volga',
         ans: ['Volga', 'Danube', 'Ural River', "Dnieper"],
@@ -2912,7 +2978,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'What is the longest river in the Sibir?',
+        question: 'What is the longest river in Sibir?',
         img: require('../img/ob.jpg'),
         corectAn: 'Ob River',
         ans: ['Volga', 'Irtysh River', 'Ural River', "Ob River"],
@@ -2920,7 +2986,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'What is the longest river in the India?',
+        question: 'What is the longest river in India?',
         img: require('../img/rive.jpg'),
         corectAn: 'Indus River',
         ans: ['Brahmaputra River', 'Indus River', 'Yarlung ', "Ganges"],
@@ -2928,7 +2994,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'What is the longest river in the Australia?',
+        question: 'What is the longest river in Australia?',
         img: require('../img/rive.jpg'),
         corectAn: 'Murray',
         ans: ['Volga', 'Darling', 'Murrumbidgee', "Murray"],
@@ -2936,7 +3002,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'What is the longest river in the Asia?',
+        question: 'What is the longest river in Asia?',
         img: require('../img/riverj.jpg'),
         corectAn: 'Yangtze',
         ans: ['Yellow River', 'Yangtze', 'Murrumbidgee', "Irtysh"],
@@ -2944,7 +3010,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'What is the longest river in the North America?',
+        question: 'What is the longest river in North America?',
         img: require('../img/rive.jpg'),
         corectAn: 'Missouri',
         ans: ['Rio Grande', 'Yukon River', 'Mississippi', "Missouri"],
@@ -2952,7 +3018,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'Rivers whit largest discharge of water?',
+        question: 'River with largest discharge of water?',
         img: require('../img/river.jpg'),
         corectAn: 'Amazon',
         ans: ['Mississippi', 'Congo', 'Nile', "Amazon"],
@@ -2960,7 +3026,7 @@ const questions = [{
         type: 'river',
     },
     {
-        question: 'Rivers whit largest discharge of water in Africa?',
+        question: 'River with largest discharge of water in Africa?',
         img: require('../img/river.jpg'),
         corectAn: 'Congo',
         ans: ['Kasai', 'Congo', 'Nile', "Amazon"],
