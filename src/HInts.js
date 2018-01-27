@@ -40,7 +40,7 @@ export default class Hints extends Component {
                  message ='You need to match video for more hints, go to the main screen';
                  this.props.onUpdate(message);
             } else {
-                 message= 'You can use hint only once per-questions';
+                 message= 'You can use hint only once per-question';
                  this.props.onUpdate(message);
             }
         }
