@@ -4,6 +4,7 @@ import {
     View,
     StyleSheet,
     Dimensions,
+    ActivityIndicator,
     TouchableOpacity,
     AsyncStorage
 } from "react-native";
@@ -21,6 +22,10 @@ export default class Rewards extends Component {
         this.state = {
             hints:'',
             msg:"",
+            animate:true,
+            zI:5,
+            limit:3,
+            level:this.props.navigation.state.params.level,
         }
     }
 
@@ -33,6 +38,21 @@ export default class Rewards extends Component {
     };
 
     componentDidMount(){
+        if(this.state.level >= 5){
+            this.setState({
+                limit:4,
+            })
+        } else if (this.state.level >= 10) {
+            this.setState({
+                limit:5,
+            })
+        }
+        setTimeout(() => {
+            this.setState({
+                animating: false,
+                zI:0,
+            })
+        },2000)
         AsyncStorage.getItem("hint").then(data => {
             this.setState({
                 hints: data,
@@ -45,7 +65,7 @@ export default class Rewards extends Component {
         AdMobRewarded.addEventListener('rewarded',
             (reward) => {
             console.log('AdMobRewarded => rewarded', reward)
-            if (this.state.hints<3){
+            if (this.state.hints<this.state.limit){
                 let hints = Number(this.state.hints) +1;
                 let hintStr = String(hints);
                 this.setState({
@@ -100,9 +120,17 @@ export default class Rewards extends Component {
     AdMobRewarded.showAd().catch(error => console.warn(error));
   }
     render(){
+        zIndex = this.state.zI;
+        const animating = this.state.animating
         return(
             <View style={styles.rewCont}>
-                <Text style={styles.rewText}>You Got { this.state.hints }/3 Hints</Text>
+                <View style={[styles.container, styles.horizontal ,{zIndex:zIndex}]}>
+                    <ActivityIndicator
+                        animating = {animating}
+                        size="large" 
+                        color="#0000ff" />
+                </View>
+                <Text style={styles.rewText}>You Got { this.state.hints }/{this.state.limit} Hints</Text>
                 <Text></Text>
                 <Text style={styles.rewText}>If you want to collect more, watch rewarded videos</Text>
                 <TouchableOpacity><Text style={styles.buttons} onPress={()=>{this.adVideo()}}>Watch Video</Text></TouchableOpacity>
@@ -111,6 +139,9 @@ export default class Rewards extends Component {
         )
     }
 }
+
+var width = Dimensions.get('window').width; //full width
+var height = Dimensions.get('window').height; //full height
 const styles = StyleSheet.create({
     rewCont:{
         marginTop:50,
@@ -137,5 +168,19 @@ const styles = StyleSheet.create({
         marginTop:20,
         marginLeft:30,
         color:'#8c1c41'
+      },
+      container: {
+        position:'absolute',
+        flex: 1,
+        width:width,
+        height:700,
+        top:-150,
+        backgroundColor:'#ffffff',
+        justifyContent: 'center'
+      },
+      horizontal: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: 10
       },
 })

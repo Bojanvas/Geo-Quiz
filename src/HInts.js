@@ -13,9 +13,19 @@ export default class Hints extends Component {
         super(props);
         this.state = {
             hints:0,
+            limit:3,
         }
     }
     componentDidMount(){
+        if(this.props.level >= 5){
+            this.setState({
+                limit:4,
+            })
+        } else if(this.props.level >= 10) {
+            this.setState({
+                limit:5,
+            })
+        }
         AsyncStorage.getItem("hint").then(data => {
             this.setState({
                 hints: data,
@@ -60,7 +70,7 @@ export default class Hints extends Component {
         var hint = this.state.hints;
         return(
             <View style={styles.containerHints}>
-                <TouchableOpacity><Text allowFontScaling={false} onPress={(event)=>{ this.hints(); }} style={styles.hintButt}>Hint  {hint}/3</Text></TouchableOpacity>
+                <TouchableOpacity><Text allowFontScaling={false} onPress={(event)=>{ this.hints(); }} style={styles.hintButt}>Hint  {hint}/{this.state.limit}</Text></TouchableOpacity>
             </View>    
         )
     }

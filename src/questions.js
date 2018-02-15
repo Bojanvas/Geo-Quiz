@@ -11,6 +11,7 @@ const questions = [{
         ans: ['Serbia', 'Macedonia', 'Spain', "Ukraine"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -19,6 +20,7 @@ const questions = [{
         ans: ['Slovenia', 'Brazil', 'Russia', "Ukraine"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -27,6 +29,7 @@ const questions = [{
         ans: ['China', 'Cuba', 'Monoglia', "Peru"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -35,6 +38,7 @@ const questions = [{
         ans: ['Usa', 'Macedonia', 'Russia', "Uk"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -43,6 +47,7 @@ const questions = [{
         ans: ['Singapore', 'Vietnam', 'Philipines', "Marocco"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -51,6 +56,7 @@ const questions = [{
         ans: ['Thailand', 'Vietnam', 'Philipines', "Marocco"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -59,6 +65,7 @@ const questions = [{
         ans: ['Argentina', 'Uruguay', 'Nicaragua', "Honduras"],
         dificult: ['1', '2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -67,6 +74,7 @@ const questions = [{
         ans: ['Azerbaijan', 'Uzbekistan', 'Kazakhstan', "Tajikistan"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -75,6 +83,7 @@ const questions = [{
         ans: ['Pakistan', 'Syria', 'Libya', "Afghanistan"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -83,6 +92,7 @@ const questions = [{
         ans: ['Pakistan', 'Algeria', 'Tunisia', "Egypt"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -91,6 +101,7 @@ const questions = [{
         ans: ['San Marino', 'Spain', 'Romania', "Andorra"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -99,6 +110,7 @@ const questions = [{
         ans: ['Angola', 'Mozambique', 'Tanzania', "Namibia"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -107,6 +119,7 @@ const questions = [{
         ans: ['Uruguay', 'Argentina', 'Bolivia', "Paraguay"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -115,6 +128,7 @@ const questions = [{
         ans: ['Azerbaijan', 'Tajikistan', 'Iran', "Armenia"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -123,6 +137,7 @@ const questions = [{
         ans: ['Australia', 'New Zealand', 'United Kingdom', "Tasmania"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -131,6 +146,7 @@ const questions = [{
         ans: ['Denmark', 'Austria', 'Norway', "Switzerland"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -139,6 +155,7 @@ const questions = [{
         ans: ['Azerbaijan', 'Kazakhstan', 'Mongolia', "Georgia"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -147,6 +164,7 @@ const questions = [{
         ans: ['Denmark', 'Austria', 'Norway', "Switzerland"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -155,6 +173,7 @@ const questions = [{
         ans: ['Qatar', 'Kuwait', 'Iraq', "Bahrain"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -163,6 +182,7 @@ const questions = [{
         ans: ['Nepal', 'Pakistan', 'Bangladesh', "Myanmar"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -171,6 +191,7 @@ const questions = [{
         ans: ['Barbados', 'Andorra', 'Dominican Republic', "Puerto Rico"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -179,6 +200,7 @@ const questions = [{
         ans: ['Ukraine', 'Belarus', 'Lithuania', "Bosnia and Herzegovina"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -187,6 +209,7 @@ const questions = [{
         ans: ['Belgium', 'Germany', 'Spain', "Austria"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -195,6 +218,7 @@ const questions = [{
         ans: ['Costa Rica', 'Bahamas', 'Barbados', "Belize"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -203,6 +227,7 @@ const questions = [{
         ans: ['Brunei', 'Mongolia', 'Myanmar', "Bhutan"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -211,6 +236,7 @@ const questions = [{
         ans: ['Ecuador', 'Bolivia', 'Peru', "Guatemala"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -219,6 +245,7 @@ const questions = [{
         ans: ['Bosnia and Herzegovina', 'Croatia', 'Montenegro', "Greece"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -227,6 +254,7 @@ const questions = [{
         ans: ['South Africa', 'Botswana', 'Zimbabwe', "Burkina Faso"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -235,6 +263,7 @@ const questions = [{
         ans: ['Australia', 'United States', 'Brazil', "Venezuela"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -243,6 +272,7 @@ const questions = [{
         ans: ['Bulgaria', 'Greece', 'Serbia', "Hungary"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -251,6 +281,7 @@ const questions = [{
         ans: ['Mauritania', 'Senegal', 'Gabon', "Burkina Faso"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -259,6 +290,7 @@ const questions = [{
         ans: ['Cambodia', 'Thailand', 'Malaysia', "Indonesia"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -267,6 +299,7 @@ const questions = [{
         ans: ['Nigeria', 'Gabon', 'Mali', "Cameroon"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -275,6 +308,7 @@ const questions = [{
         ans: ['United States', 'Canada', 'Russia', "China"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -283,6 +317,7 @@ const questions = [{
         ans: ['Central African Republic', 'Egypt', 'Tunis', "China"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -291,6 +326,7 @@ const questions = [{
         ans: ['Spain', 'Egypt', 'Romania', "Chad"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -299,6 +335,7 @@ const questions = [{
         ans: ['Netherlands', 'Slovenia', 'Slovakia', "Czech Republic"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -307,6 +344,7 @@ const questions = [{
         ans: ['China', 'France', 'Russia', "United States"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -315,6 +353,7 @@ const questions = [{
         ans: ['Peru', 'France', 'Mexico', "Chile"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -323,6 +362,7 @@ const questions = [{
         ans: ['Ecuador', 'Colombia', 'Cameroon', "Paraguay"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -331,6 +371,7 @@ const questions = [{
         ans: ['DR Congo', 'Uganda', 'Cameroon', "Sudan"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -339,6 +380,7 @@ const questions = [{
         ans: ['Costa Rica', 'Chile', 'Honduras', "Cuba"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -347,6 +389,7 @@ const questions = [{
         ans: ['Senegal', 'Côte d’Ivoire', 'Liberia', "Nigeria"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -355,6 +398,7 @@ const questions = [{
         ans: ['Montenegro', 'Hungary', 'Serbia', "Croatia"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -363,6 +407,7 @@ const questions = [{
         ans: ['Chile', 'Dominican Republic', 'Cuba', "North Korea"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -371,6 +416,7 @@ const questions = [{
         ans: ['Serbia', 'Cyprus', 'Cuba', "Honduras"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -379,6 +425,7 @@ const questions = [{
         ans: ['Denmark', 'Switzerland', 'Austria', "Czech Republic"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -387,6 +434,7 @@ const questions = [{
         ans: ['Uruguay', 'Bolivia', 'Colombia', "Ecuador"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -395,6 +443,7 @@ const questions = [{
         ans: ['Saudi Arabia', 'Morocco', 'Egypt', "Tunisia"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -403,6 +452,7 @@ const questions = [{
         ans: ['Ethiopia', 'Morocco', 'Egypt', "Eritrea"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -411,6 +461,7 @@ const questions = [{
         ans: ['Latvia', 'Finland', 'Estonia', "Lithuania"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -419,6 +470,7 @@ const questions = [{
         ans: ['Ethiopia', 'Egypt', 'Eritrea', "Morocco"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -427,6 +479,7 @@ const questions = [{
         ans: ['Brunei', 'Timor-Leste', 'Guinea-Bissau', "Laos"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -435,6 +488,7 @@ const questions = [{
         ans: ['Norway', 'Sweden', 'Poland', "Finland"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -443,6 +497,7 @@ const questions = [{
         ans: ['Italy', 'Belgium', 'France', "Spain"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -451,6 +506,7 @@ const questions = [{
         ans: ['Gabon', 'Chad', 'Egypt', "Cameroon"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -459,6 +515,7 @@ const questions = [{
         ans: ['Gabon', 'Chad', 'Guinea', "Gambia"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -467,6 +524,7 @@ const questions = [{
         ans: ['France', 'Belgium', 'Germany', "Poland"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -475,6 +533,7 @@ const questions = [{
         ans: ['Georgia', 'Armenia', 'Turkey', "Azerbaijan"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -483,6 +542,7 @@ const questions = [{
         ans: ['Senegal', 'Chad', 'Cameroon', "Ghana"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -491,6 +551,7 @@ const questions = [{
         ans: ['Serbia', 'Greece', 'Macedonia', "Albania"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -499,6 +560,7 @@ const questions = [{
         ans: ['Serbia', 'Greece', 'Macedonia', "Albania"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -507,6 +569,7 @@ const questions = [{
         ans: ['Grenada', 'Antigua and Barbuda', 'Macedonia', "Trinidad and Tobago"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -515,6 +578,7 @@ const questions = [{
         ans: ['Bolivia', 'Nicaragua', 'Honduras', "Guatemala"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -523,6 +587,7 @@ const questions = [{
         ans: ['Suriname', 'Barbados', 'Guyana', "Guinea"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -531,6 +596,7 @@ const questions = [{
         ans: ['Haiti', 'Honduras', 'Bahamas', "Jamaica"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -539,6 +605,7 @@ const questions = [{
         ans: ['Honduras', 'Nicaragua', 'Bolivia', "Jamaica"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -547,6 +614,7 @@ const questions = [{
         ans: ['Hungary', 'Slovakia', 'Bolivia', "Germany"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -555,6 +623,7 @@ const questions = [{
         ans: ['Iceland', 'Finland', 'New Zealand', "Faroe Islands"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -563,6 +632,7 @@ const questions = [{
         ans: ['China', 'India', 'Russia', "Pakistan"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -571,6 +641,7 @@ const questions = [{
         ans: ['China', 'Cambodia', 'Singapore', "Indonesia"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -579,6 +650,7 @@ const questions = [{
         ans: ['Republic of Ireland', 'Iceland', 'Netherlands', "Italy"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -587,6 +659,7 @@ const questions = [{
         ans: ['Oman', 'Iran', 'Iraq', "Egypt"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -595,6 +668,7 @@ const questions = [{
         ans: ['Oman', 'Iran', 'Iraq', "Egypt"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -603,6 +677,7 @@ const questions = [{
         ans: ['Israel', 'Syria', 'Jordan', "Egypt"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -611,6 +686,7 @@ const questions = [{
         ans: ['France', 'Spain', 'Italy', "Ireland"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -619,6 +695,7 @@ const questions = [{
         ans: ['Jamaica', 'Cuba', 'Costa Rica', "Barbados"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -627,6 +704,7 @@ const questions = [{
         ans: ['Syria', 'Israel', 'Oman', "Jordan"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -635,6 +713,7 @@ const questions = [{
         ans: ['South Korea', 'China', 'Japan', "North Korea"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -643,6 +722,7 @@ const questions = [{
         ans: ['Kazakhstan', 'Mongolia', 'Uzbekistan', "Afghanistan"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -651,6 +731,7 @@ const questions = [{
         ans: ['Sudan', 'Morocco', 'Tanzania', "Kenya"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -659,6 +740,7 @@ const questions = [{
         ans: ['Kuwait', 'Morocco', 'Qatar', "Yemen"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -667,6 +749,7 @@ const questions = [{
         ans: ['Kyrgyzstan', 'Mongolia', 'Pakistan', "Macedonia"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -675,6 +758,7 @@ const questions = [{
         ans: ['Japan', 'Cambodia', 'Laos', "Malaysia"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -683,6 +767,7 @@ const questions = [{
         ans: ['Egypt', 'Iran', 'Syria', "Lebanon"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -691,6 +776,7 @@ const questions = [{
         ans: ['Lithuania', 'Estonia', 'Finland', "Lebanon"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -699,6 +785,7 @@ const questions = [{
         ans: ['Madagascar', 'Mauritius', 'Maldives', "Kenya"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -707,6 +794,7 @@ const questions = [{
         ans: ['Togo', 'Senegal', 'Libya', "Mali"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -715,6 +803,7 @@ const questions = [{
         ans: ['Andorra', 'Malta', 'San Marino', "Cyprus"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -723,6 +812,7 @@ const questions = [{
         ans: ['Bahamas', 'Malta', 'Maldives', "Mauritania"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -731,6 +821,7 @@ const questions = [{
         ans: ['Costa Rica', 'El Salvador', 'Nicaragua', "Mauritania"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -739,6 +830,7 @@ const questions = [{
         ans: ['Montenegro', 'Albania', 'Ukraine', "Moldova"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -747,6 +839,7 @@ const questions = [{
         ans: ['China', 'Mongolia', 'Kazakhstan', "Kyrgyzstan"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -755,6 +848,7 @@ const questions = [{
         ans: ['Libya', 'Tunisia', 'Algeria', "Morocco"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -763,6 +857,7 @@ const questions = [{
         ans: ['Namibia', 'South Africa', 'Angola', "Uganda"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -771,6 +866,7 @@ const questions = [{
         ans: ['Myanmar', 'India', 'Cambodia', "Nepal"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -779,6 +875,7 @@ const questions = [{
         ans: ['Nigeria', 'Niger', 'Cameroon', "Senegal"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -787,6 +884,7 @@ const questions = [{
         ans: ['Lebanon', 'Yemen', 'Oman', "Iran"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -795,6 +893,7 @@ const questions = [{
         ans: ['Panama', 'Nicaragua', 'Costa Rica', "Venezuela"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -803,6 +902,7 @@ const questions = [{
         ans: ['Moldova', 'Chad', 'Romania', "France"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -811,6 +911,7 @@ const questions = [{
         ans: ['Madagascar', 'Angola', 'Uganda', "Rwanda"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -819,6 +920,7 @@ const questions = [{
         ans: ['Saudi Arabia', 'Iran', 'Bahrain', "Kuwait"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -827,6 +929,7 @@ const questions = [{
         ans: ['South Korea', 'North Korea', 'Myanmar', "Japan"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -835,6 +938,7 @@ const questions = [{
         ans: ['Bulgaria', 'Macedonia', 'Serbia', "Croatia"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -843,6 +947,7 @@ const questions = [{
         ans: ['Slovakia', 'Czech', 'Serbia', "Slovenia"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -851,6 +956,7 @@ const questions = [{
         ans: ['Slovakia', 'Czech', 'Serbia', "Slovenia"],
         dificult: ['2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -859,6 +965,7 @@ const questions = [{
         ans: ['Ethiopia', 'Somalia', 'Eritrea', "Egypt"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -867,6 +974,7 @@ const questions = [{
         ans: ['Germany', 'Italy', 'Spain', "France"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -875,6 +983,7 @@ const questions = [{
         ans: ['Sri Lanka', 'Malta', 'India', "Andorra"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -883,6 +992,7 @@ const questions = [{
         ans: ['South Sudan', 'Sudan', 'Ethiopia', "Egypt"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -891,6 +1001,7 @@ const questions = [{
         ans: ['Sudan', 'South Sudan', 'Ethiopia', "Egypt"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -899,6 +1010,7 @@ const questions = [{
         ans: ['Sudan', 'Botswana', 'Swaziland', "Zambia"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -907,6 +1019,7 @@ const questions = [{
         ans: ['Italy', 'Austria', 'Australia', "Switzerland"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -915,6 +1028,7 @@ const questions = [{
         ans: ['Jordan', 'Yemen', 'Syria', "Lebanon"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -923,6 +1037,7 @@ const questions = [{
         ans: ['Thailand', 'Myanmar', 'Taiwan', "China"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -931,6 +1046,7 @@ const questions = [{
         ans: ['Afghanistan', 'Kazakhstan', 'Uzbekistan', "Tajikistan"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -939,6 +1055,7 @@ const questions = [{
         ans: ['Togo', 'Benin', 'Ghana', "Gabon"],
         dificult: ['3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -947,6 +1064,7 @@ const questions = [{
         ans: ['Turkey', 'Tunis', 'Marocco', "Algeria"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -955,6 +1073,7 @@ const questions = [{
         ans: ['Turkey', 'Tunis', 'Sudan', "Egypt"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -963,6 +1082,7 @@ const questions = [{
         ans: ['Cameroon', 'Tanzania', 'Kenya', "Uganda"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -971,6 +1091,7 @@ const questions = [{
         ans: ['United States', 'United Kingdom', 'France', "Russia"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -979,6 +1100,7 @@ const questions = [{
         ans: ['Romania', 'Belarus', 'Ukraine', "Russia"],
         dificult: ['1'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -987,6 +1109,7 @@ const questions = [{
         ans: ['Uruguay', 'Argentina', 'Paraguay', "Peru"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -995,6 +1118,7 @@ const questions = [{
         ans: ['Uruguay', 'Argentina', 'Venezuela', "Chile"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -1003,6 +1127,7 @@ const questions = [{
         ans: ['Cambodia', 'Thailand', 'Myanmar', "Vietnam"],
         dificult: ['1', '2'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -1011,6 +1136,7 @@ const questions = [{
         ans: ['Oman', 'Yemen', 'Egypt', "Syria"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     {
         question: 'Which country does this flag represent?',
@@ -1019,6 +1145,7 @@ const questions = [{
         ans: ['Botswana', 'Senegal', 'Mozambique', "Zimbabwe"],
         dificult: ['2', '3'],
         type: 'flag',
+        level:'1',
     },
     //Country
 
@@ -1030,6 +1157,7 @@ const questions = [{
         ans: ['Vladivostok', 'St. Petersburg', 'Yekaterinburg', "Moscow"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Albania?',
@@ -1038,6 +1166,7 @@ const questions = [{
         ans: ['Ankara', 'Sofia', 'Athena', "Tirana"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Macedonia?',
@@ -1046,6 +1175,7 @@ const questions = [{
         ans: ['Skopje', 'Bitola', 'Tetovo', "Ohrid"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Argentina?',
@@ -1054,6 +1184,7 @@ const questions = [{
         ans: ['Lima', 'Santiago', 'Salta', "Buenos Aires"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Afganistan?',
@@ -1062,6 +1193,7 @@ const questions = [{
         ans: ['Kandahar', 'Karachi', 'Kabul', "Lahore"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Algeria?',
@@ -1070,6 +1202,7 @@ const questions = [{
         ans: ['Cairo', 'Algiers', 'Rabat', "Tunis"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Angola?',
@@ -1078,6 +1211,7 @@ const questions = [{
         ans: ['Luanda', 'Maputo', 'Rabat', "Cape Town"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Armenia?',
@@ -1086,6 +1220,7 @@ const questions = [{
         ans: ['Tbilisi', 'Baku', 'Qabala', "Yerevan"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Australia?',
@@ -1094,6 +1229,7 @@ const questions = [{
         ans: ['Melbourne', 'Perth', 'Canberra', "Sydney"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Austria?',
@@ -1102,6 +1238,7 @@ const questions = [{
         ans: ['Vienna', 'Perth', 'Prague', "Budapest"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',        
     },
     {
         question: 'What is the Capital of Azerbaijan?',
@@ -1110,6 +1247,7 @@ const questions = [{
         ans: ['Tbilisi', 'Baku', 'Qabala', "Yerevan"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',        
     },
     {
         question: 'What is the Capital of Georgia?',
@@ -1118,6 +1256,7 @@ const questions = [{
         ans: ['Tbilisi', 'Baku', 'Qabala', "Yerevan"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Bangladesh?',
@@ -1126,6 +1265,7 @@ const questions = [{
         ans: ['Sylhet', 'Dhaka', 'Khulna', "Lahore"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Belarus?',
@@ -1134,6 +1274,7 @@ const questions = [{
         ans: ['Brest', 'Kiev', 'Moscow', "Minsk"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Bosnia and Herzegovina?',
@@ -1142,6 +1283,7 @@ const questions = [{
         ans: ['Zagreb', 'Belgrade', 'Sarajevo', "Skopje"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Belgium?',
@@ -1150,6 +1292,7 @@ const questions = [{
         ans: ['Bruges', 'Amsterdam', 'Antwerp', "Brussels"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Bolivia?',
@@ -1158,6 +1301,7 @@ const questions = [{
         ans: ['Mexico City', 'La Paz', 'Lima', "Sucre"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Brazil?',
@@ -1166,6 +1310,7 @@ const questions = [{
         ans: ['Brasília', 'Rio de Janeiro', 'Lima', "São Paulo"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Bulgaria?',
@@ -1174,6 +1319,7 @@ const questions = [{
         ans: ['Belgrade', 'Varna', 'Skopje', "Sofia"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Serbia?',
@@ -1182,6 +1328,7 @@ const questions = [{
         ans: ['Belgrade', 'Zagreb', 'Skopje', "Sofia"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Croatia?',
@@ -1190,6 +1337,7 @@ const questions = [{
         ans: ['Belgrade', 'Zagreb', 'Podgorica', "Split"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Czech Republic?',
@@ -1198,6 +1346,7 @@ const questions = [{
         ans: ['Prague', 'Bratislava', 'Budapest', "Warsaw"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Slovakia?',
@@ -1206,6 +1355,7 @@ const questions = [{
         ans: ['Prague', 'Bratislava', 'Budapest', "Warsaw"],
         dificult: ['2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Hunagry?',
@@ -1214,6 +1364,7 @@ const questions = [{
         ans: ['Prague', 'Bratislava', 'Budapest', "Warsaw"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Poland?',
@@ -1222,6 +1373,7 @@ const questions = [{
         ans: ['Prague', 'Kiev', 'Budapest', "Warsaw"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Ukraine?',
@@ -1230,6 +1382,7 @@ const questions = [{
         ans: ['Prague', 'Kiev', 'Moscow', "Minsk"],
         dificult: ['2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Turkey?',
@@ -1238,6 +1391,7 @@ const questions = [{
         ans: ['Ankara', 'Cairo', 'Istanbul', "Damascus"],
         dificult: ['2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Syria?',
@@ -1246,6 +1400,7 @@ const questions = [{
         ans: ['Beirut', 'Cairo', 'Aleppo', "Damascus"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Lebanon?',
@@ -1254,6 +1409,7 @@ const questions = [{
         ans: ['Beirut', 'Cairo', 'Jerusalem', "Damascus"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Venezuela?',
@@ -1262,6 +1418,7 @@ const questions = [{
         ans: ['Caracas', 'Bogotá', 'Lima', "Maracay"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Thailand?',
@@ -1270,6 +1427,7 @@ const questions = [{
         ans: ['Ho chi minh', 'Hanoi', 'Pattaya', "Bangkok"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Egypt?',
@@ -1278,6 +1436,7 @@ const questions = [{
         ans: ['Doha', 'Cairo', 'Jerusalem', "Alexandria"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of China?',
@@ -1286,6 +1445,7 @@ const questions = [{
         ans: ['Shenzhen', 'Shanghai', 'Tokyo', "Beijing"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Japan?',
@@ -1294,6 +1454,7 @@ const questions = [{
         ans: ['Kyoto', 'Seoul', 'Tokyo', "Beijing"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of South Korea?',
@@ -1302,6 +1463,7 @@ const questions = [{
         ans: ['Pyongyang', 'Seoul', 'Tokyo', "Beijing"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Mongolia?',
@@ -1310,6 +1472,7 @@ const questions = [{
         ans: ['Tehran', 'Astana', 'Ulaanbaatar', "Beijing"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Kazakhstan?',
@@ -1318,6 +1481,7 @@ const questions = [{
         ans: ['Tehran', 'Astana', 'Ulaanbaatar', "Dushanbe"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Tajikistan?',
@@ -1326,6 +1490,7 @@ const questions = [{
         ans: ['Tehran', 'Tashkent', 'Ulaanbaatar', "Dushanbe"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Iran?',
@@ -1334,6 +1499,7 @@ const questions = [{
         ans: ['Tehran', 'Tashkent', 'Baghdad', "Riyadh"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Iraq?',
@@ -1342,6 +1508,7 @@ const questions = [{
         ans: ['Tehran', 'Doha', 'Baghdad', "Riyadh"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Saudi Arabia?',
@@ -1350,6 +1517,7 @@ const questions = [{
         ans: ['Cairo', 'Doha', 'Baghdad', "Riyadh"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Kuwait?',
@@ -1358,6 +1526,7 @@ const questions = [{
         ans: ['Cairo', 'Doha', 'Kuwait City', "Riyadh"],
         dificult: ['2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Morocco?',
@@ -1366,6 +1535,7 @@ const questions = [{
         ans: ['Cairo', 'Rabat', 'Algiers', "Casablanca"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Tunisia?',
@@ -1374,6 +1544,7 @@ const questions = [{
         ans: ['Cairo', 'Rabat', 'Algiers', "Tunis"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of United Kingdom?',
@@ -1382,6 +1553,7 @@ const questions = [{
         ans: ['London', 'Liverpool', 'Dublin', "Cardiff"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of France?',
@@ -1390,6 +1562,7 @@ const questions = [{
         ans: ['London', 'Paris', 'Lyon', "Berlin"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Germany?',
@@ -1398,6 +1571,7 @@ const questions = [{
         ans: ['London', 'Paris', 'Hamburg', "Berlin"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of USA?',
@@ -1406,6 +1580,7 @@ const questions = [{
         ans: ['New York', 'Miami', 'Washington', "Los Angeles"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Canada?',
@@ -1414,6 +1589,7 @@ const questions = [{
         ans: ['Toronto', 'Ottawa', 'Vancouver', "Montreal"],
         dificult: ['1'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Oman?',
@@ -1422,6 +1598,7 @@ const questions = [{
         ans: ['Muscat', 'Salalah', 'Dubai', "Doha"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Yemen?',
@@ -1430,6 +1607,7 @@ const questions = [{
         ans: ['Sanaa', 'Salalah', 'Tehran', "Doha"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Cambodia?',
@@ -1438,6 +1616,7 @@ const questions = [{
         ans: ['Siem Reap', 'Hanoi', 'Ho Chi Minh', "Phnom Penh"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Vietnam?',
@@ -1446,6 +1625,7 @@ const questions = [{
         ans: ['Siem Reap', 'Hanoi', 'Ho Chi Minh', "Phnom Penh"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Uganda?',
@@ -1454,6 +1634,7 @@ const questions = [{
         ans: ['Kampala', 'Kigali', 'Nairobi', "Addis Ababa"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Ethiopia?',
@@ -1462,6 +1643,7 @@ const questions = [{
         ans: ['Asmara', 'Kigali', 'Nairobi', "Addis Ababa"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Eritrea?',
@@ -1470,6 +1652,7 @@ const questions = [{
         ans: ['Asmara', 'Kigali', 'Nairobi', "Addis Ababa"],
         dificult: ['3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Kenya?',
@@ -1478,6 +1661,7 @@ const questions = [{
         ans: ['Asmara', 'Kigali', 'Nairobi', "Niamey"],
         dificult: ['3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Niger?',
@@ -1486,6 +1670,7 @@ const questions = [{
         ans: ['Yaoundé', 'Kigali', 'Nairobi', "Niamey"],
         dificult: ['3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Cameroon?',
@@ -1494,6 +1679,7 @@ const questions = [{
         ans: ['Yaoundé', 'Kigali', 'Nairobi', "Niamey"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Zimbabwe?',
@@ -1502,6 +1688,7 @@ const questions = [{
         ans: ['Yaoundé', 'Kigali', 'Nairobi', "Harare"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of D.R Congo?',
@@ -1510,6 +1697,7 @@ const questions = [{
         ans: ['Yaoundé', 'Kigali', 'Kinshasa', "Harare"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Gabon?',
@@ -1518,6 +1706,7 @@ const questions = [{
         ans: ['Yaoundé', 'Mogadishu', 'Cairo', "Libreville"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Somalia?',
@@ -1526,6 +1715,7 @@ const questions = [{
         ans: ['Yaoundé', 'Mogadishu', 'Banjul', "Libreville"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Gambia?',
@@ -1534,6 +1724,7 @@ const questions = [{
         ans: ['Yaoundé', 'Mogadishu', 'Banjul', "Accra"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Ghana?',
@@ -1542,6 +1733,7 @@ const questions = [{
         ans: ['Windhoek', 'Mogadishu', 'Banjul', "Accra"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Nambia?',
@@ -1550,6 +1742,7 @@ const questions = [{
         ans: ['Windhoek', 'Mogadishu', 'Banjul', "Accra"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Panama?',
@@ -1558,6 +1751,7 @@ const questions = [{
         ans: ['Panama', 'San José', 'San Juan', "Havana"],
         dificult: ['1', '2'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Cuba?',
@@ -1566,6 +1760,7 @@ const questions = [{
         ans: ['Panama', 'San José', 'San Juan', "Havana"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Chile?',
@@ -1574,6 +1769,7 @@ const questions = [{
         ans: ['Bogota', 'San José', 'Lima', "Santiago"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Costa Rica?',
@@ -1582,6 +1778,7 @@ const questions = [{
         ans: ['Bogota', 'San José', 'Lima', "Santiago"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Ecuador?',
@@ -1590,6 +1787,7 @@ const questions = [{
         ans: ['Bogota', 'Quito', 'Lima', "Santiago"],
         dificult: ['2', '3'],
         type: 'capital',
+        level:'3',
     },
     {
         question: 'What is the Capital of Honduras?',
@@ -1598,6 +1796,7 @@ const questions = [{
         ans: ['Tegucigalpa', 'Quito', 'Lima', "Santiago"],
         dificult: ['3'],
         type: 'capital',
+        level:'3',
     },
     //Mount
     {
@@ -1607,6 +1806,7 @@ const questions = [{
         ans: ['Lhotse', 'Mount Everest', 'K2', "Kanchenjunga"],
         dificult: ['1', '2'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in Balkans?',
@@ -1615,6 +1815,7 @@ const questions = [{
         ans: ['Rila', 'Korab', 'Olimp', "Baba"],
         dificult: ['3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in Europe?',
@@ -1623,6 +1824,7 @@ const questions = [{
         ans: ['Mount Elbrus', 'Mount Everest', 'K2', "Mont Blanc"],
         dificult: ['1', '2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in Africa?',
@@ -1631,6 +1833,7 @@ const questions = [{
         ans: ['Mount Meru', 'Mount Everest', 'Mount Kenya', "Kilimanjaro"],
         dificult: ['1', '2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in South America?',
@@ -1639,6 +1842,7 @@ const questions = [{
         ans: ['Aconcagua', 'Mount Everest', 'Mount McKinley', "Tajumulco"],
         dificult: ['2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in China?',
@@ -1647,6 +1851,7 @@ const questions = [{
         ans: ['Lhotse', 'Mount Everest', 'Kanchenjunga', "Tajumulco"],
         dificult: ['2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in India?',
@@ -1655,6 +1860,7 @@ const questions = [{
         ans: ['Lhotse', 'Mount Everest', 'Kanchenjunga', "Nanda Devi"],
         dificult: ['2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in Spain?',
@@ -1663,6 +1869,7 @@ const questions = [{
         ans: ['Lhotse', 'Mount Teide', 'Mulhacén', "Nanda Devi"],
         dificult: ['2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in Iran?',
@@ -1671,6 +1878,7 @@ const questions = [{
         ans: ['Damavand', 'Alam-Kuh', 'Mulhacén', "Nanda Devi"],
         dificult: ['3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peak in North America?',
@@ -1679,6 +1887,7 @@ const questions = [{
         ans: ['Aconcagua', 'Mount Everest', 'Mount McKinley', "Tajumulco"],
         dificult: ['2', '3'],
         type: 'mountain',
+        level:'1',
     },
     {
         question: 'Highest Mountain Peaks in Russia?',
@@ -1687,6 +1896,7 @@ const questions = [{
         ans: ['Mount Ural', 'Mount Kazbek', 'Dykh-Tau', "Mount Elbrus"],
         dificult: ['2', '3'],
         type: 'mountain',
+        level:'1',
     },
     //LAKE
     {
@@ -1696,6 +1906,7 @@ const questions = [{
         ans: ['Tanganyika', 'Lake Baikal', 'Lake Vostok', "Lake Malawi"],
         dificult: ['1', '2', '3'],
         type: 'lake',
+        level:'5',
     },
     {
         question: 'Largest lake in the world?',
@@ -1704,6 +1915,7 @@ const questions = [{
         ans: ['Lake Michigan', 'Lake Baikal', 'Lake Victoria', "Caspian Sea"],
         dificult: ['2', '3'],
         type: 'lake',
+        level:'5',
     },
     {
         question: 'Largest lake in Africa?',
@@ -1712,6 +1924,7 @@ const questions = [{
         ans: ['Lake Michigan', 'Lake Baikal', 'Lake Victoria', "Lake Tanganyika"],
         dificult: ['2', '3'],
         type: 'lake',
+        level:'5',
     },
     {
         question: 'Largest lake in North America?',
@@ -1720,6 +1933,7 @@ const questions = [{
         ans: ['Lake Michigan', 'Lake Superior', 'Lake Victoria', "Lake Huron"],
         dificult: ['2', '3'],
         type: 'lake',
+        level:'5',
     },
     {
         question: 'Largest lake in South America?',
@@ -1728,6 +1942,7 @@ const questions = [{
         ans: ['Lake Titicaca', 'Lake Superior', 'Lake Maracaibo', "Lake Huron"],
         dificult: ['2', '3'],
         type: 'lake',
+        level:'5',
     },
     {
         question: 'Country with most lakes in the World?',
@@ -1736,6 +1951,7 @@ const questions = [{
         ans: ['USA', 'Finland', 'Russia', "Canada"],
         dificult: ['1', '2', '3'],
         type: 'lake',
+        level:'5',
     },
     // Deserts
     {
@@ -1745,6 +1961,7 @@ const questions = [{
         ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
         dificult: ['1'],
         type: 'desert',
+        level:'2',
     },
     {
         question: 'Largest desert in Asia?',
@@ -1753,6 +1970,7 @@ const questions = [{
         ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
         dificult: ['2', '3'],
         type: 'desert',
+        level:'2',
     },
     {
         question: 'Largest desert in North America?',
@@ -1761,6 +1979,7 @@ const questions = [{
         ans: ['Kalahari Desert', 'Great Basin Desert', 'Gobi Desert', "Chihuahuan Desert"],
         dificult: ['2', '3'],
         type: 'desert',
+        level:'2',
     },
     {
         question: 'Second largest desert in Africa?',
@@ -1769,6 +1988,7 @@ const questions = [{
         ans: ['Kalahari Desert', 'Arabian Desert', 'Gobi Desert', "Sahara"],
         dificult: ['2', '3'],
         type: 'desert',
+        level:'2',
     },
     {
         question: 'Largest desert in South America?',
@@ -1777,6 +1997,7 @@ const questions = [{
         ans: ['Kalahari Desert', 'Atacama Desert', 'Gobi Desert', "Sahara"],
         dificult: ['2', '3'],
         type: 'desert',
+        level:'2',
     },
     //Oceans
     {
@@ -1786,6 +2007,7 @@ const questions = [{
         ans: ['Atlantic Ocean', 'Indian Ocean', 'Southern Ocean', "Pacific Ocean"],
         dificult: ['1', '2', '3'],
         type: 'ocean',
+        level:'3',
     },
     {
         question: 'Deepest place in the world?',
@@ -1794,6 +2016,7 @@ const questions = [{
         ans: ['Mariana Trench', 'Milwaukee Deep', 'Java Trench', "Puerto Rico Trench"],
         dificult: ['2', '3'],
         type: 'ocean',
+        level:'3',
     },
     {
         question: 'Smallest ocean in the world?',
@@ -1802,6 +2025,7 @@ const questions = [{
         ans: ['Arctic Ocean', 'Atlantic Ocean', 'Pacific Ocean', "Indian Ocean"],
         dificult: ['2', '3'],
         type: 'ocean',
+        level:'3',
     },
     {
         question: 'How many oceans are there?',
@@ -1810,6 +2034,7 @@ const questions = [{
         ans: ['7', '6', '5', "4"],
         dificult: ['1', '2'],
         type: 'ocean',
+        level:'3',
     },
     {
         question: 'How many oceans does United States border?',
@@ -1818,6 +2043,7 @@ const questions = [{
         ans: ['3', '2', '5', "4"],
         dificult: ['1', '2'],
         type: 'ocean',
+        level:'3',
     },
     {
         question: 'How many oceans does Russia border?',
@@ -1826,6 +2052,7 @@ const questions = [{
         ans: ['3', '2', '1', "4"],
         dificult: ['1', '2'],
         type: 'ocean',
+        level:'3',
     },
     {
         question: 'from how many oceans is surround South Africa?',
@@ -1834,6 +2061,7 @@ const questions = [{
         ans: ['3', '2', '1', "4"],
         dificult: ['1', '2'],
         type: 'ocean',
+        level:'3',
     },
     // SEA
     {
@@ -1843,6 +2071,7 @@ const questions = [{
         ans: ['Mediterranean', 'Caribbean Sea', 'Coral Sea', "South China Sea"],
         dificult: ['2', '3'],
         type: 'sea',
+        level:'1',
     },
     {
         question: 'Largest sea in Europe?',
@@ -1851,6 +2080,7 @@ const questions = [{
         ans: ['Mediterranean', 'Caribbean Sea', 'Coral Sea', "South China Sea"],
         dificult: ['1', '2'],
         type: 'sea',
+        level:'1',
     },
     {
         question: 'Deepest sea in the world?',
@@ -1859,6 +2089,7 @@ const questions = [{
         ans: ['Mediterranean', 'Caribbean Sea', 'Coral Sea', "South China Sea"],
         dificult: ['2', '3'],
         type: 'sea',
+        level:'1',
     },
     //SIZE
     {
@@ -1867,7 +2098,8 @@ const questions = [{
         corectAn: 'Russia',
         ans: ['Russia', 'US', 'Canada', "China"],
         dificult: ['1'],
-        type: 'size',     
+        type: 'size',
+        level:'2',     
     },
     {
         question: 'Second largest country in world?',
@@ -1875,7 +2107,8 @@ const questions = [{
         corectAn: 'Canada',
         ans: ['Russia', 'US', 'Canada', "China"],
         dificult: ['1','2'],
-        type: 'size',     
+        type: 'size',
+        level:'2',     
     },
     {
         question: 'Second largest country in North America?',
@@ -1883,7 +2116,8 @@ const questions = [{
         corectAn: 'US',
         ans: ['Russia', 'US', 'Canada', "China"],
         dificult: ['1','2'],
-        type: 'size',     
+        type: 'size',
+        level:'2',     
     },
     {
         question: 'Largest country in Africa?',
@@ -1891,7 +2125,8 @@ const questions = [{
         corectAn: 'Algeria',
         ans: ['Libya', 'Congo', 'Sudan', "Algeria"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size',
+        level:'2',     
     },
     {
         question: 'Second largest country in Africa?',
@@ -1899,7 +2134,8 @@ const questions = [{
         corectAn: 'Congo',
         ans: ['Libya', 'Congo', 'Sudan', "Algeria"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size',
+        level:'2',    
     },
     {
         question: 'Second largest country in South America?',
@@ -1907,7 +2143,8 @@ const questions = [{
         corectAn: 'Argentina',
         ans: ['Argentina', 'Brazil', 'Peru', "Columbia"],
         dificult: ['2'],
-        type: 'size',     
+        type: 'size',
+        level:'2',  
     },
     {
         question: 'Second largest country in Europa?',
@@ -1915,7 +2152,8 @@ const questions = [{
         corectAn: 'Ukraine',
         ans: ['Ukraine', 'Russia', 'France', "Sweden"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size', 
+        level:'2',   
     },
     {
         question: 'Second largest country in Asia?',
@@ -1923,7 +2161,8 @@ const questions = [{
         corectAn: 'China',
         ans: ['India', 'Russia', 'Iran', "China"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size', 
+        level:'2',   
     },
     {
         question: 'Largest country in Middle East?',
@@ -1931,7 +2170,8 @@ const questions = [{
         corectAn: 'Saudi Arabia',
         ans: ['India', 'Egypt', 'Iran', "Saudi Arabia"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size',
+        level:'2',   
     },
     {
         question: 'Smallest country in South America?',
@@ -1939,7 +2179,8 @@ const questions = [{
         corectAn: 'Suriname',
         ans: ['Suriname', 'Ecuador', 'Peru', "Panama"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size',
+        level:'2',   
     },
     {
         question: 'Smallest country in Europe?',
@@ -1947,7 +2188,8 @@ const questions = [{
         corectAn: 'Vatican City',
         ans: ['Andora', 'Monaco', 'Vatican City', "San Marino"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size',
+        level:'2',   
     },
     {
         question: 'Smallest country in Asia?',
@@ -1955,7 +2197,8 @@ const questions = [{
         corectAn: 'Maldives',
         ans: ['Brunei', 'Bahrain', 'Singapore', "Maldives"],
         dificult: ['2','3'],
-        type: 'size',     
+        type: 'size',
+        level:'2',  
     },
     //Country
     {
@@ -1964,7 +2207,8 @@ const questions = [{
         corectAn: 'Albania',
         ans: ['Albania', 'Macedonia', 'Montenegro', "Slovenia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',    
     },
     {
         question: 'Guess the country from its outline?',
@@ -1972,7 +2216,8 @@ const questions = [{
         corectAn: 'Macedonia',
         ans: ['Albania', 'Macedonia', 'Serbia', "Slovenia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -1980,7 +2225,8 @@ const questions = [{
         corectAn: 'Greece',
         ans: ['Greece', 'Macedonia', 'Serbia', "Bulgaria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -1988,7 +2234,8 @@ const questions = [{
         corectAn: 'Serbia',
         ans: ['Greece', 'Croatia', 'Serbia', "Bulgaria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -1996,7 +2243,8 @@ const questions = [{
         corectAn: 'Bulgaria',
         ans: ['Greece', 'Croatia', 'Serbia', "Bulgaria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2004,7 +2252,8 @@ const questions = [{
         corectAn: 'Croatia',
         ans: ['Greece', 'Croatia', 'Hungary', "Greece"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2012,7 +2261,8 @@ const questions = [{
         corectAn: 'Slovenia',
         ans: ['Slovakia', 'Croatia', 'Hungary', "Slovenia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2020,7 +2270,8 @@ const questions = [{
         corectAn: 'Bosnia',
         ans: ['Montenegro', 'Croatia', 'Hungary', "Bosnia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2028,7 +2279,8 @@ const questions = [{
         corectAn: 'Montenegro',
         ans: ['Montenegro', 'Croatia', 'Macedonia', "Bosnia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2036,7 +2288,8 @@ const questions = [{
         corectAn: 'Hungary',
         ans: ['Hungary', 'Croatia', 'Serbia', "Bulgaria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2044,7 +2297,8 @@ const questions = [{
         corectAn: 'Turkey',
         ans: ['Syria', 'Turkey', 'Iran', "Greece"],
         dificult: ['1','2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2052,7 +2306,8 @@ const questions = [{
         corectAn: 'Romania',
         ans: ['Hungary', 'Romania', 'Serbia', "Bulgaria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',   
     },
     {
         question: 'Guess the country from its outline?',
@@ -2060,7 +2315,8 @@ const questions = [{
         corectAn: 'Slovakia',
         ans: ['Hungary', 'Czech Republic', 'Slovenia', "Slovakia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2068,7 +2324,8 @@ const questions = [{
         corectAn: 'Czech Republic',
         ans: ['Hungary', 'Czech Republic', 'Slovenia', "Slovakia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2076,7 +2333,8 @@ const questions = [{
         corectAn: 'Austria',
         ans: ['Hungary', 'Czech Republic', 'Austria', "Slovakia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2084,7 +2342,8 @@ const questions = [{
         corectAn: 'Italy',
         ans: ['Spain', 'Italy', 'Yugoslavia', "France"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2092,7 +2351,8 @@ const questions = [{
         corectAn: 'France',
         ans: ['Spain', 'Italy', 'France', "Germany"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2100,7 +2360,8 @@ const questions = [{
         corectAn: 'Spain',
         ans: ['Spain', 'Italy', 'France', "Portugal"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2108,7 +2369,8 @@ const questions = [{
         corectAn: 'Portugal',
         ans: ['Spain', 'Italy', 'France', "Portugal"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2116,7 +2378,8 @@ const questions = [{
         corectAn: 'Switzerland',
         ans: ['Switzerland', 'Italy', 'France', "Austria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2124,7 +2387,8 @@ const questions = [{
         corectAn: 'Germany',
         ans: ['UK', 'Italy', 'France', "Germany"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2132,7 +2396,8 @@ const questions = [{
         corectAn: 'UK',
         ans: ['UK', 'Italy', 'France', "Germany"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2140,7 +2405,8 @@ const questions = [{
         corectAn: 'R.Irland',
         ans: ['R.Irland', 'UK', 'France', "Iceland"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2148,7 +2414,8 @@ const questions = [{
         corectAn: 'Denmark',
         ans: ['Denmark', 'Norway', 'France', "Iceland"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2156,7 +2423,8 @@ const questions = [{
         corectAn: 'Russia',
         ans: ['UK', 'Russia', 'China', "Usa"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2164,7 +2432,8 @@ const questions = [{
         corectAn: 'Ukraine',
         ans: ['Ukraine', 'Russia', 'Poland', "Belarus"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2172,7 +2441,8 @@ const questions = [{
         corectAn: 'Poland',
         ans: ['Ukraine', 'Russia', 'Poland', "Belarus"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2180,7 +2450,8 @@ const questions = [{
         corectAn: 'Belarus',
         ans: ['Ukraine', 'Russia', 'Poland', "Belarus"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2188,7 +2459,8 @@ const questions = [{
         corectAn: 'Estonia',
         ans: ['Estonia', 'Latvia', 'Poland', "Lithuania"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2196,7 +2468,8 @@ const questions = [{
         corectAn: 'Latvia',
         ans: ['Estonia', 'Latvia', 'Poland', "Lithuania"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2204,7 +2477,8 @@ const questions = [{
         corectAn: 'Lithuania',
         ans: ['Estonia', 'Latvia', 'Poland', "Lithuania"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2212,7 +2486,8 @@ const questions = [{
         corectAn: 'Norway',
         ans: ['Estonia', 'Sweden', 'Norway', "Lithuania"],
         dificult: ['2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2220,7 +2495,8 @@ const questions = [{
         corectAn: 'Sweden',
         ans: ['Finland', 'Sweden', 'Norway', "Lithuania"],
         dificult: ['2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2228,7 +2504,8 @@ const questions = [{
         corectAn: 'Finland',
         ans: ['Finland', 'Sweden', 'Norway', "Lithuania"],
         dificult: ['2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2236,7 +2513,8 @@ const questions = [{
         corectAn: 'China',
         ans: ['Russia', 'China', 'India', "Japan"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2244,7 +2522,8 @@ const questions = [{
         corectAn: 'Japan',
         ans: ['S.Korea', 'China', 'N.Korea', "Japan"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2252,7 +2531,8 @@ const questions = [{
         corectAn: 'Canada',
         ans: ['Canada', 'China', 'USA', "Russia"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2260,7 +2540,8 @@ const questions = [{
         corectAn: 'USA',
         ans: ['Canada', 'China', 'USA', "Brazil"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2268,7 +2549,8 @@ const questions = [{
         corectAn: 'Mexico',
         ans: ['Cuba', 'Mexico', 'USA', "Brazil"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2276,7 +2558,8 @@ const questions = [{
         corectAn: 'Peru',
         ans: ['Peru', 'Paraguay', 'Bolivia', "Chile"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2284,7 +2567,8 @@ const questions = [{
         corectAn: 'Argentina',
         ans: ['Peru', 'Paraguay', 'Argentina', "Chile"],
         dificult: ['2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2292,7 +2576,8 @@ const questions = [{
         corectAn: 'Cuba',
         ans: ['Cuba', 'Paraguay', 'Honduras', "Dominican Republic"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2300,7 +2585,8 @@ const questions = [{
         corectAn: 'Venezuela',
         ans: ['Venezuela', 'Paraguay', 'Columbia', "French Guiana"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2308,7 +2594,8 @@ const questions = [{
         corectAn: 'Columbia',
         ans: ['Venezuela', 'Mexico', 'Columbia', "French Guiana"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2316,7 +2603,8 @@ const questions = [{
         corectAn: 'French Guiana',
         ans: ['Ecuador', 'Mexico', 'Cuba', "French Guiana"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2324,7 +2612,8 @@ const questions = [{
         corectAn: 'Ecuador',
         ans: ['Ecuador', 'Mexico', 'Uruguay', "Paraguay"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2332,7 +2621,8 @@ const questions = [{
         corectAn: 'Paraguay',
         ans: ['Ecuador', 'Peru', 'Uruguay', "Paraguay"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2340,7 +2630,8 @@ const questions = [{
         corectAn: 'Bolivia',
         ans: ['Ecuador', 'Peru', 'Bolivia', "Paraguay"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2348,7 +2639,8 @@ const questions = [{
         corectAn: 'Brazil',
         ans: ['USA', 'China', 'Brazil', "Argentina"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2356,7 +2648,8 @@ const questions = [{
         corectAn: 'Chile',
         ans: ['Chile', 'Peru', 'Bolivia', "Paraguay"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2364,7 +2657,8 @@ const questions = [{
         corectAn: 'Uruguay',
         ans: ['Chile', 'Peru', 'Uruguay', "Paraguay"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2372,7 +2666,8 @@ const questions = [{
         corectAn: 'Thailand',
         ans: ['Myanmar', 'Vietnam', 'Thailand', "Cambodia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2380,7 +2675,8 @@ const questions = [{
         corectAn: 'Myanmar',
         ans: ['Myanmar', 'Vietnam', 'Thailand', "Cambodia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2388,7 +2684,8 @@ const questions = [{
         corectAn: 'Vietnam',
         ans: ['Myanmar', 'Vietnam', 'Thailand', "Cambodia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2396,7 +2693,8 @@ const questions = [{
         corectAn: 'Cambodia',
         ans: ['Myanmar', 'Vietnam', 'Thailand', "Cambodia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2404,7 +2702,8 @@ const questions = [{
         corectAn: 'India',
         ans: ['Myanmar', 'Afganistan', 'Pakistan', "India"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2412,7 +2711,8 @@ const questions = [{
         corectAn: 'Afganistan',
         ans: ['Iran', 'Afganistan', 'Pakistan', "India"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2420,7 +2720,8 @@ const questions = [{
         corectAn: 'Pakistan',
         ans: ['Iran', 'Afganistan', 'Pakistan', "India"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2428,7 +2729,8 @@ const questions = [{
         corectAn: 'Kazakhstan',
         ans: ['Kazakhstan', 'Kyrgyzstan', 'Uzbekistan', "Turkmenistan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2436,7 +2738,8 @@ const questions = [{
         corectAn: 'Kyrgyzstan',
         ans: ['Kazakhstan', 'Kyrgyzstan', 'Uzbekistan', "Turkmenistan"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2444,7 +2747,8 @@ const questions = [{
         corectAn: 'Uzbekistan',
         ans: ['Kazakhstan', 'Kyrgyzstan', 'Uzbekistan', "Turkmenistan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2452,7 +2756,8 @@ const questions = [{
         corectAn: 'Turkmenistan',
         ans: ['Kazakhstan', 'Kyrgyzstan', 'Uzbekistan', "Turkmenistan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2460,7 +2765,8 @@ const questions = [{
         corectAn: 'Iran',
         ans: ['Iran', 'Iraq', 'Syria', "Turkmenistan"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2', 
     },
     {
         question: 'Guess the country from its outline?',
@@ -2468,7 +2774,8 @@ const questions = [{
         corectAn: 'Iraq',
         ans: ['Iran', 'Iraq', 'Syria', "Turkey"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2476,7 +2783,8 @@ const questions = [{
         corectAn: 'Syria',
         ans: ['Iran', 'Lebanon', 'Syria', "Jordan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2484,7 +2792,8 @@ const questions = [{
         corectAn: 'Lebanon',
         ans: ['Israel', 'Lebanon', 'Syria', "Jordan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',   
     },
     {
         question: 'Guess the country from its outline?',
@@ -2492,7 +2801,8 @@ const questions = [{
         corectAn: 'Israel',
         ans: ['Israel', 'Lebanon', 'Syria', "Jordan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',  
     },
     {
         question: 'Guess the country from its outline?',
@@ -2500,7 +2810,8 @@ const questions = [{
         corectAn: 'Jordan',
         ans: ['Israel', 'Lebanon', 'Syria', "Jordan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',
     },
     {
         question: 'Guess the country from its outline?',
@@ -2508,7 +2819,8 @@ const questions = [{
         corectAn: 'Saudi Arabia',
         ans: ['Saudi Arabia', 'Lebanon', 'Jemen', "Jordan"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',   
     },
     {
         question: 'Guess the country from its outline?',
@@ -2516,7 +2828,8 @@ const questions = [{
         corectAn: 'Oman',
         ans: ['Oman', 'Jemen', 'Syria', "Jordan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',    
     },
     {
         question: 'Guess the country from its outline?',
@@ -2524,7 +2837,8 @@ const questions = [{
         corectAn: 'Jemen',
         ans: ['Oman', 'Jemen', 'Syria', "Jordan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2532,7 +2846,8 @@ const questions = [{
         corectAn: 'Azerbaijan',
         ans: ['Georgia', 'Azerbaijan', 'Syria', "Armenia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2540,7 +2855,8 @@ const questions = [{
         corectAn: 'Armenia',
         ans: ['Georgia', 'Azerbaijan', 'Syria', "Armenia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2548,7 +2864,8 @@ const questions = [{
         corectAn: 'Georgia',
         ans: ['Georgia', 'Azerbaijan', 'Syria', "Armenia"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2556,7 +2873,8 @@ const questions = [{
         corectAn: 'UAE',
         ans: ['UAE', 'Kuwait', 'Syria', "Jemen"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2564,7 +2882,8 @@ const questions = [{
         corectAn: 'Kuwait',
         ans: ['UAE', 'Kuwait', 'Syria', "Jemen"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2572,7 +2891,8 @@ const questions = [{
         corectAn: 'Egypt',
         ans: ['Tunis', 'Eritrea', 'Sudan', "Egypt"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2580,7 +2900,8 @@ const questions = [{
         corectAn: 'Eritrea',
         ans: ['Ethiopia', 'Eritrea', 'Sudan', "Egypt"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2588,7 +2909,8 @@ const questions = [{
         corectAn: 'Ethiopia',
         ans: ['Ethiopia', 'Eritrea', 'Sudan', "Egypt"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2596,7 +2918,8 @@ const questions = [{
         corectAn: 'Sudan',
         ans: ['Ethiopia', 'Libya', 'Sudan', "Egypt"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2604,7 +2927,8 @@ const questions = [{
         corectAn: 'Tunis',
         ans: ['Tunis', 'Libya', 'Morocco', "Egypt"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2612,7 +2936,8 @@ const questions = [{
         corectAn: 'Libya',
         ans: ['Tunis', 'Libya', 'Morocco', "Egypt"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2620,7 +2945,8 @@ const questions = [{
         corectAn: 'Algeria',
         ans: ['Tunis', 'Libya', 'Morocco', "Algeria"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',    
     },
     {
         question: 'Guess the country from its outline?',
@@ -2628,7 +2954,8 @@ const questions = [{
         corectAn: 'Morocco',
         ans: ['Tunis', 'Libya', 'Morocco', "Algeria"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2636,7 +2963,8 @@ const questions = [{
         corectAn: 'Niger',
         ans: ['Niger', 'Libya', 'Mali', "Algeria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2644,7 +2972,8 @@ const questions = [{
         corectAn: 'Mali',
         ans: ['Niger', 'Libya', 'Mali', "Algeria"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2652,7 +2981,8 @@ const questions = [{
         corectAn: 'South Sudan',
         ans: ['Niger', 'Sudan', 'Mali', "South Sudan"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2660,7 +2990,8 @@ const questions = [{
         corectAn: 'CAR',
         ans: ['CAR', 'Sudan', 'Mali', "South Sudan"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2668,7 +2999,8 @@ const questions = [{
         corectAn: 'Chad',
         ans: ['Chad', 'Sudan', 'Mali', "Togo"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',    
     },
     {
         question: 'Guess the country from its outline?',
@@ -2676,7 +3008,8 @@ const questions = [{
         corectAn: 'Burkina Faso',
         ans: ['Chad', 'Ivory Coast', 'Burkina Faso', "Togo"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2684,7 +3017,8 @@ const questions = [{
         corectAn: 'Ivory Coast',
         ans: ['Nigera', 'Ivory Coast', 'Burkina Faso', "Togo"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2692,7 +3026,8 @@ const questions = [{
         corectAn: 'Togo',
         ans: ['Nigera', 'Ivory Coast', 'Burkina Faso', "Togo"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2700,7 +3035,8 @@ const questions = [{
         corectAn: 'Guinea',
         ans: ['Guinea', 'Ivory Coast', 'Senegal', "Togo"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2708,7 +3044,8 @@ const questions = [{
         corectAn: 'Senegal',
         ans: ['Guinea', 'Mauritania', 'Senegal', "Togo"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2716,7 +3053,8 @@ const questions = [{
         corectAn: 'Mauritania',
         ans: ['Guinea', 'Ivory Coast', 'Senegal', "Mauritania"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2724,7 +3062,8 @@ const questions = [{
         corectAn: 'Gabon',
         ans: ['Republic of the Congo', 'Ivory Coast', 'Gabon', "Cameroon"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2732,7 +3071,8 @@ const questions = [{
         corectAn: 'Republic of the Congo',
         ans: ['Republic of the Congo', 'Ivory Coast', 'Gabon', "Cameroon"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2740,7 +3080,8 @@ const questions = [{
         corectAn: 'Cameroon',
         ans: ['Republic of the Congo', 'Ivory Coast', 'Gabon', "Cameroon"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2748,7 +3089,8 @@ const questions = [{
         corectAn: 'Zambia',
         ans: ['Angola', 'Nigeria', 'Zambia', "Cameroon"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2756,7 +3098,8 @@ const questions = [{
         corectAn: 'Nigeria',
         ans: ['Angola', 'Nigeria', 'Zambia', "Cameroon"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2764,7 +3107,8 @@ const questions = [{
         corectAn: 'Angola',
         ans: ['Angola', 'Nigeria', 'Zambia', "Cameroon"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2772,7 +3116,8 @@ const questions = [{
         corectAn: 'Nambia',
         ans: ['Angola', 'Nambia', 'Zambia', "Cameroon"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2780,7 +3125,8 @@ const questions = [{
         corectAn: 'South Africa',
         ans: ['Angola', 'Nambia', 'Zambia', "South Africa"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2788,7 +3134,8 @@ const questions = [{
         corectAn: 'Botswana',
         ans: ['Botswana', 'Nambia', 'Zambia', "South Africa"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2796,7 +3143,8 @@ const questions = [{
         corectAn: 'Swaziland',
         ans: ['Botswana', 'Swaziland', 'Zambia', "South Africa"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2804,7 +3152,8 @@ const questions = [{
         corectAn: 'Mozambique',
         ans: ['Botswana', 'Nambia', 'Zambia', "Mozambique"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2812,7 +3161,8 @@ const questions = [{
         corectAn: 'Zimbabwe',
         ans: ['Zimbabwe', 'Nambia', 'Zambia', "Mozambique"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2820,7 +3170,8 @@ const questions = [{
         corectAn: 'Madagascar',
         ans: ['Zimbabwe', 'Nambia', 'Madagascar', "Mozambique"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2828,7 +3179,8 @@ const questions = [{
         corectAn: 'Kenya',
         ans: ['Kenya', 'Somalia', 'Ethiopia', "Mozambique"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2836,7 +3188,8 @@ const questions = [{
         corectAn: 'Rwanda',
         ans: ['Kenya', 'Somalia', 'Rwanda', "Mozambique"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2844,7 +3197,8 @@ const questions = [{
         corectAn: 'Somalia',
         ans: ['Kenya', 'Somalia', 'Ethiopia', "Mozambique"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2852,7 +3206,8 @@ const questions = [{
         corectAn: 'Uganda',
         ans: ['Kenya', 'Somalia', 'Ethiopia', "Uganda"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2860,7 +3215,8 @@ const questions = [{
         corectAn: 'Tanzania',
         ans: ['Kenya', 'Uganda', 'Ethiopia', "Tanzania"],
         dificult: ['2','3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2868,7 +3224,8 @@ const questions = [{
         corectAn: 'Burundi',
         ans: ['Malawi', 'Uganda', 'Burundi', "Tanzania"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2876,7 +3233,8 @@ const questions = [{
         corectAn: 'Malawi',
         ans: ['Malawi', 'Uganda', 'Burundi', "Tanzania"],
         dificult: ['3'],
-        type: 'country',     
+        type: 'country',
+        level:'2',     
     },
     {
         question: 'Guess the country from its outline?',
@@ -2884,7 +3242,8 @@ const questions = [{
         corectAn: 'Australia',
         ans: ['China', 'USA', 'Australia', "New Zealand"],
         dificult: ['1'],
-        type: 'country',     
+        type: 'country',
+        level:'2',    
     },
     {
         question: 'Guess the country from its outline?',
@@ -2892,7 +3251,8 @@ const questions = [{
         corectAn: 'New Zealand',
         ans: ['UK', 'Chile', 'Australia', "New Zealand"],
         dificult: ['1','2'],
-        type: 'country',     
+        type: 'country',
+        level:'2',    
     },
     //States
     {
@@ -2901,7 +3261,8 @@ const questions = [{
         corectAn: 'California',
         ans: ['Nevada', 'California', 'Oregon', "Washington"],
         dificult: ['1','2'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2909,7 +3270,8 @@ const questions = [{
         corectAn: 'Nevada',
         ans: ['Nevada', 'California', 'Oregon', "Washington"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2917,7 +3279,8 @@ const questions = [{
         corectAn: 'Oregon',
         ans: ['Nevada', 'California', 'Oregon', "Washington"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2925,7 +3288,8 @@ const questions = [{
         corectAn: 'Washington',
         ans: ['Nevada', 'California', 'Oregon', "Washington"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2933,7 +3297,8 @@ const questions = [{
         corectAn: 'Alaska',
         ans: ['Nevada', 'California', 'Alaska', "Texas"],
         dificult: ['1','2'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2941,7 +3306,8 @@ const questions = [{
         corectAn: 'Idaho',
         ans: ['Nevada', 'Utah', 'Oregon', "Idaho"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2949,7 +3315,8 @@ const questions = [{
         corectAn: 'Montana',
         ans: ['Montana', 'Utah', 'Wyoming', "Idaho"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2957,7 +3324,8 @@ const questions = [{
         corectAn: 'Wyoming',
         ans: ['Montana', 'Utah', 'Wyoming', "Idaho"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2965,7 +3333,8 @@ const questions = [{
         corectAn: 'Colorado',
         ans: ['Colorado', 'Utah', 'Wyoming', "Idaho"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2973,7 +3342,8 @@ const questions = [{
         corectAn: 'Utah',
         ans: ['Colorado', 'Utah','Wyoming', "Idaho"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2981,7 +3351,8 @@ const questions = [{
         corectAn: 'Arizona',
         ans: ['Arizona', 'Utah','Wyoming', "New Mexico"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2989,7 +3360,8 @@ const questions = [{
         corectAn: 'New Mexico',
         ans: ['Arizona', 'Utah','Wyoming', "New Mexico"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -2997,7 +3369,8 @@ const questions = [{
         corectAn: 'Texas',
         ans: ['Texas', 'Utah','Oklahoma', "New Mexico"],
         dificult: ['1','2'],
-        type: 'state',     
+        type: 'state',
+        level:'3',  
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3005,7 +3378,8 @@ const questions = [{
         corectAn: 'Oklahoma',
         ans: ['Texas', 'Utah','Oklahoma', "New Mexico"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3013,7 +3387,8 @@ const questions = [{
         corectAn: 'Kansas',
         ans: ['Texas', 'Utah','Oklahoma', "Kansas"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3021,7 +3396,8 @@ const questions = [{
         corectAn: 'Kansas',
         ans: ['South Dakota', 'Nebraska','Oklahoma', "Kansas"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3029,7 +3405,8 @@ const questions = [{
         corectAn: 'South Dakota',
         ans: ['South Dakota', 'Nebraska','North Dakota', "Kansas"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3037,7 +3414,8 @@ const questions = [{
         corectAn: 'North Dakota',
         ans: ['South Dakota', 'Nebraska','North Dakota', "Kansas"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3045,7 +3423,8 @@ const questions = [{
         corectAn: 'Minnesota',
         ans: ['South Dakota', 'Nebraska','North Dakota', "Minnesota"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3053,7 +3432,8 @@ const questions = [{
         corectAn: 'Iowa',
         ans: ['South Dakota', 'Iowa','North Dakota', "Minnesota"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3061,7 +3441,8 @@ const questions = [{
         corectAn: 'Missouri',
         ans: ['Missouri', 'Iowa','Arkansas', "Minnesota"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3069,7 +3450,8 @@ const questions = [{
         corectAn: 'Arkansas',
         ans: ['Missouri', 'Iowa','Arkansas', "Minnesota"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3077,7 +3459,8 @@ const questions = [{
         corectAn: 'Louisiana',
         ans: ['Missouri', 'Mississippi','Arkansas', "Louisiana"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3085,7 +3468,8 @@ const questions = [{
         corectAn: 'Mississippi',
         ans: ['Missouri', 'Mississippi','Arkansas', "Louisiana"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3093,7 +3477,8 @@ const questions = [{
         corectAn: 'Tennessee',
         ans: ['Missouri', 'Mississippi','Arkansas', "Tennessee"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3101,7 +3486,8 @@ const questions = [{
         corectAn: 'North Carolina',
         ans: ['Missouri', 'Mississippi','South Carolina', "North Carolina"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3109,7 +3495,8 @@ const questions = [{
         corectAn: 'South Carolina',
         ans: ['Missouri', 'Mississippi','South Carolina', "North Carolina"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',    
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3117,7 +3504,8 @@ const questions = [{
         corectAn: 'Georgia',
         ans: ['Alabama', 'Georgia','South Carolina', "North Carolina"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3125,7 +3513,8 @@ const questions = [{
         corectAn: 'Alabama',
         ans: ['Alabama', 'Georgia','South Carolina', "North Carolina"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3133,7 +3522,8 @@ const questions = [{
         corectAn: 'Florida',
         ans: ['Alabama', 'Florida','South Carolina', "Texas"],
         dificult: ['1','2'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3141,7 +3531,8 @@ const questions = [{
         corectAn: 'New York',
         ans: ['New Jersey', 'Florida','New York', "Texas"],
         dificult: ['1','2'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3149,7 +3540,8 @@ const questions = [{
         corectAn: 'New Jersey',
         ans: ['New Jersey', 'Virginia','New York', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3157,7 +3549,8 @@ const questions = [{
         corectAn: 'Michigan',
         ans: ['New Jersey', 'Michigan','New York', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',   
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3165,7 +3558,8 @@ const questions = [{
         corectAn: 'Virginia',
         ans: ['Virginia', 'Michigan','New York', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3173,7 +3567,8 @@ const questions = [{
         corectAn: 'Kentucky',
         ans: ['Virginia', 'Michigan','Kentucky', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3181,7 +3576,8 @@ const questions = [{
         corectAn: 'West Virginia',
         ans: ['West Virginia', 'Michigan','Kentucky', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3189,7 +3585,8 @@ const questions = [{
         corectAn: 'Maine',
         ans: ['Virginia', 'Michigan','Kentucky', "Maine"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3197,7 +3594,8 @@ const questions = [{
         corectAn: 'Indiana',
         ans: ['Indiana', 'Michigan','Kentucky', "Maine"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3205,7 +3603,8 @@ const questions = [{
         corectAn: 'Illinois',
         ans: ['Indiana', 'Michigan','Illinois', "Maine"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3213,7 +3612,8 @@ const questions = [{
         corectAn: 'Ohio',
         ans: ['Indiana', 'Michigan','Illinois', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3221,7 +3621,8 @@ const questions = [{
         corectAn: 'Wisconsin',
         ans: ['Indiana', 'Michigan','Wisconsin', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3229,7 +3630,8 @@ const questions = [{
         corectAn: 'Pennsylvania',
         ans: ['PennsylvaniaSt', 'Michigan','Delaware', "Ohio"],
         dificult: ['2','3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3237,7 +3639,8 @@ const questions = [{
         corectAn: 'Hawaii',
         ans: ['California', 'Florida','Hawaii', "Ohio"],
         dificult: ['1','2'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3245,7 +3648,8 @@ const questions = [{
         corectAn: 'Delaware',
         ans: ['Pennsylvania', 'Maryland','Delaware', "Ohio"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3253,7 +3657,8 @@ const questions = [{
         corectAn: 'Maryland',
         ans: ['Rhode Island', 'Maryland','Delaware', "Vermont"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3261,7 +3666,8 @@ const questions = [{
         corectAn: 'Vermont',
         ans: ['Pennsylvania', 'Maryland','Delaware', "Vermont"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3269,7 +3675,8 @@ const questions = [{
         corectAn: 'Connecticut',
         ans: ['Rhode Island', 'Connecticut','Delaware', "Vermont"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3277,7 +3684,8 @@ const questions = [{
         corectAn: 'Rhode Island',
         ans: ['Rhode Island', 'Connecticut','Delaware', "Vermont"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3285,7 +3693,8 @@ const questions = [{
         corectAn: 'Massachusetts',
         ans: ['Rhode Island', 'Connecticut','Delaware', "Massachusetts"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     {
         question: 'Guess the US state from its outline?',
@@ -3293,7 +3702,8 @@ const questions = [{
         corectAn: 'New Hampshire',
         ans: ['Rhode Island', 'Connecticut','New Hampshire', "Massachusetts"],
         dificult: ['3'],
-        type: 'state',     
+        type: 'state',
+        level:'3',     
     },
     //Island
     {
@@ -3302,7 +3712,8 @@ const questions = [{
         corectAn: 'Greenland',
         ans: ['UK', 'Greenland', 'New Guinea', "Borneo"],
         dificult: ['1','2'],
-        type: 'island',     
+        type: 'island',
+        level:'1', 
     },
     {
         question: 'Second largest island in the world?',
@@ -3310,7 +3721,8 @@ const questions = [{
         corectAn: 'New Guinea',
         ans: ['UK', 'Greenland', 'New Guinea', "Borneo"],
         dificult: ['1','2'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
     {
         question: 'Largest island in southeast Asia?',
@@ -3318,7 +3730,8 @@ const questions = [{
         corectAn: 'Borneo',
         ans: ['Java', 'Sumatra', 'New Guinea', "Borneo"],
         dificult: ['2','3'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
     {
         question: 'Largest island in Europe?',
@@ -3326,7 +3739,8 @@ const questions = [{
         corectAn: 'UK',
         ans: ['Iceland', 'Ireland', 'Sicily', "UK"],
         dificult: ['1','2'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
     {
         question: 'Largest island in Indain Ocean?',
@@ -3334,7 +3748,8 @@ const questions = [{
         corectAn: 'Madagascar',
         ans: ['Madagascar', 'Réunion', 'Sicily', "Mauritius"],
         dificult: ['2','3'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
     {
         question: 'Largest island in Mediterranean Sea?',
@@ -3342,7 +3757,8 @@ const questions = [{
         corectAn: 'Sicily',
         ans: ['Sardinia', 'Ireland', 'Sicily', "UK"],
         dificult: ['2','3'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
     {
         question: 'Largest island in Caribbean?',
@@ -3350,7 +3766,8 @@ const questions = [{
         corectAn: 'Cuba',
         ans: ['Puerto Rico', 'Jamaica', 'Sicily', "Cuba"],
         dificult: ['1','2'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
     {
         question: 'Largest island in Micronesia?',
@@ -3358,7 +3775,8 @@ const questions = [{
         corectAn: 'Pohnpei',
         ans: ['Chuuk', 'Yap', 'Pohnpei', "Kosrae"],
         dificult: ['3'],
-        type: 'island',     
+        type: 'island',
+        level:'1',     
     },
 
     // RIVERS
@@ -3369,6 +3787,7 @@ const questions = [{
         ans: ['Mississippi', 'Yangtze', 'Nile', "Amazon"],
         dificult: ['1', '2'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'What is the longest river in Europe?',
@@ -3377,6 +3796,7 @@ const questions = [{
         ans: ['Volga', 'Danube', 'Ural River', "Dnieper"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'What is the longest river in Sibir?',
@@ -3385,6 +3805,7 @@ const questions = [{
         ans: ['Volga', 'Irtysh River', 'Ural River', "Ob River"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'What is the longest river in India?',
@@ -3393,6 +3814,7 @@ const questions = [{
         ans: ['Brahmaputra River', 'Indus River', 'Yarlung ', "Ganges"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'What is the longest river in Australia?',
@@ -3401,6 +3823,7 @@ const questions = [{
         ans: ['Volga', 'Darling', 'Murrumbidgee', "Murray"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'What is the longest river in Asia?',
@@ -3409,6 +3832,7 @@ const questions = [{
         ans: ['Yellow River', 'Yangtze', 'Murrumbidgee', "Irtysh"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'What is the longest river in North America?',
@@ -3417,6 +3841,7 @@ const questions = [{
         ans: ['Rio Grande', 'Yukon River', 'Mississippi', "Missouri"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'River with largest discharge of water?',
@@ -3425,6 +3850,7 @@ const questions = [{
         ans: ['Mississippi', 'Congo', 'Nile', "Amazon"],
         dificult: ['1', '2'],
         type: 'river',
+        level:'3',
     },
     {
         question: 'River with largest discharge of water in Africa?',
@@ -3433,6 +3859,7 @@ const questions = [{
         ans: ['Kasai', 'Congo', 'Nile', "Amazon"],
         dificult: ['2', '3'],
         type: 'river',
+        level:'3',
     },
 ];
 var dif;

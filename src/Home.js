@@ -19,6 +19,7 @@ import {
   Dimensions,
   TextInput
 } from 'react-native';
+
 import { 
   AdMobBanner, 
   AdMobInterstitial, 
@@ -26,12 +27,15 @@ import {
   AdMobRewarded
 } from 'react-native-admob';
 
+//import components
 import {countries} from './country.js';
 import Levels from './Level.js';
 import PushNotification from 'react-native-push-notification';
 import Notification from './notification.js';
 import realm from './realm';
 import User from "./user.js";
+import ModalLvl from './level-modal.js';
+
 export default class Home extends Component {
        constructor(props){
          super(props);
@@ -43,6 +47,7 @@ export default class Home extends Component {
            name:"No Name",
            user_id:null,
            modalVisible : false,
+           subModal:null,
            notif:'true',
            level:0,
            exp:0,
@@ -52,21 +57,24 @@ export default class Home extends Component {
 
 
       setModalVisible(visible) {
-        if(this.state.location == 'none'){
-          this.setState({modalVisible: true});
-        }else{
-          this.setState({modalVisible: false});
+        if (this.state.location == 'none') {
+           this.setState({
+             modalVisible: true,
+            });
+        } else {
+           this.setState({
+             modalVisible: false,
+            });
         }
       }
       
     static navigationOptions = {
-    title: ' Geography Quiz || Test your knowledge',
-    headerTintColor: 'white',
-     headerStyle: {
-       backgroundColor: '#33afd4', 
-       elevation: null},
-
-      
+      title: ' Geography Quiz || Test your knowledge',
+      headerTintColor: 'white',
+      headerStyle: {
+      backgroundColor: '#33afd4', 
+      elevation: null},
+ 
   };
   
   componentDidMount(){
@@ -75,11 +83,11 @@ export default class Home extends Component {
     console.log(users[0]);
     // NOtifications
     AsyncStorage.getItem('hint').then((data)=>{
-      if(data != null){
+      if (data != null) {
       this.setState({
         hints:data
       })
-    }else{
+    } else {
       AsyncStorage.setItem('hint','3');
     }
     })
@@ -98,7 +106,7 @@ export default class Home extends Component {
     AsyncStorage.getItem('user_id').then((data)=>{
       if(data != null){
         this.setState({
-          user_id:data
+          user_id:data,
         })
       } else {
         id = this.generateId();
@@ -109,6 +117,9 @@ export default class Home extends Component {
         user.exp = 0;
         User.newUser(user);
         this.setUser();
+        this.setState({
+          subModal:this.subModal(),
+        })
      }
     })
    AsyncStorage.getItem('dificult').then((data)=>{
@@ -123,7 +134,7 @@ export default class Home extends Component {
    AsyncStorage.getItem('location').then((data)=>{
     if(data != null){
     this.setState({
-      location:data
+      location:data,
     })
   }else{
      AsyncStorage.setItem('location','none');
@@ -134,7 +145,7 @@ export default class Home extends Component {
   checkNotif() {
     //clear notfications first
     PushNotification.cancelAllLocalNotifications();
-    if(this.state.notif == 'true'){
+    if (this.state.notif == 'true') {
       //if notif is on show notification after one week
       PushNotification.localNotificationSchedule({
         title:"World geography",
@@ -163,6 +174,9 @@ export default class Home extends Component {
     return Math.floor((Math.random() * 10) * 0x10000000)
     .toString(16)
     .substring(1);
+  }
+  subModal(){
+      return <ModalLvl level={this.state.level} subModalVisible ={true} />
   }
   render(){
     var country = this.state.count;
@@ -211,10 +225,11 @@ export default class Home extends Component {
         </Modal>
         <Image source={require('../img/geo.png')} style={styles.backgroundImage}></Image>
         <Levels level= {this.state.level} exp = {this.state.exp} />
-        <View style={styles.image}>      
+        <View style={styles.image}>     
+          {this.state.subModal} 
           <TouchableOpacity>
             <Text onPress = {()=>{
-          this.props.navigation.navigate('Game',{dificult:this.state.dificult, name:this.state.name});
+          this.props.navigation.navigate('Game',{dificult:this.state.dificult, name:this.state.name, level:this.state.level});
           }} style={styles.buttons}>New Game</Text>
           </TouchableOpacity>
           <TouchableOpacity>
@@ -234,7 +249,7 @@ export default class Home extends Component {
           </TouchableOpacity>
           <TouchableOpacity>
             <Text onPress = {()=>{
-          this.props.navigation.navigate('Rewards');
+          this.props.navigation.navigate('Rewards',{level:this.state.level});
           }} style={styles.buttons}>Rewards</Text>
           </TouchableOpacity>
           </View>
