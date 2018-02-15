@@ -200,10 +200,12 @@ import {
         backgroundColor:'#f6f6f6f6',
         borderWidth: 0.5,
         borderColor: 'white',
-        padding:10,
+        padding:12,
     },
     rows:{
         width:width,
+        fontSize:16,
         color:"#4286f4",
+        fontFamily: 'Slabo',
     },
   });

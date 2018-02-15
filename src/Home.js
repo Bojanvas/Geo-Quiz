@@ -253,10 +253,12 @@ export default class Home extends Component {
           }} style={styles.buttons}>Rewards</Text>
           </TouchableOpacity>
           </View>
-          <AdMobBanner
-                adSize="fullBanner"
-                adUnitID="ca-app-pub-7664756446244941/5385120799"
-                didFailToReceiveAdWithError={this.bannerError} />
+          <View style={styles.ads}>
+            <AdMobBanner
+                  adSize="fullBanner"
+                  adUnitID="ca-app-pub-7664756446244941/5385120799"
+                  didFailToReceiveAdWithError={this.bannerError} />
+          </View>      
       </View>
     );
   }
@@ -315,5 +317,8 @@ const styles = StyleSheet.create({
   },
   image:{
     position:'absolute'
+  },
+  ads:{
+    width:width/1.5,
   }
 });
