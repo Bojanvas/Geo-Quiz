@@ -24,6 +24,7 @@ import {
 import realm from './realm';
 import User from "./user.js";
 import Score from "./score_realm.js";
+import ModalLvl from'./level-modal.js';
 
 export default class Results extends Component{
     constructor(props){
@@ -31,6 +32,7 @@ export default class Results extends Component{
         this.state={
             name:this.props.navigation.state.params.name,
             modalVisible : true,
+            subModal:null,
             poition:0,
             score:0,
             location:'none',
@@ -117,41 +119,41 @@ export default class Results extends Component{
     person.location =this.state.location;
     
 
-    fetch('https://bojanv4.herokuapp.com/results',{
-        method:'POST',
-        headers:{
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        },
-        body:JSON.stringify({
-            name:this.state.name,
-            score: res,
-            date:td,
-            dificult:difi,
-            location:this.state.location
-        })
-    }).then(function(response) {
-        console.log(response)
-        }).catch(function(err) {
-            console.log(err)
-        })
-    fetch('https://bojanv4.herokuapp.com/levels',{
-        method:"POST",
-        headers:{
-            "Accept":"application/json",
-            "Content-Type":"application/json",
-        },
-        body: JSON.stringify({
-            id: users.id,
-            name: this.state.name,
-            location: this.state.location,
-            level: users.level,
-        })
-    }).then(function(response){
-        console.log("this is res"+response)
-    }).catch(function(err){
-        console.log(err)
-    })
+    // fetch('https://bojanv4.herokuapp.com/results',{
+    //     method:'POST',
+    //     headers:{
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json',
+    //     },
+    //     body:JSON.stringify({
+    //         name:this.state.name,
+    //         score: res,
+    //         date:td,
+    //         dificult:difi,
+    //         location:this.state.location
+    //     })
+    // }).then(function(response) {
+    //     console.log(response)
+    //     }).catch(function(err) {
+    //         console.log(err)
+    //     })
+    // fetch('https://bojanv4.herokuapp.com/levels',{
+    //     method:"POST",
+    //     headers:{
+    //         "Accept":"application/json",
+    //         "Content-Type":"application/json",
+    //     },
+    //     body: JSON.stringify({
+    //         id: users.id,
+    //         name: this.state.name,
+    //         location: this.state.location,
+    //         level: users.level,
+    //     })
+    // }).then(function(response){
+    //     console.log("this is res"+response)
+    // }).catch(function(err){
+    //     console.log(err)
+    // })
   }
   caclLevel(exp,lvl,old){
       //calculate the level
@@ -162,9 +164,15 @@ export default class Results extends Component{
             if(exp > borderLvL){
                 exp = exp - borderLvL;
                 lvl++;
+                if(lvl == 8) {
+                    AsyncStorage.setItem('hint','4');
+                }
+                this.setState({
+                    subModal:this.checkModal(lvl),
+                })  
             } else {
                 checkExp = false;
-            }
+            }        
         }
         return info =[lvl,exp];
 
@@ -177,7 +185,7 @@ export default class Results extends Component{
       } else if ( dif == 1) {
             difi = "Normal";
       } else if ( dif == 2 ) {
-            difi ="Hard";
+            difi = "Hard";
       }
       return difi;
   }
@@ -190,6 +198,13 @@ checkScore(){
     var res = Number(res.toFixed(2));
     this.checkrank(res);
     return res;
+}
+checkModal(lvl){
+    var lvlArr = [1,2,3,5,8,10];
+    if(lvlArr.includes(lvl)){
+        return <ModalLvl level={lvl} subModalVisible ={true} />
+    };
+
 }
 calc(json,result){
     var pos=1;
@@ -255,6 +270,7 @@ checkrank(result){
                         </View>
                     </View>
                 </Modal>
+                {this.state.subModal}
                 <Text allowFontScaling={false} style={styles.resTitle}> Congrats, you made it!</Text>
                 <Text allowFontScaling={false} style={styles.resNumber}>Correct Questions:{this.props.navigation.state.params.score}</Text>
                 <Text allowFontScaling={false} style={styles.resNumber}>Online Rank:{this.state.position}</Text>

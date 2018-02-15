@@ -30,7 +30,7 @@ import {
 import {dificulties} from './questions.js';
 import TimerMixin from 'react-timer-mixin';
 import Resul from './results.js';
-import Hints from './Hints.js';
+import Hints from './hints.js';
 
 
 export default class Home extends Component {
@@ -56,6 +56,7 @@ export default class Home extends Component {
             opacity:0,
             mesColor:'#8c1c41',
             message:'',
+            level:this.props.navigation.state.params.level, 
         }
     }
 
@@ -66,8 +67,15 @@ export default class Home extends Component {
     var difQuest_3 = [];
     var newdificulties = [];
     var newQuestion = [];
-    for(let i=0;i<dificulties.length;i++){
-        newQuestion[i] = dificulties[i].slice();
+    var levels= this.state.level;
+    for(var i=0;i<dificulties.length;i++){
+        tempDiffArr = [];
+        console.log('before '+dificulties[i].length+"level: "+levels);
+        //Filter questions by level
+        tempDiffArr[i] = dificulties[i].filter(quest => quest.level <= levels);
+
+        console.log("after"+ tempDiffArr[i].length);
+        newQuestion[i] = tempDiffArr[i].slice();
     }
      function random() {
     for (let i = 0; i < 20; i++) {
@@ -116,36 +124,39 @@ random()
   };
 
   checkAn(answer){
-        LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
+      LayoutAnimation.configureNext(LayoutAnimation.Presets.spring);
       //cheking thae answer if is correct or not
       var i = this.state.i;
       var corect = this.state.questions[i].corectAn;
       var score = this.state.score;
+      console.log(i+" and score : "+score);
       if(corect == answer){
           // right one
           score++;
+          console.log("and here score is : " + score);
           this.setState({
               score: score,
               mesColor:'#3bf955',
               message:'Correct answer',
+          },() => {
+            if (i<19) {
+                this.nextquest();
+              } else {
+                this.gameover();
+              }
           })
-          if(i<19){
-           this.nextquest();
-          }else{
-            this.gameover();
-          }
-
-      }else{
-          
+      } else {
           //wrong one
            this.setState({
               score: score,
               mesColor:'#8c1c41',
               message:'Wrong answer, Correct answer was: '+corect,
+          }, ()=>{
+              
           })
-        if(i<19){
+        if (i<19) {
               this.nextquest();
-          }else{
+          } else {
               this.gameover();
           }
       }
@@ -181,14 +192,7 @@ componentWillUnmount(){
       var questArr = this.state.newArr;
       var msg = this.state.message;
     return (
-      <View  style={styles.container}>
-        <View style={styles.ad}>
-            <AdMobBanner
-            adSize="fullBanner"
-            adUnitID="ca-app-pub-7664756446244941/5385120799"
-            didFailToReceiveAdWithError={this.bannerError}
-            />
-        </View>    
+      <View  style={styles.container}>  
         <View style={styles.first}>
             <Image style={styles.img} source={this.state.questions[i].img}></Image>
             <View style={styles.time}>
@@ -196,7 +200,7 @@ componentWillUnmount(){
                 {"\n"}
                 {this.state.time}
             </Text>
-            <Hints questions={questArr} total={questArr.length} correct={this.state.questions[i].corectAn } message={msg} onUpdate={this.onUpdate} />
+            <Hints level={this.state.level} questions={questArr} total={questArr.length} correct={this.state.questions[i].corectAn } message={msg} onUpdate={this.onUpdate} />
             <Text allowFontScaling={false} style={styles.quest}>Questions:
                 {"\n"}
                 {i+1}/{questions.length}
@@ -216,6 +220,13 @@ componentWillUnmount(){
             </View>
         </View>    
         </View>
+        <View style={styles.ad}>
+            <AdMobBanner
+            adSize="fullBanner"
+            adUnitID="ca-app-pub-7664756446244941/5385120799"
+            didFailToReceiveAdWithError={this.bannerError}
+            />
+        </View>  
       </View>
     );
   }

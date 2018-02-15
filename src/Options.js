@@ -81,11 +81,11 @@ export default class Option extends Component {
     return (
       <View style={styles.option}>
         <Text style={styles.opTitle}>Fun Quizzes</Text>
-        <AdMobBanner
+        {/* <AdMobBanner
           adSize="fullBanner"
           adUnitID="ca-app-pub-7664756446244941/5385120799"
           didFailToReceiveAdWithError={this.bannerError}
-        />
+        /> */}
         <View style={styles.opDiv}>{this.checkdb(lastdb)}</View>
         <View style={styles.opDiv}>
           <View style={{ flex: 5 }}>
